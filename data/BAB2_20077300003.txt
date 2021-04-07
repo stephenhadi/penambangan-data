@@ -1,0 +1,568 @@
+﻿TUGAS AKHIR
+
+
+SISTEM PENDUKUNG KEPUTUSAN 
+PEMILIHAN SUB-JURUSAN MAHASISWA 
+TEKNIK INFORMATIKA UNPAR
+
+
+
+
+
+
+
+
+
+
+
+
+
+ALBERTUS KUSUMA SETA PRAWATYA
+NPM: 20077300003
+
+
+
+PEMBIMBING UTAMA: Dr. Veronica Sri Moertini ST, MT
+PEMBIMBING SERTA: Lucky Adhie S.Kom
+
+
+
+PROGRAM STUDI TEKNIK INFORMATIKA
+FAKULTAS TEKNOLOGI INFORMASI DAN SAINS
+UNIVERSITAS KATOLIK PARAHYANGAN
+BANDUNG
+2010
+
+TUGAS AKHIR
+
+
+SISTEM PENDUKUNG KEPUTUSAN 
+PEMILIHAN SUB-JURUSAN MAHASISWA 
+TEKNIK INFORMATIKA UNPAR
+
+
+
+
+
+
+
+
+
+ALBERTUS KUSUMA SETA PRAWATYA
+NPM: 2007730003
+
+
+
+BANDUNG, 6 OKTOBER 2010
+MENYETUJUI:
+PEMBIMBING UTAMA
+
+
+
+
+Dr. Veronica Sri Moertini ST, MTPEMBIMBING SERTA
+
+
+
+
+Lucky Adhie S.Kom
+
+PROGRAM STUDI TEKNIK INFORMATIKA
+FAKULTAS TEKNOLOGI INFORMASI DAN SAINS
+UNIVERSITAS KATOLIK PARAHYANGAN
+BANDUNG
+2010
+DAFTAR ISI
+      
+      
+DAFTAR ISI	i
+DAFTAR GAMBAR	iii
+BAB 1  PENDAHULUAN	1-1
+1.1	Latar Belakang	1-1
+1.2	Rumusan Masalah	1-2
+1.3	Tujuan	1-2
+1.4	Batasan Masalah	1-2
+1.5	Metodologi Penelitian	1-2
+1.6	Sistematika Pembahasan	1-3
+BAB 2  DASAR TEORI	2-5
+2.1	KONSEP SISTEM INFORMASI	2-5
+2.1.1	Definisi Sistem Informasi	2-5
+2.1.2	Hirarkhi Sistem Informasi	2-5
+2.1.3	Management Support System	2-6
+2.2	PENGAMBILAN KEPUTUSAN	2-8
+2.2.1	Tipe Pengambilan Keputusan	2-9
+2.2.2	Proses Pengambilan Keputusan	2-10
+2.2.3	Faktor yang Mempengaruhi Pengambilan Keputusan	2-12
+2.3	SISTEM PENDUKUNG KEPUTUSAN	2-13
+2.3.1	Karakteristik Sistem Pendukung Keputusan	2-13
+2.3.2	Manfaat Sistem pendukung Keputusan	2-15
+2.3.3	Jenis Sistem Pendukung Keputusan	2-16
+2.3.4	Komponen Sistem Pendukung Keputusan	2-16
+2.3.5	Tahap Pengembangan Sistem Pendkuung Keputusan	2-23
+2.4	PENGAMBILAN KEPUTUSAN KRITERIA GANDA	2-25
+2.4.1	Trade Off	2-25
+2.4.2	Weighting Average	2-26
+2.4.3	Sequencial Elimination by Lexicography	2-27
+2.4.4	Sequencial Elimination by Conjunctive Constraint	2-28
+2.5	KURIKULUM JURUSAN TEKNIK INFORMATIKA UNPAR	2-28
+2.6	KARAKTERISTIK MAHASISWA	2-30
+DAFTAR REFERENSI	ix
+
+ 
+
+DAFTAR GAMBAR
+      
+      
+Gambar 21 CBIS Model [Mc.Leod]	2-6
+Gambar 22 Proses Pengambilan Keputusan	2-10
+Gambar 23 Proses Karateristik Sistem Pendukung Keputusan	2-13
+Gambar 24 Model Konseptual Komponen Sistem Pendukung Keputusan	2-17
+Gambar 25 Model DBMS	2-18
+Gambar 27  Skema Model Management subsystem	2-20
+Gambar 28  Skema Dialog Management	2-23
+Gambar 29 Contoh Trade-Off step 1	2-25
+Gambar 210 Contoh Trade-Off step 2	2-25
+Gambar 210 Contoh Trade-Off	2-26
+Gambar 211 Contoh Penetapan nilai variabel pada Weighting Average	2-26
+Gambar 211 Contoh SPK Weighting Average Method	2-27
+Gambar 212 Contoh Penentuan level prioritas SE by lexicography	2-27
+Gambar 213 Contoh SPK SE by lexicography	2-28
+Gambar 213 Contoh SPK SE by Conjunctive Constraint	2-28
+
+1 [Nomor Bab]
+BAB 1 
+PENDAHULUAN
+      
+      
+1.1 Latar Belakang
+      Program studi Teknik Informatika Unpar, mempunyai 3 sub-jurusan yang dapat dipilih oleh mahasiswanya.Jurusan tersebut adalah Ilmu Komputer, Telematika, dan Teknik Informatika Bisnis. Mahasiswa semester 5 diwajibkan untuk memilih 1 diantara 3 sub-jurusan yang ada, sebagai spesialisasi bidangnya. Pemilihan sub-jurusan menjadi vital bagi karier mahasiswa di dunia kerja, karena setiap sub-jurusan mempunyai kompetensi masing-masing yang kelak menjadi bekal di dalam dunia kerja.
+      Kompetensi yang diperoleh mahasiswa bergantung dari sub-jurusannya. Mahasiswa sub-jurusan ilmu komputer diharapkan mempunyai kompetensi untuk mempelajari penemuan baru di bidang ilmu komputer, mengindentifikasi dan memecahkan masalah yang terkait dengan teknologi di bidang komputer, mengembangkan ilmu komputer melalui riset, dan mampu melanjutkan studi di bidang Teknologi Informasi. Mahasiswa sub-jurusan Teknik Informatika Bisnis diharapkan mempunyai kompetensi dalam memberikan solusi teknologi bisnis, konsep bisnis dan ilmu managemen sumberdaya, dan wawasan mengenai teknologi informasi. Mahasiswa sub-jurusan Telematika diharapakan mempunyai kompetensi dalam memahami penerapan telematika di dunia nyata, kemampuan menganalisis persoalan dalam bidang telematika, mengimplementasikan solusi hasil analisis dan berpartisipasi dalam proyek telematika.
+      Faktanya, meskipun telah diadakan sosialisasi sub-jurusan dan pembahasan mengenai prosepek kerja untuk setiap sub-jurusan dan pembahasan mengenai prospek kerja untuk setiap sub-jurusan, mahasiswa masih ragu dalam memilih sub jurusan mereka. Terkadang dijumpai mahasiswa yang index prestasinya menurun drastis setelah memasuki suatu sub-jurusan. Banyak faktor yang mempengaruhi penurunan tersebut. Erat dugaan, salah satu penyebabnya adalah kesalahan dalam pemilihan sub-jurusan. Sub-jurusan yang dipilih tidak sesuai dengan minat, bakat, dan kemampuan mahasiswa. Oleh karena itu, diperlukan suatu sistem yang dapat menganalisis minat, bakat dan kemampuan mahasiswa, sehingga mahasiswa dapat terbantu dalam memilih sub-jurusannya. Sistem Pendukung Keputusan pemilihan sub-jurusan mahasiswa.
+      
+1.2 Rumusan Masalah
+      Dalam pembangunan Sistem Pendukung Keputusan pemilihan sub-jurusan mahasiswa ini, terdapat beberapa permasalahan. Permasalahan yang dibahas untuk menjadi konsentrasi dalam penelitian ini adalah. 
+1. Variabel apa yang menjadi indikator minat, bakat, dan kemampuan mahasiswa dalam menentukan sub-jurusan?
+2. Model Sistem Pendukung Keputusan apa yang cocok untuk diterapkan dalam pembangunan Sistem?
+3. Berapa besar minat mahasiswa mempengaruhi hasil rekomendasi dari sistem?
+1.3 Tujuan
+      Tujuan penelitian ini adalah :
+1. Merumuskan variabel yang menjadi indikator minat, bakat, dan kemampuan mahasiswa dalam menentukan sub-jurusan.
+2. Mengetahui Model Sistem Pendukung Keputusan yang cocok untuk diterapkan dalam pembangunan sistem
+3. Membangun Sistem Pendukung Keputusan pemilihan sub-jurusan mahasiswa Teknik Informatika Unpar.
+1.4 Batasan Masalah
+      Sistem hanya akan membuat permodelan yang valid untuk masa penelitian.
+1.5 Metodologi Penelitian
+      Langkah yang akan dijalani untuk melakukan penelitian ini aalah :
+1. Mempelajari Konsep Sistem Pendukung Keputusan
+2. Melakukan Studi pustaka mengenai
+a. Penjurusan di Teknik Informatika Unpar
+b. Karakteristik Mahasiswa
+c. PHP, MySQL.
+3. Menganalisis variabel yang digunakan berdasarkan dasar teori
+4. Membangun Sistem Pendukung Keputusan dengan langkah-langkah
+a. Melakukan analisis kebutuhan sistem
+b. Perancangan pemodelan sistem
+c. Impelementasi atau coding
+      Mengadakan eksperimen untuk menguji Hipotesis
+1.6 Sistematika Pembahasan
+Bab 1 Pendahuluan
+	Bab Pendahuluan berisi latar belakang masalah, rumusan masalah, tujuan penyusunan tugas akhir, batasan masalah, metodologi penelitian, sistematika penyusunan tugas akhir, rencana pelaksanaan dan jadwal pembuatan tugas akhir.
+
+Bab 2 Dasar Teori
+      Bab 2 berisi beberapa landasan teori yang mendasari penyusunan tugas akhir, yang berisi Teori mengenai Sistem Pendukung Keputusan dan Karakteristik Mahasiswa.
+
+Bab 3 Analisis
+      Bab ini berisi hasil analisis proses permodelan Sistem Pendukung Keputusan Pemilihan Sub-Jurusan, hasil survey, ERD, Use Case Diagram, Diagram Class, Database System.
+
+Bab 4 Rancangan Sistem
+      Hasil bab ini berupa rancangan perangkat lunak yang akan dibuat , user interface, sequence diagram, kelas diagram rinci, dan state diagram
+
+Bab 5 Implementasi dan Pengujuan
+      Bab ini berisi implementasi dan evaluasi terhadap teori yang telah diterapkan dalam proses pembuatan perangkat lunak. Termasuk juga pengkodean dan penerapan database.
+
+Bab 6 Kesimpulan dan Saran
+      Berisi kesimpulan dan saran tentang sistem pendukung keputusan pemilihan sub jurusan terhadap proses pemilihan sub jurusan di Teknik Informatika Unpar
+      
+
+
+
+2 [Nomor Bab]
+BAB 2 
+DASAR TEORI
+
+2.1 KONSEP SISTEM INFORMASI
+2.1.1 Definisi Sistem Informasi
+      Untuk Mengerti mengenai sistem informasi, terlebih dahulu kita harus mempelajari pengertian dari data, informasi, dan sistem. 
+      Menurut Vercellis, data merupakan perwujudan atau penggambaran sebuah representasi fakta yang tersusun secara terstruktur. Dapat dikatakan juga bahwa data merupakan suatu obyek, kejadian, atau fakta yang terdokumentasi dengan memiliki kodifikasi terstruktur untuk satu atau beberapa entitas [VER-09].
+      Informasi merupakan hasil dari pengolahan sebuah data. Data tersebut diolah sedemikian rupa sehingga menjadi bermakna bagi penggunanya.
+      Sistem merupakan istilah dari bahasa yunani yang artinya adalah himpunan bagian atau unsur yang saling berhubungan secara teratur untuk mencapai tujuan bersama. 
+      Sedangkan definisi sistem informasi sendiri, menurut Robert A. Leitch adalah suatu sistem dalam suatu organisasi yang mempertemukan kebutuhan pengolahan transaksi harian, mendukung operasi, bersifat manajerial dan kegiatan strategi dari suatu organissasi dan menyediakan pihak luar tertentu dengan laporan-laporan yang diperlukan [URL-01].
+2.1.2 Hirarkhi Sistem Informasi
+      Menurut Mc. Leod dalam Computer Based Information Sistem Model (CBIS model). Sistem informasi yang membantu proses kegiatan dalam suatu instansi, dibedakan menjadi :
+a. Accounting Information System (AIS)
+b. Management Information System (MIS)
+c. Decission Support System (DSS)
+d. Expert System.(ES) atau Knowledge Based System.
+
+Gambar 21 CBIS Model [Mc.Leod]
+
+      Accounting Information System (AIS), atau sering disebut juga sebagai Transaction Processing System, terkonsentrasi pada pengumpulan data, kemudian mengubah data menjadi informasi sehingga informasi tersebut dapat berguna bagi user di dalam maupun diluar instansi tersebut. 
+      Management Information System (MIS) adalah sebuah sistem yang menitik beratkan pada pemrosesan informasi menjadi knowledge.
+      Decision Support System (DSS) atau Sistem Pendukung Keputusan (SPK) adalah sebuah sistem yang mendukung seseorang atau sekelompok pengambil keputusan untuk memecahkan masalah semi terstruktur.
+      Expert System adalah suatu paket hardware dan software yang digunakan sebagai pengambil keputusan dan atau pemecahan masalah, yang mencapai level permasalahan tidak terstruktur sempurna. Expert System biasanya dibuat menggunakan Artificial Intelegent.
+2.1.3 Management Support System
+      Seiring dengan perkembangan Jaman CBIS yang membantu kegiatan Bisnis disebut juga MSS (Management Support System). MSS dibuat untuk membantu seorang manajer dalam meningkatkan produktivitasnya.
+      Produktivitas = Output (produk/Jasa) : Input (resources)
+      Dengan adanya teknologi Informasi/Komputer maka akan diberikan lebih banyak alternatif pilihan, dan mengurangi pendekatan manajemen trial and eror untuk mengkaji seluruh alternatif pilihan yang tersedia tersebut. MSS terdiri dari :
+a. Decision Support System
+      Merupakan Sistem berbasis Komputer yang interaktif dalam membantu pengambilan keputusan dengan memanfaatkan data dan model untuk menyelesaikan masalah-masalah yang tak terstruktur.
+	DSS mendayagunakan resources individu secara intelek dengan kemampuan komputer untuk meningkatkan kualitas keputusan. Sehingga dapat disimpulkan, bahwa DSS merupakan Sistem Informasi Berbasis Komputer yang berhubungan dengan masalah semi terstruktur.
+b. Group Support System
+      Group Support System, digunakan untuk membuat keputusan utama dalam organisasi, yang dibuat oleh grup secara kolektif. GSS dapat mengatasi problem dalam mengumpulkan seluruh grup secara bersama dalam satu tempat dan waktu. 
+c. Executive Information System
+      EIS atau biasa juga dikenal dengan Executive Support System (ESS), dikembangkan untuk:
+i.  Menyediakan kebutuhan informasi yang diperlukan oleh pihak eksekutif
+ii.  Menyediakan antarmuka yang user-friendly untuk Eksekutif
+iii. Mempertemukan berbagai gaya keputusan individu para Eksekutif
+iv. Menyediakan pelacakan dan kontrol yang tepat waktu dan efektif
+v. Menyediakan akses cepat pada informasi detil yang tersirat di teks, bilangan, atau grafik.
+vi. Menyaring, memadatkan, dan melacak data dan informasi yang kritis
+vii. Melakukan identifikasi masalah
+      
+d. Expert System
+      Expert System dibuat untuk menyelesaikan situasi atau masalah yang tak terstruktur, sehingga membutuhkan suatu sistem yang menyerupai pakar atau ahli dalam bidang tersebut.
+e. Artificial Neural Networks
+      Pada dunia nyata yang kompleks, sangat sulit untk mendapatkan data, informasi, maupun pengetahuan secara eksplisit, sedangkan keputusan harus diambil walaupun kondisinya tidak lengkap, parsial, atau tidak eksak(pasti). Pada ANN, terdapat proses pembelajaran oleh komputer. ANN dibuat untuk mengisi kekurangan tersebut.
+f. Hybrid Support System
+      Merupakan gabungan dari 2 atau lebih MSS, dengan proporsinya masing masing. Hybrid support sistem lebih dikenal sebagai CBIS menurut McLeod. Hybrid Support System dibuat untuk mengatasi permasalahan yang membutuhkan berbagai alat (sistem) yang terintegrasi untuk menyelesaikannya
+2.2 PENGAMBILAN KEPUTUSAN
+      Terdapat beberapa Definisi pengambilan keputusan. Menurut G.R. Terry, pengambilan keputusan adalah  pemilihan yang didasarkan kriteria tertentu atas dua atu lebih alternatif yang mungkin. Horold dan Cyril O’Donell mengatakan bahwa pengambilan keputusan  adalah pemilihan alternatif mengenai suatu cara bertindak dengan inti dari perencanaan, perencanaan dikatakan tidak ada, jika tidak ada keputusan, sumber yang dipercaya, petunjuk atau reputasi yang telah dibuat.
+2.2.1 Tipe Pengambilan Keputusan
+      Dalam pengambilan keputusan, terdapat 3 tipe pengambilan keputusan berdasarkan permasalahan yang dihadapi.
+      	1. Structured problem
+      	2. semi structured problem
+      	3. unstructured problem
+      
+      Structured problem atau masalah terstruktur adalah masalah yang rutin dan selalu berulang, sehingga dapat membentuk solusi standart atau prosedur baku dalam memecahkan masalah permasalahan tersebut.
+      Semi structured problem atau masalah semi terstruktur, masalah ini terdapat diantara level masalah terstruktur dan tidak terstruktur. Masalah yang dihadapi mungkin merupakan masalah rutin, tetapi prosedur standar yang biasa digunakan tidak dapat memecahkan masalah yang ada. Masalah semi terstruktur membutuhkan standar solusi dan juga keputusan individual. Pada keputusan semi terstruktur, hanya sejumlah data atau beberapa keputusan pelengkap yang dapat diproses secara berstruktur. Namun terdapat ketidaklengkapan data/pengetahuan, sehingga diperlukan pertimbangan dan pengalaman dari luar untuk menyelesaikan masalah tersebut.
+      Golongan yang terakhir adalah masalah tidak tersetruktur atau unstructured problem. Masalah tidak terstruktur bersifat kompleks, dan pengambil keputusan tidak memiliki pengalaman (knowledge) untuk menyelesaikan permasalah tersebut. 
+      Terdapat empat karakteristik utama, dimana suatu keputusan digolongkan menjadi keputusan semi dan tidak terstruktur. Keempat karakteristik tersebut adalah :
+a. Tidak tersedia informasi lengkap tentang situasi keputusan serta tentang lingkungannya.
+b. Kurangnya Tolak ukur kuantitatif yang dengan tepat dan lengkap memperinci biaya dan manfaat
+c. Adanya sasaran ganda pada bagian organisasi, individu, atau kelompok yang bersangkutan
+d. Kehadiran lebih dari satu peserta dalam situasi keputusan yang berwenang untuk mempengaruhi hasil keputusan
+      Permasalahan yang tidak mempunyai ke empat karakteristik diatas, dapa digolongkan menjadi keputusan terstruktur.
+2.2.2 Proses Pengambilan Keputusan
+      Terdapat beberapa versi dari pengambilan keputusan. John Deway (1910) mengemukakan bahwa pengambilan keputusan terdiri dari 3 tahap yang dapat diwakilkan dengan pertanyaan :
+      	1. Apa permasalahannya?
+      	2. Bagaimana masing-masing alternatif beserta solusinya?
+      	3. Alternatif Solusi mana yang paling menguntungkan?
+      Hebert A. Simon (1960) meneruskan pemikiran John Deway dengan memperkenalkan tahap - tahap pengambilan keputusan, yaitu 
+      	1. Fase Intelegent
+      	2. Fase Desaign
+      	3. Fase Choice
+      	4. Fase Implementation
+      
+Gambar 22 Proses Pengambilan Keputusan
+
+      Pada Fase Intelegent, dilakukan penyeledikan mengenai lingkungan intern dan ekstern dari pengambil keputusan, untuk menemukan kondisi yang mempengaruhi keputusan tersebut berdasarkan asumsi dan penyederhanaan. Proses yang dijalankan pada fase ini adalah menemukan masalah, mengklasifikasi masalah, menguraikan masalah, dan menetapkan masalah.
+      Pada Fase Desaign, Model permasalahan mulai dibentuk. Proses yang dijalankan pada fase ini adalah, menetapkan komponen model, membuat struktur model, menyeleksi prinsip pemilihan (kriteria evaluasi), melakukan pengembangan alternatif, memprediksi hasil, mengukur hasil, dan menerapkan skenario pemecahan masalah.  Hasil dari fase ini adalah model yang telah divalidasi.
+      Pada Fase Choice, dilakukan  evaluasi keuntungan dan biaya dari kemungkinan dan tindakan yang tersedia. pada fase ini juga dilakukan pemilihan alternatif yang terbaik. Hasil dari fase pilihan adalah verofolaso dam testing dari pilihan yang sudah diuji.
+      Fase Implementation atau fase penerapan, adalah dimana kita menerapkan pilihan yag sudah dipilih pada saat fase pilihan.
+      Seiring dengan perkembangan jaman, diperlukan pengambilan keputusan secara bersama, atau dikenal dengan Grup Decision Maker. Oleh karena itu, dilakukan modifikasi dari model Simon. Tahapan untuk proses pengambilan keputusan bersama adalah :
+1. Pengumpulan informasi (information gathering)
+2. Analisis
+3. Interaksi
+      Mirip dengan fase intelegent, pada fase pengumpulan informasi, lingkungan intern dan ekstern dari organisasi diselidiki untuk menemukan situasi-situasi keputusan yang akan timbul, lalu dikumpulkan informasi berkenaan dengan setiap situasi yang telah dideteksi, dan memperinci setiap alternatif cara penanganan untuk masing-masing situasi itu.
+      Kemudian pada fase analisis, berbagai hasil dari situasi keputusan yang mungkin dibawa serta oleh kombinasi masing-masing cara penanganan peserta dianalisis lalu disusun menurut urutan preferensi. Kemudian merancang strategi yang akan diterapkan untuk mencapai hasil yang dikehendaki pada tahap ini.
+      Terakhir pada fase interaksi, preferensi dan intuisi dikombinasikan secara eksplisit dan implisit kepada peserta-peserta lainnya dengan tujuan meyakinkan atau memaksa mereka untuk menyepakati hasil yang lebih disenangi (most prefered)
+2.2.3 Faktor yang Mempengaruhi Pengambilan Keputusan
+      Terdapat beberapa faktor yang dapat mempengaruhi pengambilan keputusan. Faktor tersebut adalah 
+1. Lingkungan
+   Lingkungan pada umumnya bersifat kompleks dan dinamis, memuat unsur persaingan, dan memiliki keterbatasan.
+2. Kemampuan Manusia
+   Manusia memiliki kecerdasan, persepsi dan falsafah. Kecerdasan digunakan untuk memahami dan menyusun tindakan. Persepsi untuk belajar dari apa yang dilihat dan dialami sehingga dapat memberi penilaian. Falsafah merupakan pandangan dan prinsip hidup sebagai preferensi terhadap berbagai hasil yang diharapkan dapat diperoleh dari kepuusan yang diambil.
+3. Intuisi
+   Intuisi mempengaruhi sebagian besar keputusan yang dibuat dalam hidup. Mekanisme kerja intuisi tidak dapat dijabarkan, intuisi adalah sesuatu yang irasional karena didasarkan dari perasaan.
+4. Keputusan dan Hasil
+   Keputusan dan Hasil adalah sesuatu yang berbeda, namun dalam prakteknya manusia lebih sering mengatakan bahwa hasil baik merupakan imbas dari keputusan yang tepat. Paradigma ini menunjukkan bahwa seringkali kualitas keputusan dinilai dari hasilnya. Seharusnya menilai keputusan didasarkan oleh kekonsistenan keputusan tersebut. Hal tersebut disebabkan oleh variabel yang dapat kita kontrol dalam pengambilan keputusan adalah keputusan tersebut, bukan hasilnya.
+
+2.3 SISTEM PENDUKUNG KEPUTUSAN
+      Sistem Pendukung Keputusan adalah sebuah sistem yang mendukung seseorang atau sekelompok pengambil keputusan untuk memecahkan semi terstruktur.
+2.3.1 Karakteristik Sistem Pendukung Keputusan
+
+Gambar 23 Proses Karateristik Sistem Pendukung Keputusan
+
+1. Sistem Pendukung Keputusan menyediakan dukungan bagi pengambil keputusan utamanya pada situasi semi terstruktur dan tak terstruktur dengan memadukan pertimbangan manusia dan informasi terkomputerisasi. Berbagai masalah tidak dapat diselesaikan atau tidak dapat diselesaikan dengan memuaskan oleh sistem terkomputerisasi lain (EDP atau MIS).
+2. Dukungan disediakan untuk berbagai level managerial yang berbeda, mulai dari pimpinan sampai manager lapangan.
+3. Dukungan disediakan bagi individu dan juga bagi grup. Berbagai maslah organisasional melibatkan pengambilan keputusan dari orang dalam grup. Untuk masalah yang strukturnya lebih sedikit seringkali hanya membutuhkan keterlibatan beberapa individu dari departement dan level organisasi yang berbeda
+4. Sistem Pendukung Keputusan menyediakan berbagai keputusan yang beruurutan atau saling berkaitan
+5. Sistem Pendukung Keputusan mendukung berbagai fase proses pengambilan keputusan : intelegent, desaign, choice, dan implementation
+6. Sistem Pendukung Keputusan mendukung berbagai proses pengambilan keputusan dan style yang berbeda; ada kesesuaian antara Sistem Pendukung Keputusan dan atribut pengambil keputusan individu.
+7. Sistem Pendukung Keputusan selalu bisa beradaptasi sepanjang masa. Dalam artian pengamblian keputusan harus reaktif, mampu mengatasi perubahan kondisi secepatnya dan berdaptasi untuk membuat Sistem Pendukung Keputusan selalu bisa menangani perbuahan jaman. Sistem Pendukung Keputusan bersifat flexible, sehingga user dapat menambahkan, menghapus, mengkombinasikan, mengubah, atau mengatur kembali elemen-elemen dasar. Kemampuan ini memberikan analisis yang tepat dan cepat.
+8. Sistem Pendukung Keputusan mudah untuk digunakan. User harus merasa nyaman dengan sistem ini. User-friendly, fleksibel, grafis, dan antarmuka sesuai dengan bahasa manusia. Kemudahan penggunaan diimplikasikan pada mode yang interaktif.
+9. Sistem Pendukung Keputusan mencoba meningkatkan efektifitas dari pengambilan keputusan (akurasi, jangka waktu, kualitas), lebih daripada efisiensi yang bisa diperoleh
+10. Pengambilan Keputusan memiliki kontrol menyeluruh terhadap semua langkah proses pengambilan keputusan dalam menyelesaikan masalah. Sistem Pendukung Keputusan secara khusus ditujukan untuk mendukung dan tidak menggantikan pengambil keputusan.
+11. Sistem Pendukung Keputusan mengarah pada pembelajaran, yaitu mengarah pada kebutuhan baru dan penyempurnaan Sistem.
+12. User atau pengguna harus mampu menyusun sendiri sistem yang sederhana. Sistem yang lebih besar dapat dibangun dalam organisasi dengan melibatkan bantuan teknisi SI/IT
+13. Sistem Pendukung Keputusan menggunakan model dalam menganalisis berbagai keputusan. Kemampuan pemodelan ini menjadikan percobaan yang dilakukan dapat dilakukan pada berbagai konfigurasi yang berbeda.
+14. Sistem Pendukung Keputusan tingkat lanjut dilengkapi dengan komponen knowledge yang bisa memberikan solusi yang efisien dan efektif dari permasalahan. 
+2.3.2 Manfaat Sistem pendukung Keputusan
+      Beberapa keuntungan Sistem Pendukung Keputusan yang dikemmukakan oleh Dr. Irfan Subakti antara lain : 
+1. Mampu mendukung pencarian solusi dari masalah yang kompleks.
+2. Respon cepat pada situasi yang tak diharapkan dalam kondisi yang berubah ubah
+3. mampu menerapkan berbagai strategi yang berbeda pada konfigurasi berbeda secara cepat dan tepat.
+4. Pandangan dan pembelajaran baru
+5. Memfasilitasi komunikasi
+6. Meningkatkan kontrol manajemen dan kinerja
+7. Menghemat biaya.
+8. keputusan lebih tepat, karena ditimbang dengan struktur
+9. Meningkatkan efektivitas manajerial, menjadikan manajer dapat bekerja lebih singkat dengan sedikit usaha.
+10. Meningkatkan produktivitas analisis 
+2.3.3 Jenis Sistem Pendukung Keputusan
+      Sistem Pendukung Keputusan tidak mempunyai taksonomi yang pasti. Beberapa Ahli membedakan klasifikasi SPK berdasarkan relasinya dengan user, model dukungan yang diberikan, Cakupan (scope), Arsitekturnya
+      Haettenschwiler membedakan Sistem Pendukung Keputusan menjadi 3 jenis, berdasrakan relasinya dengan user, 
+1. Pasive DSS
+Sistem pendukung keputusan pasif adalah sistem yang membantu proses pemilihan keputusan, tapi sistem tersebut tidak dapat memberikan hasil keputusan secara langsung/eksplisit.
+2. Active DSS
+Sebaliknya, sistem pendukung keputusan aktif, dapat memberikan sebuah keputusan, atau solusi.
+3. Cooperative DSS
+Sistem pendukung keputusan kooperatif memberikan sebuah fleksibilitas kepada usernya, dengan memberikan wewenang kepada user untuk memodifikasi alternatif piliahn, sebelum memvalidasi alternatif tersebut
+2.3.4 Komponen Sistem Pendukung Keputusan
+      Terdapat beberapa ahli yang membedakan komponen yang terdapat dalam Sistem Pendukung Keputusan. Sprague and Carlson membedakan komponen Sistem Pendukung Keputusan menjadi 3, yaitu
+1. Database Mangement System (DBMS)
+2. Model-Base Management System (MBMS)
+3. Dialog Generation and Management System (DGMS)
+
+      Haag, juga membedakan komponen Sistem Pendukung Keputusan menjadi 3, yaitu :
+1. Data Mangement Component; Komponen managemen data yang menyimpan informasi
+2. Model Management Component; Komponen managemen model yang menangani kejadian representatif, kenyataan, atau situasi
+3. User Interface Management Component; Komponen Antar muka yang menangani antarmuka user dengan sistem.
+      
+      Turban menarik kesimpulan bahwa Komponen Sistem Pendukung Keputusan mempunyai sebuah model Konseptual dengan komponen :
+
+Gambar 24 Model Konseptual Komponen Sistem Pendukung Keputusan
+
+1. Data Management
+   Termasuk database, yang mengandung data yang relevan dari berbagai situasi dan diatur oleh software yang disebut Database Management System.
+2. Model Management
+   Melibatkan model finansial, statistikal, management science, dan atau berbagai model kuantitatif lainnya, sehingga dapat memberikan sistem kemampuan analitis dan management software yang diperlukan
+3. Communication
+   Komunikasi atau sering diekanl dengan dialog subsistem. Memungkinkan user untuk dapat berkomunikasi dan memberikan perintah kepada Sistem Pendukung Keputusan melalui subsistem ini. Dapat dikatakan juga sebagai penyedia antarmuka
+4. Knowledge Management 
+   Sebuah subsistem opsional yang dapat mendukung sistem lain atau bertindak sebagai komponen sendiri. Knowledge management mengakomodasi Sistem Pendukung Keputusan untuk menentukan model yang diperlukan.
+      
+2.3.4.1 Data Management Subsystem
+      Terdiri dari beberapa elemen, yaitu database Sistem Pendukung keputusan, Database management system, Data directory, Query facility.
+
+Gambar 25 Model DBMS
+
+      Database Management System (DBMS) terkadang dibagi menjadi beberapa database terpisah dengan tujuan :
+1. Kontrol yang lebih besar terhadap data
+2. Manajemen data yang lebih baik
+3. Database yang terpisah lebih efisien dikarenakan database ditujukan untuk memproses data.
+4. Sistem Pendukung Keputusan bisa melibatkan berbagai fungsi, sehingga membutuhkan input dari beberapa database. Dengan melakukan ekstrasi ke dalam satu database, maka penggunaan data akan lebih efisien dan mudah.
+5. Perubahan dan update lebih cepat dan mudah
+6. Akses lebih mudah dan manipulasi data bisa dilakukan
+7. Dapat mengadopsi struktur databse yang optimal untuk penggunaannya seperti object-oriented model.
+      Pemisahan database memberikan dampak dalam hal biaya pembangunan, keamanan dan perawatannya. Data tidak konsisten juga dapat terjadi bila terjadi modifikasi pada data-data redudansi oleh user yang berbeda beda.
+      Kemampuan Database Management System dalam Sistem Pendukung Keputusan :
+1. Dapat mengekstrak data agar bisa masuk ke dalam Sistem Pendukung Keputusan
+2. Mengupdate record data dan file dengan lebih efisien
+3. Menghubungkan data dari berbagai source
+4. Menampilkan data dari database dalam queries dan report
+5. Menyediakan keamanan data menyeluruh ( termasuk proteksi dari akses yang tidak berhak, kemampuan recover dari crash)
+6. Menangani data personal dan tidak resmi shingga user dapat mencoba berbagai solusi alternatif berdasarkan pertimbangan user
+7. Menyuguhkan penampilan data secara lebih kompleks dan proses manipulasi berdasarkan query yang diberikan
+8. Melacak Penggunaan data.
+ Gambar 26  Peranan DBMS dalam Sistem Pendukung Keputusan
+
+
+2.3.4.2 Model Management Subsystem
+      Terdiri dari Model base, model base management system, modeling language, model directory, model execution.
+
+Gambar 27  Skema Model Management subsystem
+
+      Model Base Management System (MBMS) adalah suatu sistem software dengan fungsi sebagai : pembuat model, penggunaan subrutin, building block; pembangkitan rutin dan laporan baru; update dan perubahan model; manipulasi data.
+      MBMS bisa menghubungkan berbagai model dengan jalur yang diinginkan melalui suatu database, sehingga :
+1. Membuat model lebih mudah dan cepat
+2. Memberikan user kelelusasaan untuk memanipulasi model, sehingga dapat menyusun percobaan dan melakukan analisis sensitivitas dari “what-if” ke pencarian goal.
+3. Menyimpan dan mengatur berbagai jenis model dalam bentuk logik dan terintegrasi
+4. Mengakses dan mengintegrasikan model building block
+5. Mengkatalogkan dan menampilkan direktori model untuk digunakan oleh beberapa individu dalam organisasi
+6. Melacak model, data dan penggunaan aplikasi
+7. Menghubungkan model dengan jalurnya yang sesuai dengan database
+8. Mengatur dan merawat model base dengan fungsi manajemen yang mempunyai analogi dengan database management : menyimpan, mengakses, menjalankan, update, link, catalog, dan query
+      Aktivitas yang dilakukan oleh model managemen adalah mengontrol jalan model (model execution) dan mengkombinasikan operasi dari berbagai model jika diperlukan (model integration)
+2.3.4.3 Knowledge Subsystem
+      Knowledge subsystem biasa juga dikenal dengan Expert System (ES), atau sistem kepakaran. Komponen knowledge subsystem menyediakan pengetahuan yang dapat meningkatkan operasi dari komponen Sistem Pendukung Keputusan lainnya. Komponen ini terdiri dari satu atau beberapa ES, seperti halnya data dan model management, pada software Knowledge management terdapat eksekusi dan integrasi yang diperlukan dari ES. Sistem Pendukung Keputusan yang mempunyai Knowledge subsystem dapat disebut sebagai Knowledge-based DSS atau Sistem Pendukung Keputusan berbasis pengetahuan
+2.3.4.4 User Interface Subsystem
+      User Interface subsystem disebut juga Dialog Generation and Management System (DGMS). DGMS terdiri dari berbagai program yang mampu melakukan hal berikut ini :
+1. Berinteraksi dengan berbagai dialog style yang berbeda
+2. Menyimpan, menambang, dan menganalisis penggunaan dialog yang dapat digunakan untuk meningkatkan dialog system.
+3. Mengakomodasi user dengan berbagai peralatan input yang berbeda
+4. Menghadirkan data dengan berbagai format dan peralatan output berbeda
+5. Memeberikan user kemampuan untuk membantu diagnosis rutin dan saran atau dukungan lainnya.
+6. Menyediakan antarmuka user ke database dan model base
+7. Membuat struktur data untuk menjelaskan output.
+8. Menyimpan data input dan output
+9. Menyediakan grafis berwarna, grafis tiga dimensi dan data plotting.
+10. Memiliki windows yang memungkinkan berbagai fungsi untuk ditampilkan bersamaan.
+11. Dapat mendukung komunikasi diantara user dan pembuat Sistem Pendukung Keputusan
+12. Menyediakan training dengan contoh contoh sehingga dapat memandu user.
+13. Menyediakan fleksibilitas yang dapat beradaptasi, sehingga Sistem Pendukung Keputusan mampu mengakomodasi masalah yang berbeda.
+
+ 
+Gambar 28  Skema Dialog Management
+
+2.3.5 Tahap Pengembangan Sistem Pendkuung Keputusan
+      Tahap tahap pengembangan SPK menurut Turban Efrain, terbagi menjadi 7 tahap, yaitu :
+1. Tahap A : Planning (Perencanaan)
+      pada tahap ini, mulai terdapat kebutuhan bisnis yang tidak dapat terpenuhi. Dengan kata lain, terdapat masalah yang harus diselesaikan dengan Sistem Pendukung Keputusan. Permasalahan tersebut akan didiagnosa, dimana hasil diagnosa permasalahan akan dijadikan tujuan akhir Sistem Pendukung Keputusan yang akan dibangun.
+2. Tahap B : Research (Penelitian)
+      Pada tahap ini, dilakukan identifikasi dari pendekatan yang relevan untuk menempatkan kebutuhan pengguna dan sumber yang dibutuhkan.
+3. Tahap C : System Analisis & Conceptual Desaign ( Analisis Sistem dan Perancangan Konseptual )
+      Pada tahap ini, dilakukan pendekatan pembangunan terbaik dan spesifikasi sumber untuk mengimplementasikan Sistem Pendukung Keputusan ini. Termasuk didalamnya segi Teknis, Staff, keuangan, pengalokasian sumber sumber, dan perancangan pengerjaan.
+4. Tahap D : Desaign (Perancangan)
+      Spesifikasi terperinci dari kemampuan sistem, termasuk struktur dan ciri sistem yang akan di gunakan. Pada tahap ini dilakukan pula pemilihan perangkat lunak yang akan digunakan.
+5. Tahap E : Building (Pembangunan) 
+      Pada tahap ini,  dilakukan perancangan sistem. lalu dibangunlah sistem yang sesuai dengan perancangan dan peralatan yang dipakai untuk membangun sistem tersebut. 
+6. Tahap F : Implementasi
+      Proses penerapan sistem kepada instansi yang akan menggunakan sistem pendukung keputusan tersebut
+      	Tahap ini dibagi menjadi :
+i. Pengujian : sistem yang sudah dibangun, diuji kevalidannya dengan realitas yang ada.
+ii. Evaluasi : sistem tersebut dikaji ulang, apakah terdapat kesalahan atau penambahan yang diperlukan.
+iii. Demonstrasi : Menunjukkan sistem yang sudah lulus tahap evaluasi tersebut kepada user.
+iv. Pelatihan : Melakukan pelatihan user, agar terbiasa dengan sistem.
+v. Penyebaran : Melakukan penginstalan ke semua user.
+      
+8. Tahap G : Perawatan dan Dokumentasi
+      Pada tahap ini, dilakukan pendataan sistem dan komunitas. Sehingga bila terdapat perubahan, dapat diketahui melalui dokumentasi, dan dilakukan perawatan  atau perubahan yg diperlukan.
+9. Tahap H : Adaptasi
+      Pada tahap ini, sistem akan mengkaji ulang kebutuhan pengguna yang bisa saja berubah dikarenakan perubahan pada komunitas. tahap ini bertujuan untuk menanggapi kebutuhan tersebut.
+2.4 PENGAMBILAN KEPUTUSAN KRITERIA GANDA
+2.4.1 Trade Off
+      Trade-Off adalah suatu metode dalam penyelesaian  masalah yang menggunakan kriteria ganda. Cara kerja trade off adalah dengan membuat daftar opsi dengan 2 sisi. 1 sisi untuk daftar opsi yang baik, sisi lain untuk yang kurang baik. Lalu semua list diberi nilai awal 1. seperti pada gambar 
+      :
+Gambar 29 Contoh Trade-Off step 1
+
+      Kemudian dari list tersebut kita mengurangi opsi yang dapat di kompromikan menjadi 0, seperti pada contoh :
+ 
+Gambar 210 Contoh Trade-Off step 2
+      
+      Dengan melakukan Step 2 berkali-kali dan melakukan pengeliminasian terhadap opsi yang dapat dikompromikan dengan mengubah variabel kolom B dan D menjadi 0. maka akan didapatkan 1 pemenang sebagai pilihan yang dipilih.
+       
+Gambar 210 Contoh Trade-Off 
+      Dari contoh diatas, dapat disimpulkan bahwa point membuka kantor baru, mempunyai 2 point lebih daripada pilihan lainnya, memperluas kantor yang sudah ada. Sehingga sistem akan menampilkan alternatif pilihan yang terbaik adalah membuka kantor baru.
+2.4.2 Weighting Average
+      Pada Weighting Average method, para pengambil keputusan harus sepakat untuk mengisi bobot setiap variabel yang akan digunakan untuk mempertimbangkan alternatif keputusan yang akan dipilih. Setelah data bobot tersebut tersedia, maka Sistem akan menginformasikan nilai dari setiap variabel untuk masing – masing alternatif pilihan. Contoh kasus pada pemilihan jasa angkutan sebuah perusahaan 
+      
+Gambar 211 Contoh Penetapan nilai variabel pada Weighting Average
+      
+      Kemudian setelah bobot variabel ditetapkan, para pengambil keputusan dapat mengedit nilai untuk setiap variabel tersebut. Sistem akan menampilkan nama dengan perolehan nilai tertinggi.
+      
+Gambar 211 Contoh SPK Weighting Average Method
+2.4.3 Sequencial Elimination by Lexicography
+      Sequencial Elimination by Lexicography mengurutkan tingkat prioritas suatu variabel penentu keputusan dari yang sangat penting ke yang kurang penting. Seperti pada contoh kasus jasa pengiriman barang, diberikan variabel biaya, kerusakan, keterlambatan, keramahan, dan keluhan lain sebagai variabel penimbangnya.
+      
+Gambar 212 Contoh Penentuan level prioritas SE by lexicography
+      
+      Kemudian, setelah prioritas ditentukan,  Sistem akan menyajikan data secara berurut sesuai dengan tingkat prioritasnya, untuk kemudian diberi bobot oleh pengambil keputusan. Lalu pilihan akan dieliminasi secara bertingkat oleh Sistem, sebagai hasilnya sistem akan memberikan alternatif pilihan yang terbaik.
+      
+Gambar 213 Contoh SPK SE by lexicography
+2.4.4 Sequencial Elimination by Conjunctive Constraint
+      Sequencial Elimination by Conjunctive Constraint memiliki metode awal yang sama dengan SE by Lexicography. Langkah awalnya adalah menentukan level prioritas dari variabel penentu keputusan. Kemudian ditetapkan Standart penilaian untuk setiap variabel tersebut
+      
+Gambar 213 Contoh SPK SE by Conjunctive Constraint
+2.5 KURIKULUM JURUSAN TEKNIK INFORMATIKA UNPAR
+      Jurusan Teknik Informatika Unpar mempunyai visi “Menjadikan komunitas akademik di bidang teknologi informasi dengan jiwa wirausaha yang mengembangkan potensi lokal pada tataran internasional demi penigkatan martabat manusia. [URL-02] Setiap mahasiswa unpar diharapkan mempunyai kompetensi utama berupa :
+a. Mampu membuat program dalam bahasa pemrograman berorientasi obyek untuk menyelesaikan masalah 
+b. Mampu melakukan rancang bangun perangkat lunak dengan menggunakan metode, teknik, dan alat bantu tertentu berikut pendokumentasiannya
+c. Mempunyai sikap dan etika profesionalisme yang tinggi berdasarkan ketakwaan kepada Tuhan YME dan kecintaan terhadap tanah air.
+d. Mampu berpartisipasi dalam penelitian dalam bidang informatika
+e. Memiliki jiwa dan pengetahuan serta ketrampilan wirausaha di bidang Teknologi Informasi
+f. Memiliki kemampuan berfikir analitis dan kritis
+      Dan mempunyai kompetensi pendukung :
+a. Mempunyai interpersonal skill yang baik
+b. Mampu berkomunikasi dengan baik dan efektif dalam skala nasional dan internasional
+c. Mempunyai integritas yang tinggi
+d. Mampu bekerja sama dengan orang lain dalam kelompok
+      Dalam perkembangannya Jurusan Teknik Informatik Unpar memiliki 3 Sub-Jurusan yang memiliki kompetensi masing-masing. 
+      Sub-jurusan Ilmu Komputer memiliki kompetensi 
+a. Mampu mempelajari penemuan baru di bidang ilmu komputer
+b. Mampu mengidentifikasikan dan memecahkan masalah yang terkait dengan teknologi yang baru di bidang komputer
+c. Mampu mengembangkan ilmu komputer melalui riset 
+d. Mampu melanjutkan studi di bidang Teknologi Informasi
+Sub-Jurusan Teknologi Informasi Bisnis, diharapkan berkompetensi dalam:
+a. Mampu memberikan solusi teknologi masyarakat yang tepat guna bagi organisasi bisnis.
+b. Memiliki fondasi konsep bisnis dan ilmu managemen sumber daya yang memadai.
+c. Menguasai dan memiliki wawasan yang luas mengenai teknologi informasi yang menunjang proses bisnis
+Sub-Jurusan Telematika memiliki kompetensi :
+a. Dasar pengetahuan telematika dan memahami penerapannya di dunia nyata.
+b. Memiliki kemmapuan untuk menganalisis persoalan dalam bidang telematika
+c. Memiliki kemampuan untuk mengimplementasikan solusi hasil analisis dan berpartisipasi dalam proyek telematika
+2.6 KARAKTERISTIK MAHASISWA
+      Karakteristik mahasiswa sendiri menurut KBBI (Kamus Besar Bahasa Indonesia) mendefinisikan karakter sebagai tabiat, watak, sifat-sifat kejiawaan, atau budi pekerti yang membedakan seseorang dari orang lain [POE-76]. Sejalan dengan itu, Hornby mengartikan karakter sebagai watak (mental) kekuatan moral, kemampuan dan kualitas yang menjadikan pembeda seseorang atau benda dengan yang lainnya. Sedangkan Winkel, W.S menyatakan bahwa karakter ialah keseluruhan hasrat-hasrat manusia yang terarah pada suatu tujuan yang mengandung nilai moralitas, mengacu pada gaya hidup seseorang, tingkah laku yang konsisten dan lebih mudah diperkirakan. Setiap orang mempunyai sistem nilai yang dapat mengendalikan tingkah lakunya dalam kehidupan sehingga dapat membentuk "gaya" yang luas, berbeda dengan orang lain.
+      Dalam studinya, Sadirman AM,menyebutkan bahwa faktor yang dapat mempengaruhi keberhasilan mahasiswa dalam menempuh studinya adalah 
+      	1. Raw Input (masukan mentah)
+      	2. Instrumental Input (masukan penunjang)
+      	3. Instrumental Output (keluaran penunjang)
+      Dalam hal ini yang dimaksud dengan Raw Input adalah mahasiswa tersebut sendiri sehubungan dengan ujian saringan masuk universitas tersebut. Kemampuan awal berhubungan dengan prestasi akademik yang dicapai peserta didik, makin tinggi atau luas pengetahuan dan ketrampilan yang dimiliki sewaktu akan memasuki program pengajaran dengan sendirinya akan memperbesar kemungkinan untuk memperoleh hasil belajar yang baik[SIA–89].
+      Namun dalam studi kasus mengenai kualitas mahasiswa yang diterima dari jalur PMDK dan non-PMDK, ditemukan beberapa kasus bahwa terdapat mahasiswa non PMDK yang mempunyai IPK lebih baik dibandingkan dengan mahasiswa yang menempuh jalur PMDK dalam saringan masuknya.
+      Karakteristik mahasiswa sangat erat kaitannya dengan sifat dasarnya dan menunjuk pada suatu aspek dalam kepribadian yaiut sifat individual yang dapat memberikan pengaruh terhadap proses pembelajaran. Ditinjau dari sifat dasarnya, Syah menyimpulkan bahwa terdapat 5 karakteristik mahasiswa dalam proses pembelajaran yaitu intelegensi, sikap, bakat, minat, motivasi
+Dalam studinya mengenai faktor-faktor yang mempengaruhi keberhasilan studi mahasiswa, Syafrudin mengemukakan bahwa, terdapat faktor yang berpengaruh secara langsung dan tidak langsung pada keberhasilan belajar mahasiswa. Syafrudin menggunakan metode persamaan struktural (SEM) dengan model keberhasilan studi dengan indikator IPK. dia menggunakan faktor Total SKS, status bekerja, jenis kelamin, tempat tinggal, sebagai faktor internal. Kemudian faktor pendidikan ayah dan penghasilan orangtua sebagai faktor eksternal. Syafrudin juga merumuskan bahwa faktor tersebut mempengaruhi minat dan pemikiran seseorang yang sudah dianggap dewasa
+      Minat mahasiswa lebih sulit ditelusuri dibandingkan dengan minat remaja atau Siswa SMA, dikarenakan mahasiswa sudah mencapai periode dewasa, namun ada kemungkinan belum mencapai kematangan secara penuh. Sehingga mereka mempunyai minat yang kuat, tetapi untuk mengetahui dan memotivasi minat tersebut dibutuhkan bimbingan yang kuat dari orang di sekelilingnya [SYA-06]
+      .
+
+
+3 [Nomor Bab]
+DAFTAR REFERENSI
+      
+      
+[MCL-95]	McLeod,R. Sistem Informasi Manajemen, Jakarta : PT Prenhallindo, 1995
+[POE-76]	Poerwadarminta, W.J.S. 1976. Kamus Umum Bahasa Indonesia. Jakarta: P.N. Balai Pustaka.
+[PPS-77]	Pohan, H.I., Pengantar Perancangan Sistem, Erlangga, 1977.
+[SAI-98]	Azwar, Saifuddin. 1998. Sikap Manusia. Yogyakarta: Pustaka Pelajar.
+ [SIA–89]	Siagian, P.S. , 1989. Teori Motivasi dan Aplikasinya. Penerbit Bina Aksara, Jakarta.
+[SYA-06]	Syafrudin. 2006. Analisis Faktor Faktor yang Mempengaruhi Keberhasilan Studi Mahasiswa Program Sarjana Ekstensi Manajemen Agrobisnis IPB (Pendekatan Model Persamaan Struktural. Bogor : IPB
+[TUR-95]	Turban, Efraim, “Decision Support and Expert Systems : Management Support Systems, Fourth Edition, Prentice-Hall, Inc, United States of America, 1995
+[URL-01]	Unknown, “Pengertian sistem”, Tanggal Akses 26 September 2010, http://www.creativebrain.web.id/media.php?action=readnews&id=84&title=Pengertian%20Sistem%20Menurut%20Para%20Ahli
+[URL-02]	Juklak Teknik Informatika Unpar, Tanggal Akses 27 September 2010 http://www.unpar.ac.id/main.php?
+ [VER-09]	Vercellis, Carlo. “Business Entelligence : data mining anda optimization for decision making”, Chichester : John Wiley & Sons, 2009.
+
+
+1 [Nomor Bab]
+
+
+
+
+
+
+
+
+
+
+
+
+iii
+
+
+2-31	
+
+
+
+
+1-1
+
+2-5
+
+
+
+
+
+ix
+
+
+B-1
+
+

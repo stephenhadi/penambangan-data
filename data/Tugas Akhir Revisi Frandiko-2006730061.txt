@@ -1,0 +1,1067 @@
+Tugas Akhir
+
+SISTEM PENDUKUNG KEPUTUSAN 
+PEMILIHAN SEPEDA
+
+
+
+
+
+Frandiko Usman
+NPM: 2006730061
+
+
+
+PEMBIMBING UTAMA: Rosa de Lima E. P., Dra., M.Kom.
+PEMBIMBING SERTA: Beatrix, S.Kom.
+
+
+
+PROGRAM STUDI TEKNIK INFORMATIKA
+FAKULTAS TEKNOLOGI INFORMASI DAN SAINS
+UNIVERSITAS KATOLIK PARAHYANGAN
+BANDUNG
+2010
+TUGAS AKHIR
+
+SISTEM PENDUKUNG KEPUTUSAN 
+PEMILIHAN SEPEDA
+
+
+
+
+Frandiko Usman
+NPM: 2006730061
+
+
+BANDUNG, 18 Mei 2010
+MENYETUJUI:
+PEMBIMBING UTAMA
+
+
+Rosa de Lima E. P., Dra., M.Kom.PEMBIMBING SERTA
+
+
+Beatrix, S.Kom
+PROGRAM STUDI TEKNIK INFORMATIKA
+FAKULTAS TEKNOLOGI INFORMASI DAN SAINS
+UNIVERSITAS KATOLIK PARAHYANGAN
+BANDUNG
+2010
+
+DAFTAR ISI
+
+
+DAFTAR ISI	i
+DAFTAR GAMBAR	iii
+BAB 1  PENDAHULUAN	1-1
+1.1	Latar Belakang	1-1
+1.2	Rumusan Masalah	1-2
+1.3	Tujuan	1-2
+1.4	Batasan Masalah	1-2
+1.5	Metodologi Penelitian	1-3
+1.6	Sistematika Pembahasan	1-4
+BAB 2  LANDASAN TEORI	2-1
+2.1	Sistem Informasi	2-1
+2.2	Hirarki Sistem Informasi	2-1
+2.3	Pengambilan Keputusan	2-4
+2.4	Sistem Pendukung Keputusan	2-5
+2.4.1	Karakteristik dan Kemampuan Sistem Pendukung Keputusan	2-6
+2.4.2	Komponen Sistem Pendukung Keputusan	2-8
+2.4.3	Manfaat SPK	2-9
+2.5	Pengambilan Keputusan Kriteria Ganda	2-10
+2.6	Sepeda	2-19
+BAB 3  ANALISIS	3-1
+3.1	Analisis Kebutuhan Sistem	3-1
+3.1.1	Analisis Karakteristik dan Kemampuan Sistem Pendukung Keputusan PilihSepeda	3-1
+3.1.2	Manfaat SPK PilihSepeda	3-3
+3.1.3	Komponen SPK PilihSepeda	3-3
+3.2	Analisis Kebutuhan Data	3-3
+3.2.1	Wawancara dan Observasi	3-4
+3.2.2	Penyebaran Kuesioner	3-4
+3.3	Analisis Hasil Pengumpulan Data	3-4
+3.4	Metode Pengambilan Keputusan	3-9
+3.4.1	Penetapan Kandidat Sepeda	3-9
+3.4.2	Metode Analytical Hierarchy Process	3-11
+3.5	Analisis Kebutuhan Perangkat Lunak	3-19
+3.5.1	Use Case Diagram	3-20
+3.5.2	Entity Relationship Diagram	3-25
+3.5.3	Class Diagram	3-25
+BAB 4  PERANCANGAN	4-1
+4.1	Rancangan Antarmuka Sistem Pendukung Keputusan Pemilihan Sepeda	4-1
+4.1.1	Rancangan Antarmuka Home	4-1
+4.1.2	Rancangan Antarmuka Login Admin	4-2
+4.1.3	Rancangan Antarmuka Admin	4-2
+4.1.4	Rancangan Antarmuka Informasi Sepeda	4-3
+4.1.5	Rancangan Antarmuka Memilih Sepeda	4-3
+4.1.6	Rancangan Antarmuka Perbandingan Variabel	4-4
+4.1.7	Rancangan Antarmuka Perbandingan Kandidat Alternatif Berdasarkan Safety/handling	4-4
+4.1.8	Rancangan Antarmuka Perbandingan Kandidat Alternatif Berdasarkan Tampilan/design	4-5
+4.1.9	Rancangan Antarmuka Perbandingan Kandidat Alternatif Berdasarkan Merek	4-6
+4.1.10	Rancangan Antarmuka Hasil Seleksi	4-6
+DAFTAR REFERENSI	1
+ 
+
+DAFTAR GAMBAR
+
+Gambar 2- 1 Hirarki Sistem Informasi	2-2
+Gambar 2- 2 Fase Pengambilan Keputusan	2-4
+Gambar 2- 3 Karakteristik dan Kemampuan SPK	2-6
+Gambar 2- 4 Komponen SPK	2-8
+Gambar 2- 5 Tabel Penggunaan Metode Weighting Method	2-11
+Gambar 2- 6 Penggunaan Metode Sequential Elimination by Lexicography	2-12
+Gambar 2- 7 Hasil penyempitan alternatif pilihan dengan metode sequential elimination by lexicography	2-12
+Gambar 2- 8 Penggunaan Sequential Elimination by Conjunctive Constraint	2-13
+Gambar 2- 9 Tabel Preferensi	2-14
+Gambar 2- 10 Matriks Pairwise untuk Kriteria Pemilihan Mobil Baru	2-15
+Gambar 2- 11 Hasil Matriks Pecahan dalam Bentuk Desimal	2-15
+Gambar 2- 12 Hasil Perkalian Matriks dengan Mengkuadratkan Matriks Pairwise	2-16
+Gambar 2- 13 Langkah Kedua dalam Proses Normalisasi Eigenvector	2-16
+Gambar 2- 14 Iterasi Kedua Proses Normalisasi Eigenvector, Langkah Kedua	2-16
+Gambar 2- 15 Hitung Beda antar Iterasi 1 dan 2	2-17
+Gambar 2- 16 Eigenvalue Hasil Iterasi ke 3	2-17
+Gambar 2- 17 Urutan Prioritas untuk Setiap Kriteria dari Hasil Normalisasi Eigenvector Iterasi ke 2	2-17
+Gambar 2- 18 Hasil Perhitungan Menggunakan Metode Eigenvector untuk Setiap Alternatif Berdasarkan Kriteria	2-17
+Gambar 2- 19 Pohon Hierarki Bobot Kriteria dan Alternatif Menggunakan Metode Eigenvector	2-18
+Gambar 2- 20 Hasil Perkalian Matriks Alternatif dan Matriks Kriteria	2-18
+Gambar 2- 21 Urutan Prioritas Alternatif, dengan Clio Menempati Urutan Tertinggi	2-19
+Gambar 2- 22 Sepeda Rancangan Baron Karls Drais von Sauerbronn	2-19
+Gambar 2- 23 Anatomi Sepeda	2-22
+Gambar 3- 1 Usia Responden	3-4
+Gambar 3- 2 Jenis Kelamin Responden	3-5
+Gambar 3- 3 Sudah pernah membeli sepeda sebelumnya?	3-5
+Gambar 3- 4 Harga sepeda yang berkualitas	3-6
+Gambar 3- 5 Kelompok warna sepeda	3-6
+Gambar 3- 6 Jenis Sepeda yang paling diketahui	3-7
+Gambar 3- 7 Apakah mengalami kesulitan mendapatkan informasi tentang sepeda?	3-8
+Gambar 3- 8 Informasi tentang sepeda didapat dari?	3-8
+Gambar 3- 9 Form Penentuan Batasan Secara Manual	3-10
+Gambar 3- 10 Penggunaan Metode Sequential Elimination by Conjunctive Constraint	3-10
+Gambar 3- 11 Tabel Preferensi	3-12
+Gambar 3- 12 Penilaian Pairwise comparison Pengguna	3-12
+Gambar 3- 13 Matriks Pairwise berdasarkan Pairwise comparison pada variabel	3-13
+Gambar 3- 14 Matriks Pairwise variabel dalam bentuk desimal	3-13
+Gambar 3- 15 Hasil perkalian matriks dengan mengkuadratkan matriks pairwise	3-13
+Gambar 3- 16 Proses normalisasi hasil perkalian matriks pairwise	3-13
+Gambar 3- 17 Hasil metode Eigenvector iterasi pertama	3-13
+Gambar 3- 18 Hasil metode Eigenvector iterasi ketiga	3-14
+Gambar 3- 19 Data nilai RI	3-15
+Gambar 3- 20 Pairwise comparison terhadap setiap pasang alternatif sepeda berdasarkan variabel safety/handling	3-16
+Gambar 3- 21 Pairwise comparison terhadap setiap pasang alternatif sepeda berdasarkan variabel tampilan/design	3-16
+Gambar 3- 22 Pairwise comparison terhadap setiap pasang alternatif sepeda berdasarkan variabel merek	3-17
+Gambar 3- 23 Hasil metode eigenvector alternatif sepeda berdasarkan variabel safety/handling	3-17
+Gambar 3- 24 Hasil metode eigenvector alternatif sepeda berdasarkan variabel tampilan/design	3-17
+Gambar 3- 25 Hasil metode eigenvector alternatif sepeda berdasarkan variabel merek	3-18
+Gambar 3- 26 Pohon hirarki bobot variabel dan alternatif menggunakan metode eigenvector	3-18
+Gambar 3- 27 Hasil perkalian matriks alternatif dan matriks variabel	3-19
+Gambar 3- 28 Use Case Diagram	3-20
+Gambar 3- 29 Entity Relationship Diagram	3-25
+Gambar 3- 30 Class Diagram	3-25
+Gambar 4- 1 Rancangan Antarmuka Home	4-1
+Gambar 4- 2 Rancangan Antarmuka Login Admin	4-2
+Gambar 4- 3 Rancangan Antarmuka Admin	4-2
+Gambar 4- 4 Rancangan Antarmuka Informasi Sepeda	4-3
+Gambar 4- 5 Rancangan Antarmuka Memilih Sepeda	4-3
+Gambar 4- 6 Rancangan Antarmuka perbandingan variabel	4-4
+Gambar 4- 7 Rancangan Antarmuka perbandingan kandidat alternatif berdasarkan safety/handling	4-5
+Gambar 4- 8 Rancangan Antarmuka perbandingan kandidat alternatif berdasarkan tampilan/design	4-5
+Gambar 4- 9 Rancangan Antarmuka perbandingan kandidat alternatif berdasarkan merek	4-6
+Gambar 4- 10 Rancangan Antarmuka Hasil Seleksi	4-7
+
+
+
+1 [Nomor Bab]
+BAB 1 
+PENDAHULUAN
+
+
+1.1 Latar Belakang
+　　　Beberapa tahun ini banyak orang kembali beralih menggunakan sepeda, baik untuk sekedar berolahraga, berkeliling komplek di sekitar tempat tinggal, pergi ke kantor, atau pun untuk belajar menyeimbangkan diri sebelum dapat menggunakan sepeda motor. Bersepeda memiliki banyak manfaat, di samping dapat membakar banyak lemak, juga membuat tubuh berolahraga secara maksimal, karena hampir semua persendian bekerja ketika mengendarai sepeda. 
+　　　Harga sepeda pada umumnya lebih murah di antara alat-alat transportasi lainnya. Perawatan sepeda juga tidak susah dan peralatan sepeda bisa didapatkan dimana saja, mulai daerah pedesaan hingga ke kota-kota besar. Sepeda juga memiliki banyak jenis dan ukuran disesuaikan dengan si pemakai.
+　　　Meskipun terlihat mudah dalam proses pembeliannya, tetapi memilih sepeda terkadang menjadi hal yang cukup sulit untuk diputuskan, selain pilihan model yang beragam, sepeda juga memiliki berbagai ukuran, sehingga tinggi badan serta usia pemakai mempengaruhi kenyamanan pemakaian sepeda, seringkali terjadi, orang tua membelikan anaknya sepeda tanpa membawa si anak karena ingin menjadikannya hadiah kejutan, ataupun membelikan sepeda untuk teman sebagai hadiah ulang tahun tetapi ketika si pemakai (anak atau teman) tadi ingin memakainya sepeda tersebut terlalu tinggi atau terlalu rendah untuk digunakan, serta model sepeda tidak sesuai keinginan.
+　　　Sistem pendukung keputusan?adalah bagian dari sistem informasi?berbasis komputer yang dipakai untuk mendukung pengambilan keputusan. Sistem ini dapat diaplikasikan untuk berbagai macam masalah yang berhubungan dengan pengambilan keputusan(decision making) salah satunya adalah pada kasus pemilihan sepeda.
+　　　Mengingat hal tersebut, penulis ingin mencoba membantu orang-orang yang ingin membeli sepeda agar si pemilik sepeda dapat memperoleh sepeda yang cocok serta efisien baik dari segi harga, kenyamanan, serta efisiensi dalam perawatan dan pemakaian sepeda yang digunakan. Bertitik tolak dari hal tersebut, penulis tertarik untuk melakukan penelitian dengan judul : “Sistem Pendukung Keputusan Pemilihan Sepeda”.
+1.2 Rumusan Masalah
+     Berdasarkan latar belakang penelitian yang telah dikemukakan sebelumnya, penulis merumuskan masalah yang akan diteliti sebagai berikut :
+1. Apa saja faktor atau atribut yang dipertimbangkan seseorang dalam memilih sepeda?
+2. Bagaimana membuat aplikasi sistem pendukung keputusan yang dapat membantu memilih sepeda secara baik?
+
+1.3 Tujuan
+　　　Berdasarkan rumusan masalah diatas, tujuan dilakukannya penelitian ini adalah untuk membantu masyarakat mencari faktor atau atribut yang digunakan dalam memilih sepeda dengan membuat sebuah aplikasi sistem pendukung keputusan yang dapat membantu memilih sepeda secara baik.
+
+1.4 Batasan Masalah
+ Batasan masalah pada penelitian ini adalah :
+1. Disebabkan oleh banyaknya merk sepeda yang ada saat ini, maka ditentukan batasan jumlah produk yang akan diteliti. Terdapat 3 merk sepeda yang menjadi bahan penelitian yaitu United, Wim Cycle, dan Polygon.
+2. Selain pembatasan merk diterapkan juga pembatasan tipe sepeda yang diteliti yaitu city bike, BMX, dan mountain bike.
+3. Sepeda yang diteliti yaitu 10 produk untuk setiap tipe berdasarkan masing-masing merk.
+1.5 Metodologi Penelitian
+Langkah-langkah yang akan ditempuh pada proses penelitian antara lain :
+1. Melakukan studi literatur
+Mempelajari konsep dan teori sistem pendukung keputusan serta hal-hal yang menyangkut tentang sepeda.
+2. Pengumpulan data
+Melakukan pengumpulan data berupa :
+a. Pembagian kuesioner pada pengguna maupun calon pembeli sepeda.
+b. Melakukan observasi pada beberapa toko sepeda serta website perusahaan sepeda.
+c. Melakukan wawancara dengan pemilik toko sepeda.
+3. Melakukan analisis terhadap kriteria yang diminati calon pembeli/pemilik sepeda terhadap sepeda yang diharapkan
+Tahap ini dilaksanakan agar penulis dapat mengetahui kriteria yang diinginkan oleh calon pembeli sepeda.
+4. Membuat rancangan dan implementasi sistem pendukung keputusan
+Tahap ini dilaksanakan untuk melakukan perancangan dan implementasi sistem pendukung keputusan pemilihan sepeda berdasarkan hasil analisis dan pengumpulan data yang telah dilakukan.
+5. Menguji sistem pendukung keputusan
+Tahapan ini dilakukan untuk menguji apakah sistem pendukung keputusan pemilihan sepeda yang dibuat sesuai dengan tujuan penelitian.
+6. Menarik kesimpulan dan membuat saran berdasarkan penelitian yang telah dilakukan.
+
+
+
+1.6 Sistematika Pembahasan
+	Bab 1 Pendahuluan berisi latar belakang, rumusan masalah, tujuan, hipotesis, batasan masalah, metodologi penelitian, sistematika pembahasan, dan rencana pelaksanaan dan jadwal.
+	Bab 2 Landasan teori berisi teori-teori tentang pemahaman mengenai keputusan, sistem pedukung keputusan serta teori yang berkaitan tentang sepeda serta sejarah sepeda.
+	Bab 3 Analisis sistem pendukung keputusan pemilihan sepeda berisi analisis terhadap kriteria yang diminati calon pembeli/pemilik sepeda terhadap sepeda yang diharapkan.
+	Bab 4 Perancangan perangkat lunak sistem pendukung keputusan pemilihan sepeda berisi perancangan dan implementasi sistem pendukung keputusan pemilihan sepeda berdasarkan hasil analisis dan pengumpulan data yang telah dilakukan.
+	Bab 5 Implementasi, pengujian dan eksperimen berisi implementasi dan pengujian perangkat lunak yang telah selesai dibuat dan melakukan eksperimen sistem pendukung keputusan pemilihan sepeda.
+	Bab 6 Kesimpulan dan Saran berisi kesimpulan dari seluruh bab dan saran.
+
+2 [Nomor Bab]
+BAB 2 
+LANDASAN TEORI
+
+
+2 
+2.1 Sistem Informasi
+　　　Sistem informasi memiliki banyak arti, menurut Gordon B Davis, sistem informasi dapat diartikan sebagai sebuah sistem pengguna-mesin yang terintegrasi yang menyediakan informasi untuk mendukung operasi, manajemen, serta pengambilan keputusan dalam sebuah organisasi. Sedangkan menurut John G. Burch sistem informasi adalah sebuah sistem yang terdiri atas sekumpulan komponen formal yang melakukan operasi pengolahan untuk :
+a) Memenuhi hukum dan persyaratan pengolahan data transaksional
+b) Memberikan informasi kepada manajemen untuk mendukung kegiatan perencanaan, pengendalian dan pengambilan keputusan 
+c) Menyediakan berbagai laporan, seperti yang diperlukan, untuk tingkat konstituen
+
+
+2.2 Hirarki Sistem Informasi
+     Sistem informasi dikembangkan untuk tujuan yang berbeda, tergantung pada kebutuhan bisnis. Sistem informasi terbagi menjadi berbagai jenis berdasarkan gambar 2-1 terdapat 9 jenis sistem informasi. Transaction Processing System(TPS) berfungsi pada tingkat operasional, TPS adalah sistem informasi komputerisasi yang dikembangkan untuk memproses data dalam jumlah besar untuk transaksi bisnis rutin seperti gaji dan persediaan. Pada knowledge level terdapat Knowledge Work System(KWS) dan Office Automation System(OAS). OAS biasanya mendukung pekerjaan yang melakukan analisis terhadap data-data yang ada, contoh dari OAS adalah aplikasi word processing, spreadsheets, desktop publishing dan video conferencing. KWS mendukung para pekerja profesional seperti ilmuwan dengan membantu mereka dalam upaya untuk menciptakan pengetahuan baru dan memungkinkan mereka untuk memberikan kontribusi kepada organisasi mereka atau masyarakat pada umumnya.
+
+
+Gambar 2- 1 Hirarki Sistem Informasi
+
+　　　Sistem informasi dikembangkan untuk tujuan yang berbeda, tergantung pada kebutuhan bisnis. Sistem informasi terbagi menjadi berbagai jenis berdasarkan gambar diatas terdapat 9 jenis sistem informasi. Transaction Processing System(TPS) berfungsi pada tingkat operasional, TPS adalah sistem informasi komputerisasi yang dikembangkan untuk memproses data dalam jumlah besar untuk transaksi bisnis rutin seperti gaji dan persediaan. Pada knowledge level terdapat Knowledge Work System(KWS) dan Office Automation System(OAS). OAS biasanya mendukung pekerjaan yang melakukan analisis terhadap data-data yang ada, contoh dari OAS adalah aplikasi word processing, spreadsheets, desktop publishing dan video conferencing. KWS mendukung para pekerja profesional seperti ilmuwan dengan membantu mereka dalam upaya untuk menciptakan pengetahuan baru dan memungkinkan mereka untuk memberikan kontribusi kepada organisasi mereka atau masyarakat pada umumnya.
+	Management Information System(MIS) merupakan sebuah sistem informasi yang berkerja karena adanya interaksi antara manusia dan komputer, hasil dari MIS biasanya digunakan di dalam membuat keputusan. Decision Support System(DSS) pada dasarnya hampir sama dengan MIS akan karena keduanya bergantung kepada data-data yang ada di dalam database, akan tetapi DSS lebih modern daripada MIS karena DSS lebih menekankan dukungan pengambilan keputusan dalam semua tahapan walaupun pengambilan keputusan pada akhirnya tetap merupakan wewenang dari pengambil keputusan. Expert System(ES) secara efektif menyerap dan menggunakan pengetahuan dari para ahli yang digunakan pada masalah-masalah yang pernah dialami sebelumnya di dalam sebuah organisasi. Berbeda dengan DSS, yang memberikan keputusan pengambilan keputusan kepada pengambil keputusan, sebuah ES memberikan langsung solusi terbaik untuk sebuah masalah spesifik. 
+	Group Decision Support System(GDSS) bertujuan untuk memberikan kelompok kesempatan memecahkan masalah secara bersama-sama dengan menyediakan beberapa fasilitas pendukung seperti polling, kuesioner, brainstorming, dan skenario perancangan. GDSS dirancang agar dapat meminimalisir efek negatif dari kelompok seperti kurangnya partisipasi karena takut akan balasan yang didapat karena mengungkapkan dari sudut pandang yang tidak popular atau bertentangan, selain itu juga agar berkurangnya dominasi dari anggota kelompok yang “vocal”.
+	Executive Support System(ESS) membantu para eksekutif untuk mengatur interaksi mereka dengan lingkungan eksternal dengan menyediakan grafik  dan dukungan komunikasi di tempat-tempat yang dapat diakses seperti di dalam ruang rapat ataupun ruang pribadi di perusahaan. Meskipun ESS mengandalkan informasi yang dihasilkan oleh TPS dan MIS, ESS membantu pengguna mengatasi masalah-masalah keputusan tidak terstruktur, yang tidak berada  di dalam aplikasi spesifik, dengan menciptakan sebuah lingkungan kondusif untuk memikirkan masalah-masalah strategis melalui informasi yang disediakan.
+	Berdasarkan penjelasan di atas, maka dapat dilihat bahwa SPK merupakan bagian dari sistem informasi.
+
+
+2.3 Pengambilan Keputusan
+　　　Pengambilan keputusan adalah proses memilih di antara beberapa alternatif tindakan dengan maksud untuk mencapai suatu tujuan atau beberapa tujuan. Proses pengambilan keputusan sendiri terbagi menjadi beberapa fase, fase-fase ini dapat dilihat pada gambar 2-2.
+
+Gambar 2- 2 Fase Pengambilan Keputusan 
+
+1. Intelligence phase
+Intelligence phase terdiri dari proses :
+a. Mengidentifikasi masalah
+b. Mengklasifikasi masalah
+c. Memperjelas permasalahan yang membutuhkan suatu keputusan
+2. Design phase
+Design phase terdiri dari tahap pencarian atau pengembangan dan menganalisa hal-hal yang mungkin dilakukan, termasuk pemahaman masalah serta menguji solusi yang layak. Model dari masalah dirancang, diuji, dan divalidasi. Proses dari pemodelan terdiri dari kombinasi seni dan ilmu pengetahuan. Sebagai ilmu pengetahuan, terdapat banyak standar kelas model yang tersedia, dan dengan latihan seorang analis dapat menentukan kelas model mana yang dapat diterapkan pada situasi yang sesuai. Sebagai seni, tingkat kreatifitas dan kecerdasan dibutuhkan ketika menentukan apakah penyederhanaan asumsi dapat bekerja, bagaimana menggabungkan fitur yang sesuai dari kelas model, dan bagaimana untuk mengintegrasikan model-model untuk mendapatkan solusi yang valid.
+3. Choice phase
+Choice phase merupakan bagian penting dari proses pengambilan keputusan. Choice phase merupakan tempat dimana keputusan dan komitmen untuk mengikuti hasil keputusan itu dibuat.
+4. Implementation phase 
+Proses implementasi pada dasarnya merupakan proses penerapan solusi yang ada. Proses ini meliputi menyetujui dan mengaktualisasikan alternatif solusi yang dipilih sebagai bentuk keputusan.
+
+2.4 Sistem Pendukung Keputusan
+　　　Sistem yang dimaksudkan untuk mendukung para pengambil keputusan dalam situasi pengambilan keputusan semi terstruktur.?Sistem pendukung keputusan dimaksudkan untuk menjadi alat bantu bagi para pengambil keputusan untuk memperluas kemampuan mereka tetapi tidak untuk menggantikan penilaian mereka.
+
+
+
+
+
+
+
+
+2.4.1 Karakteristik dan Kemampuan Sistem Pendukung Keputusan
+ 
+
+Gambar 2- 3 Karakteristik dan Kemampuan SPK 
+
+　　　Menurut Efraim Turban terdapat 14 karakteristik SPK seperti diperlihatkan pada gambar 2-3, karakteristik dan kemampuan yang ideal dimiliki oleh sebuah SPK adalah :
+1. Semistructured and unstructured problem
+SPK menyediakan dukungan bagi para pengambil keputusan terutama dalam situasi semi terstruktur dan tidak terstruktur dengan menyatukan penilaian manusia dan informasi terkomputerisasi.
+2. Support managers at different levels
+SPK menyediakan dukungan keputusan bagi berbagai tingkat manajerial yang berbeda. Mulai dari tingkat eksekutif hingga kepada manajer lapangan.
+3. Support groups and individual
+SPK mendukung keputusan bagi individu maupun kelompok, beberapa masalah terstruktur seingkali memerlukan keterlibatan beberapa individu dari departemen dan tingkat organisasi yang berbeda, bahkan bisa juga dari organisasi yang berbeda.
+4. Interdependent or sequential decisions
+SPK mendukung keputusan yang bersifat saling tergantung dan/atau keputusan sekuensial.
+5. Support intelligence,design,choice
+SPK mendukung seluruh fase pengambilan keputusan yaitu : intelligence, design, choice, dan implementation.
+6. Support variety of decision styles and process
+SPK mendukung berbagai cara dan gaya pengambilan keputusan.
+7. Adaptable and flexible
+SPK bersifat adaptif dari waktu ke waktu, pengambil keputusan harus reaktif, mampu menghadapi kondisi yang berubah cepat, dan mampu beradaptasi dengan SPK untuk memenuhi perubahan-perubahan yang terjadi. SPK juga bersifat fleksibel sehingga pengguna dapat menambahkan, menggabungkan, menghapus, mengubah atau mengatur kembali elemen-elemen dasar yang terdapat pada SPK.
+8. Interactive ease of use
+SPK bersifat user friendly sehingga pengguna dapat menggunakannya dengan mudah. User diharapkan nyaman dengan sistem yang ada sehingga dapat lebih mudah berinteraksi dengan SPK.
+9. Effectiveness not efficiency
+SPK dimaksudkan untuk meningkatkan efektifitas pengambilan keputusan(akurasi, ketepatan waktu, kualitas) bukan kepada efisiensinya(biaya membuat keputusan).
+10. Humans control the machine
+SPK secara khusus ditujukan untuk mendukung pengambilan keputusan dan tidak untuk menggantikan pengambil keputusan. Pengambil keputusan dapat menindaklanjuti rekomendasi yang diberikan SPK maupun mengabaikannya.
+
+
+11. Ease of development by end-users
+Pengguna sebaiknya mampu menyusun sendiri sistem yang sederhana. Sistem yang lebih besar dapat dibangun dalam organisasi pengguna dengan bantuan dari spesialis di bidang sistem informasi.
+12. Modelling and analysis
+SPK biasanya menggunakan pemodelan untuk menganalisis situasi pengambilan keputusan. Kapabilitas pemodelan memungkinkan percobaan dengan strategi yang berbeda di bawah konfigurasi yang berbeda.
+13. Data access
+SPK memungkinkan akses berbagai bentuk sumber data.
+14. Standalone, integration, web-based
+SPK dapat diintegrasikan dengan aplikasi lain dan didistribusikan melalui jaringan maupun internet.
+
+2.4.2 Komponen Sistem Pendukung Keputusan
+　　　Sebuah aplikasi SPK dapat terdiri atas beberapa komponen seperti pada gambar 2-4.
+
+Gambar 2- 4 Komponen SPK 
+1. Data management subsystem
+Subsistem ini meliputi database, yang berisi data-data yang relevan untuk digunakan oleh sistem. Database sendiri merupakan kumpulan data yang saling terkait yang diorganisasikan untuk memenuhi kebutuhan dan struktur organisasi, serta dapat digunakan oleh lebih dari satu orang melalui lebih dari satu aplikasi. Data yang ada disimpan dan dikelola oleh suatu database yang diorganisasikan dalam suatu sistem yang disebut Database Management System(DBMS). Melalui DBMS data dapat diakses serta diekstraksi dengan cepat oleh sistem.
+2. Model management subsystem
+Subsistem ini merupakan paket perangkat lunak yang meliputi data-data maupun model kuantitatif lainnya yang menyediakan kemampuan analisis dari sistem serta manajemen perangkat lunak yang sesuai.
+3. Knowledge-based management subsystem
+Subsistem ini dapat mendukung subsistem lainnya atau bertindak sebagai komponen tersendiri. Subsistem ini memberikan kecerdasan kepada sistem sehingga menambah informasi yang didapatkan oleh pengambil keputusan.
+4. User interface subsystem
+Pengguna SPK berkomunikasi serta memberikan perintah kepada SPK melalui subsistem ini, pengguna dianggap merupakan bagian dari sistem dimana dinyatakan oleh para peneliti bahwa kontribusi unik dari SPK berasal dari interaksi intensif antara SPK dengan pengambil keputusan.
+
+2.4.3 Manfaat SPK
+　　　SPK memiliki beberapa manfaat, diantaranya adalah :
+1. SPK memiliki kemampuan untuk mendukung pencarian solusi dari masalah yang kompleks.
+2. SPK memiliki kemampuan untuk menerapkan berbagai strategi yang berbeda pada konfigurasi yang berbeda secara cepat, tepat, dan objektif.
+3. Dengan menggunakan SPK pengguna dapat menghemat biaya, karena aplikasi SPK yang digunakan untuk pengambilan keputusan mengurangi/menghilangkan biaya yang timbul karena pengambilan keputusan yang keliru.
+4. Keputusan yang dihasilkan SPK lebih objektif dan konsisten dibandingkan dengan keputusan yang dibuat secara intuitif.
+5. SPK memberikan pengetahuan dan pembelajaran yang baru.
+6. SPK meningkatkan efektifitas manajerial, karena menjadikan pengguna dapat menyelesaikan pekerjaan dengan waktu yang lebih singkat dan dengan usaha yang lebih kecil.
+
+2.5 Pengambilan Keputusan Kriteria Ganda
+　　　Pendekatan kriteria ganda memungkinkan pengambil keputusan untuk menetapkan prioritas mereka, dan juga memungkinkan pembuat keputusan untuk melakukan analisis sensitivitas dengan menanyakan jenis pertanyaan “what-if”. Metode-medote ini meliputi weighting methods, sequential elimination by lexicography, sequential elimination by conjunctive constraints, goal programming, serta analytic hierarchy processing(AHP).
+　　　
+2.5.1 Weighting Method
+　　　Sebuah contoh dari penggunaan weighting methods dapat digambarkan pada masalah berikut. Sebuah keputusan pembelian akan dilakukan terhadap tiga database package yang diperkirakan cocok untuk bisnis. Setiap atribut  diberi nilai oleh pengambil keputusan, setelah memerika software package yang diberikan, pengambil keputusan memberi sebuah angka pada setiap atribut dari tiap database package, pada kasus ini kisaran angka adalah antara 1 sampai 10. Nilai total kemudian dikakulasikan di baris paling bawah dari tabel penilaian, dan pengambil keputusan kemudian memilih database package berdasarkan total nilai tertinggi. Pembuat keputusan tetap memiliki kesempatan untuk mengubah beberapa nilai untuk atribut atau bahkan skor yang ditetapkan untuk setiap database package dalam situasi “what-if” yang diinginkan. Pendekatan metode ini dapat dilihat pada gambar 2-5.
+
+
+
+Gambar 2- 5 Tabel Penggunaan Metode Weighting Method
+
+
+2.5.2 Sequential Elimination by Lexicography
+　　　Terkadang pengambil keputusan merasa weighting method menyamarkan fitur terbaik dari suatu alternatif dengan mengambil nilai rata-rata dari semua atribut. Salah satu metode yang mengutamakan individual adalah metode sequential elimination by lexicography. Metode ini lebih sedikit meminta input daripada metode weighting method karena atribut yang ada diurutkan menurut tingkat kepentingannya dibandingkan dengan memberikan nilai bobot dari suatu atribut.
+	Pada gambar 2-6 diperlihatkan sebuah tabel penilaian dengan menggunakan metode sequential elimination by lexicography. Sebuah matriks yang terdiri dari atribut dan alternatif dimasukkan ke dalam tabel. Tabel ini diurutkan pertama-tama ialah dengan menempatkan atribut dari paling atas(paling penting) hingga paling bawah(kurang penting). Kemudian dengan menempatkan alternate berurut baris demi baris. Pada langkah berikutnya hanya alternatif dari atribut pertama yang memiliki nilai tertinggi(pada kasus ini 10) yang akan dipertimbangkan. Dengan kata lain alternatif 5, 7, 3, dan 4 merupakan alternatif yang potensial. Kemudian atribut kedua dipertimbangkan, dan hanya alternatif 5 dan 4 yang dapat dipertimbangkan untuk langkah selanjutnya.
+	Hasil akhir yang merupakan alternatif terbaik ialah alternatif 5, diperlihatkan pada gambar 2-7 karena nilai yang atribut ketiga dari alternatif 5 lebih baik dibandingkan alternatif 4.
+
+Gambar 2- 6 Penggunaan Metode Sequential Elimination by Lexicography
+
+
+Gambar 2- 7 Hasil penyempitan alternatif pilihan dengan metode sequential elimination by lexicography
+
+2.5.3 Sequential Elimination by Conjunctive Constraint
+　　　Metode sequential elimination yang lainnya adalah dengan menggunakan conjunctive constraints, sesuai dengan namanya, pengambil keputusan memberikan batasan(constaints) atau standar, dan kemudian diproses dengan mengeliminasi semua alternatif yang tidak memenuhi batasan. Jika batasan yang diberikan terlalu ketat, seluruh alternatif dapat tereliminasi, tetapi jika batasan tidak terlalu ketat, banyak alternatif yang akan tersisa.
+	Pada gambar 2-8 diperlihatkan tabel yang menggunakan pendekatan sequential elimination by conjunctive constraint. Pada contoh di tabel, diperlihatkan pengambil keputusan mencoba untuk memilih kendaraan perusahaan yang sesuai. Atribut-atribut ditempatkan pada kolom A, sementara batasan ditempatkan pada kolom B, nilai untuk setiap batasan ditempatkan pada kolom C. Kolom D, F, H digunakan untuk memasukkan nilai numerik, sedangkan pada kolom E, G, I digunakan untuk memasukkan nilai benar(True) atau salah(False). Pada bagian bawah tabel, sebuah kondisi “AND” ditempatkan untuk memilih solusi yang paling sesuai dengan batasan, alternatif yang memiliki nilai benar(True) merupakan solusi yang paling sesuai, pada contoh di gambar 2-8 tersebut, maka solusi yang paling sesuai adalah Car 3.
+
+Gambar 2- 8 Penggunaan Sequential Elimination by Conjunctive Constraint
+
+2.5.4 Analytical Hierarchy Process
+　　　Analytical Hierarchy Process(AHP) adalah teknik pengambilan keputusan yang memasukkan kriteria ganda, baik yang bersifat nyata, tidak nyata, kualitatif, dan juga memperhitungkan adanya konflik maupun perbedaan.
+　　　AHP digunakan untuk mengukur prioritas dengan menyajikan kerangka logika dan penyelesaian masalah yang diaplikasikan secara luas oleh dunia bisnis dan organisasi, yaitu proses pengorganisasian persepsi, perasaan, penilaian dan pengalaman masa lalu ke dalam suatu hirarki yang akan mempengaruhi suatu keputusan.
+　　　AHP sangat cocok dan fleksibel digunakan untuk menentukan keputusan yang menolong pengambil keputusan untuk mengambil keputusan yang kualitatif dan kuantitatif berdasarkan segala aspek yang dimilikinya. Kelebihan lain dari AHP adalah dapat memberikan gambaran yang jelas dan rasional kepada pemngambil keputusan tentang keputusan yang dihasilkan.
+　　　Proses AHP mengharuskan pengambil keputusan untuk membuat keputusan yang berhubungan dengan kepentingan dari setiap kriteria dan kemudian mengindikasikan kecondongan berdasarkan keutamaan dari setiap kriteria untuk setiap alternatif.
+Terdapat 3 langkah dalam AHP, yaitu:
+1. Menentukan perbandingan antara satu alternatif dengan alternatif lain, disebut pairwise comparison. Dengan kata lain membandingkan antara 2 alternatif untuk menentukan mana yang lebih penting dan berapa perbandingannya.
+2. Mengulang proses di atas untuk setiap kriteria.
+3. Mengurutkan kriteria berdasarkan keutamaannya.
+
+　　　Sebagai contoh adalah penggunaan AHP dalam memilih sebuah mobil baru. Pertama-tama diputuskan penentuan mengenai perbandingan urutan dari setiap kriteria, dengan menggunakan pairwise comparison berdasarkan tabel preferensi pada gambar 2-9.
+
+Gambar 2- 9 Tabel Preferensi 
+Berdasarkan pairwise comparison, misalnya ditentukan:
+1. Reliability 2 kali lebih penting dibanding Style.
+2. Style 3 kali lebih penting dibanding Fuel Economy.
+3. Reliability 4 kali lebih penting dibanding Fuel Economy.
+
+
+　　　Setelah dilakukan pairwise comparison untuk setiap kriteria, langkah selanjutnya adalah membangun matriks pairwise, seperti ditunjukkan oleh gambar 2-10. Gambar 2-10 merupakan matriks pairwise hasil dari pairwise comparison yang telah dilakukan sebelumnya.
+
+Gambar 2- 10 Matriks Pairwise untuk Kriteria Pemilihan Mobil Baru
+
+　　　Setelah dibentuk ke dalam matriks pairwise, langkah berikutnya adalah mendapatkan urutan kriteria berdasarkan matriks pairwise yang telah terbentuk. Salah satu cara untuk mendapatkan urutan prioritas dari matriks pairwise adalah menggunakan metode Eigenvector. Langkah-langkah penggunaan Eigenvector adalah:
+1. Mengkuadratkan matriks pairwise dengan operasi perkalian matriks.
+2. Jumlahkan setiap baris dan lakukan normalisasi.
+3. Lakukan langkah 1 dan 2 hingga beda antar iterasi relatif kecil.
+
+　　　Gambar 2-11 merupakan matriks pairwise yang telah diubah dari bentuk pecahan ke dalam bentuk desimal. Langkah pertama Eigenvector ditunjukkan dalam gambar 2-12. Gambar 2-12 menunjukkan iterasi pertama yang merupakan hasil dari matriks pairwise yang dikuadratkan menggunakan operasi perkalian matriks.
+
+Gambar 2- 11 Hasil Matriks Pecahan dalam Bentuk Desimal
+
+
+Gambar 2- 12 Hasil Perkalian Matriks dengan Mengkuadratkan Matriks Pairwise
+
+　　　Dari hasil pada gambar 2-12, dilakukan langkah kedua yaitu proses menjumlahkan setiap baris pada matriks hasil dari langkah pertama, kemudian melakukan normalisasi. Langkah-langkah ini ditunjukkan pada gambar 2-13.
+
+Gambar 2- 13 Langkah Kedua dalam Proses Normalisasi Eigenvector
+
+　　　Langkah-langkah 1 dan 2 proses normalisasi Eigenvector dilakukan sampai beda antara iterasi relatif kecil. Gambar 2-14 menunjukkan iterasi kedua proses normalisasi menggunakan metode Eigenvector, yang hasil pertamanya telah dihitung sebelumnya.
+
+Gambar 2- 14 Iterasi Kedua Proses Normalisasi Eigenvector, Langkah Kedua
+
+　　　Setelah dilakukan iterasi kedua maka langkah selanjutnya adalah menghitung beda antara iterasi. Gambar 2-15 menunjukkan perhitungan beda antar iterasi, dan terlihat bahwa beda antar iterasi pada baris ke dua masih lebih besar daripada 0.00001, maka iterasi ketiga dilakukan sehingga mendapatkan eigenvalue. Hasil eigenvalue iterasi ketiga ditunjukkan pada gambar 2-16. Terlihat bahwa beda antar iterasi sudah lebih kecil dari 0.00001, sehingga iterasi dapat dihentikan.
+
+Gambar 2- 15 Hitung Beda antar Iterasi 1 dan 2
+
+Gambar 2- 16 Eigenvalue Hasil Iterasi ke 3
+
+　　　Setelah langkah-langkah metode Eigenvector selesai dilakukan maka didapatkan urutan prioritas untuk setiap kriteria. Gambar 2-17 menunjukkan ranking untuk setiap kriteria yang didapat dari hasil iterasi ketiga.
+
+Gambar 2- 17 Urutan Prioritas untuk Setiap Kriteria dari Hasil Normalisasi Eigenvector Iterasi ke 2
+
+　　　Setelah didapatkan urutan untuk setiap kriteria, hal yang sama juga dilakukan untuk setiap alternatif. Proses AHP dilakukan untuk setiap alternatif berdasarkan kriteria yang ada. Gambar 2-18 menunjukkan hasil perhitungan dengan menggunakan metode Eigenvector untuk setiap alternatif berdasarkan kriteria yang ada.
+
+Gambar 2- 18 Hasil Perhitungan Menggunakan Metode Eigenvector untuk Setiap Alternatif Berdasarkan Kriteria
+　　　
+　　　Berdasarkan hasil perhitungan dengan menggunakan metode Eigenvector untuk setiap kriteria dan setiap alternatif berdasarkan masing-masing kriteria, maka didapatkan pohon hierarki beserta bobot untuk masing-masing kriteria dan alternatif, yang ditunjukkan pada gambar 2-19.
+
+Gambar 2- 19 Pohon Hierarki Bobot Kriteria dan Alternatif Menggunakan Metode Eigenvector
+
+　　　Langkah selanjutnya adalah menentukan alternatif mana yang paling baik, berdasarkan pohon hierarki yang terbentuk dari hasil proses perhitungan dengan menggunakan metode Eigenvector. Penentuan alternatif mana yang paling baik dengan cara melakukan proses perkalian aljabar matriks antara matriks alternatif dengan matriks kriteria. Proses perkalian matriks serta hasilnya ditunjukkan pada gambar 2-20.
+
+Gambar 2- 20 Hasil Perkalian Matriks Alternatif dan Matriks Kriteria
+
+　　　Dari hasil perkalian matriks yang ditunjukkan gambar 2-20 maka dapat disimpulkan alternatif mana yang terbaik. Setelah diurutkan membesar, maka alternatif Clio mendapatkan ranking yang paling tinggi. Gambar 2-21 menunjukkan ranking untuk setiap kriteria.
+
+Gambar 2- 21 Urutan Prioritas Alternatif, dengan Clio Menempati Urutan Tertinggi
+
+2.6 Sepeda
+2.6.1 Sejarah Sepeda
+　　　Nenek moyang sepeda diperkirakan berasal dari?Prancis. Menurut sejarah, negeri tersebut sudah sejak awal abad ke-18 mengenal alat transportasi roda dua yang dinamai?velocipede. Seorang Jerman bernama Baron Karls Drais von Sauerbronn yang pantas dicatat sebagai salah seorang penyempurna velocipede. Tahun 1818, von Sauerbronn membuat alat transportasi roda dua untuk menunjang efisiensi kerjanya. Berikut adalah sepeda rancangan von Sauerbronn seperti diperlihatkan pada gambar 2-9.
+
+Gambar 2- 22 Sepeda Rancangan Baron Karls Drais von Sauerbronn
+　　　Upaya penyempurnaan dilakukan oleh penemu Prancis,?Ernest Michaux pada 1855, dengan membuat pemberat engkol, hingga laju sepeda lebih stabil. Sepeda makin sempurna setelah orang Prancis lainnya,?Pierre Lallement (1865) memperkuat roda dengan menambahkan lingkaran besi di sekelilingnya (sekarang dikenal sebagai pelek atau velg). Lallement juga yang memperkenalkan sepeda dengan roda depan lebih besar daripada roda belakang. Namun kemajuan paling signifikan terjadi saat teknologi pembuatan baja berlubang ditemukan, menyusul kian bagusnya teknik penyambungan besi, serta penemuan karet sebagai bahan baku ban sepeda.
+	Sepeda roda dua kembali mendunia setelah berdirinya pabrik sepeda pertama di?Coventry, Inggris pada 1885. Pabrik yang didirikan?oleh James Starley ini makin menemukan momentum, setelah tahun 1888?John Dunlop menemukan teknologi ban angin. Penemuan lainnya, seperti rem, perbandingan gigi yang bisa diganti-ganti, rantai, setang yang bisa digerakkan, dan masih banyak lagi makin menambah daya tarik sepeda. Sejak saat itu, berjuta-juta orang mulai menjadikan sepeda sebagai alat transportasi
+
+2.6.2 Definisi Sepeda
+　　　Menurut Kamus Besar Bahasa Indonesia, sepeda adalah kendaraan beroda dua atau tiga, mempunyai setang, tempat duduk, dan sepasang pengayuh yg digerakkan kaki untuk menjalankannya.
+
+2.6.3 Jenis Sepeda
+   Sepeda memiliki banyak jenis dan tipe, berikut ini akan dijelaskan beberapa tipe sepeda :
+1. Sepeda gunung/ Mountain bike
+Sepeda gunung umumnya dirancang untuk bersepeda di jalur off-road, yang di dalamnya termasuk sub-jenis sepeda off-road seperti jenis cross country, downhill, dan freeride. Semua sepeda gunung memiliki fitur yang kokoh, memiliki rangka serta roda yang tahan lama, memiliki ukuran ban yang lebar, serta setang yang membantu mengurangi sentakan. Beberapa sepeda gunung memiliki sistem suspensi, serta rem cakram mekanis, sepeda gunung memiliki rentang yang sangat besar, mulai dari rasio paling kecil hingga sedang, umumnya memiliki ukuran 16 hingga 28 gigi.
+2. Sepeda balap/ Road bike
+Sepeda ini dirancang untuk kecepatan serta kompetisi balap sepeda di jalanan beraspal. Sepeda jenis ini memiliki rangka dan komponen yang ringan dengan sedikit aksesoris, setang ayun(drop handlebars) memberikan aerodinamis yang baik, ban sepeda balap memiliki lebar yang sempit untuk meminimalkan hambatan perputaran roda. 
+3. Sepeda santai/ City bike
+Sebuah sepeda santai dirancang untuk bepergian di sekitar perkotaan yang memiliki daerah yang relatif datar, sepeda ini memiliki bagian tengah yang melengkung serta rangka yang berat. Untuk menjaga pengendara tetap bersih, sepeda ini memiliki spatbor di bagian depan dan belakang, serta penutup rantai. Sepeda ini juga biasanya memiliki keranjang di bagian depan.
+4. Sepeda BMX
+Sepeda BMX dirancang khusus untuk balap di trek tanah, serta memiliki kinerja yang baik untuk melakukan trik. Sebuah BMX merupakan sepeda yang kuat, memiliki rangka yang ringan dan lebih kecil dari sepeda umumnya, serta memiliki roda yang besar.
+
+2.6.4 Bagian Sepeda
+　　　Sebuah sepeda terdiri dari banyak bagian-bagian penyusun yang disatukan sehingga menjadi sebuah sepeda yang utuh, berikut ini akan dijelaskan tentang bagian-bagian sepeda seperti terlihat pada gambar 2-10.
+
+Gambar 2- 23 Anatomi Sepeda
+1. Handle bar
+Batang horizontal yang berfungsi sebagai kemudi dan terpasang pada stem yang kedua ujungnya terpasang handgrip, brake levers, dan shifters.
+2. Top Tube
+Batang penghubung head tube dengan bagian atas dari seat tube.
+3. Down Tube
+Batang penghubung head tube dengan bottom bracket.
+4. Shifter
+Mekanisme pengatur yang menggerakan derailleur, terletak dikiri (rear-derailleur) dan kanan (front-derailleur) batang pengemudi (handle bar). 
+5. Handgrip
+Pembungkus handlebar (stang kemudi) berbahan karet/tape.
+6. Brake Lever
+Lengan pengungkit yang berfungsi untuk melakukan pengereman.
+7. Head Set
+Mekanisme berputar yang dipasangkan pada head tube untuk menghubungkan fork dan stem.
+8. Stem
+Batang penghubung handle bar dengan head tube atau steering tube, dengan panjang dan sudut yang bervariasi.
+
+
+9. Saddle
+Sadel atau bantalan duduk ketika mengayuh sepeda sehingga bokong tetap terasa nyaman disamping itu juga berfungsi untuk mengurangi rasa lelah.
+10. Seat Post
+Tiang penyangga sadel yang dimasukan ke seat tube.
+11. Seat Stay
+Batang rangka yang mendukung roda belakang dan terhubung dengan bagian atas seat tube.
+12. Pedals
+Platform atau pijakan kaki yang terhubung langsung ke crank / bottom bracket.
+13. Crank Set
+Komponen yang menghubungkan pedals dengan chain ring.
+14. Chain Ring
+Piringan logam yang bergerigi disekelilingnya (teeth) sebagai dudukan rantai, terletak dibagian tengah sepeda.
+15. Chain
+Rantai yang menghubungkan chainring dan cassette dan bertugas menyalurkan daya dari kayuhan pedal ke roda belakang.
+16. Idler Pulley
+Merupakan bagian dari rear derailleur (RD), berupa gir (gigi) kecil disertai tension (biasanya berupa per-pegas) yang berfungsi agar chain (rantai) tetap lurus dan tidak kendor.
+17. Front dan Rear Derailleur
+Perangkat mekanis yang berfungsi memindahkan rantai dari berbagai posisi cassette (via rear derailleur) atau chainrings (via front derailleur).
+18. Rims
+Merupakan komponen wheelset (roda) lebih di kenal dengan pelak (pelek) sepeda.
+19. Tire
+Karet ban yang terbuat dari bahan dan bidang kontak yang didisain secara khusus untuk mendapatkan traksi dan daya tahan yang diinginkan.
+20. Front Fork
+Merupakan bagian sepeda yang berfungsi menghubungkan roda (wheelset) depan dengan kemudi (handlebar).
+21. Disc Brake
+Sistem rem yang bekerja menggunakan piringan baja yang dipasang pada Hub.
+22. Spokes
+Kawat besi(jari-jari) yang menghubungkan hub dan rim, dengan pengatur tegangan menggunakan nipple yang terdapat di rim. Ada dua jenis bahan yang biasa digunakan: 
+(1)  Stainless Steel, yang terkenal cukup kuat dan tidak berkarat.
+(2) Double-butted, biasanya agak mengecil dibagian tengahnya tanpa mempengaruhi kekuatan, namun bobotnya lebih ringan.
+23. Hub
+Bagian tengah dari sebuah roda yang terdapat mekanisme berputar dengan bearing didalamnya dimana spokes dipasang.
+24. Bearing
+Bola baja kecil, biasa disebut pelor/ gotri untuk mengurangi gesekan dua logam bergerak.
+
+
+
+
+
+3 [Nomor Bab]
+BAB 3 
+ANALISIS
+
+
+3 
+3.1 Analisis Kebutuhan Sistem
+3.1.1 Analisis Karakteristik dan Kemampuan Sistem Pendukung Keputusan PilihSepeda
+　　　Berdasarkan 14 jenis karakteristik dan kemampuan SPK yang ada, SPK PilihSepeda hanya mendukung 8 jenis karakteristik dan kemampuan SPK, ke 8 karakteristik dan kemampuan tersebut adalah :
+1. Semistructured problem
+SPK menyediakan dukungan untuk pengambilan keputusan pada situasi semi-terstruktur dengan menyatukan pendapat manusia dengan hasil informasi.
+2. Interdependent or sequential decisions
+SPK PilihSepeda memberikan dukungan pada beberapa keputusan yang saling berurutan dan saling berkaitan.
+3. Support intelligence, design and choice
+SPK mendukung tahap-tahap pengambilan keputusan yaitu intelligence, design, choice dan implementation.
+4. Adaptable & flexible
+SPK PilihSepeda bersifat adaptif dan fleksibel karena Admin dapat mengubah, menghapus, menambahkan, serta mengatur kembali data-data yang ada.
+5. Ease to use
+SPK memiliki grafis yang baik serta menarik dan interaktif sehingga memudahkan user untuk berinteraksi.
+6. Human control the machine
+Pengguna memiliki kontrol penuh terhadap langkah-langkah di dalam proses pengambilan keputusan dan pemecahan masalah. SPK PilihSepeda bertujuan untuk memberikan dukungan dalam pengambilan keputusan kepada pengambil keputusan, pengambil keputusan dapat menolak hasil yang diberikan oleh sistem.
+7. Ease of development by end users
+SPK mendukung pengambilan kebutuhan bagi pengguna bila standar yang ditetapkan berubah di lain waktu, kemampuan ini bertujuan untuk mendukung pengguna apabila pengambil keputusan memiliki penilaian baru terhadap sepeda yang diinginkan.
+8. Ease of construction
+SPK PilihSepeda dibangun secara modular sehingga mempermudah di dalam proses pembangunannya.
+
+	Adapun karakteristik dan kemampuan yang tidak dimiliki oleh SPK PilihSepeda adalah :
+1. Support managers at different levels
+SPK PilihSepeda tidak mendukung berbagai tingkat managerial, karena pengguna dari SPK PilihSepeda bukanlah berasal dari tingkat manajerial.
+2. Support groups and individuals
+SPK PilihSepeda tidak memberikan dukungan kepada kelompok, tetapi hanya memberikan dukungan kepada perorangan.
+3. Support variety of decision styles and process
+SPK PilihSepeda tidak memberikan dukungan kepada berbagai proses dan gaya pengambilan keputusan.
+4. Effectiveness not efficiency
+SPK PilihSepeda lebih mencoba untuk meningkatkan efisiensi pada pengambilan keputusan daripada keefektifan dibandingkan pengambilan keputusan, karena menghemat biaya yang dikeluarkan akibat pencarian informasi mengenai sepeda dan tipe-tipe yang ada saat ini.
+5. Data access
+SPK PilihSepeda tidak menyediakan akses data.
+6. Standalone, integration, web-based
+SPK PilihSepeda menggunakan teknologi web dalam penggunaan dan penyebarannya, tetapi tidak diintegrasikan dengan aplikasi lain.
+3.1.2 Manfaat SPK PilihSepeda
+　　　SPK Pilih Sepeda memiliki beberapa manfaat, diantaranya adalah:
+1. SPK PilihSepeda memberikan dukungan untuk pemberian solusi di dalam permasalahan pemilihan sepeda.
+2. SPK PilihSepeda memiliki kemampuan untuk memberikan hasil yang cepat dan tepat berdasarkan variasi sepeda yang diinginkan.
+3. SPK PilihSepeda menghemat biaya dan waktu yang diperlukan untuk mencari informasi mengenai sepeda yang diinginkan.
+4. Hasil yang dihasilkan oleh SPK PilihSepeda lebih bersifat objektif dibandingkan dengan proses pemilihan secara intuitif.
+3.1.3 Komponen SPK PilihSepeda
+　　　Berdasarkan komponen-komponen yang ada di dalam SPK, komponen yang akan digunakan di dalam SPK PilihSepeda adalah sebagai berikut :
+1. Data Management Subsystem
+Manajemen data pada SPK PilihSepeda mencakup basis data informasi sepeda yang sesuai dengan situasi saat ini dan oleh perangkat lunak Database Management System(DBMS).
+2. User Interface Subsystem
+Pengguna dapat berinteraksi dengan SPK PilihSepeda melalui antarmuka yang berbasis web.
+
+3.2 Analisis Kebutuhan Data
+　　　Data-data yang memadai diperlukan untuk menghasilkan informasi yang akurat di dalam SPK PilihSepeda. Data yang dibutuhkan oleh SPK ini adalah data-data yang dapat menjadi penentu dalam proses pemilihan sepeda. Untuk mendapatkan data-data tersebut diperlukan adanya proses pengumpulan data dengan cara pengumpulan dokumen dan survei yang meliputi wawancara dan penyebaran kuesioner.
+
+3.2.1 Wawancara dan Observasi
+　　　Proses wawancara dilakukan dengan Bapak Wawah, pemilik toko sepeda PD Sinar Bangka Jl.Veteran no 78, Bandung, toko sepeda PD.Sinar Bangka sendiri telah memulai usahanya sejak tahun 1974 dan memiliki 3 orang pegawai. Hasil wawancara dapat dilihat pada lampiran.
+　　　Sementara observasi mengenai jenis sepeda dilakukan dengan mengakses beberapa website beberapa merk sepeda, yaitu Polygon, United dan Wim Cycle.
+
+3.2.2 Penyebaran Kuesioner
+　　　Pada penelitian ini akan disebarkan 40 kuesioner untuk mengetahui faktor apa saja yang mempengaruhi seseorang untuk memilih sepeda serta kendala apa saja yang dihadapi ketika akan melakukan pemilihan dan pembelian sepeda. Kuesioner ini dibagikan kepada penjual sepeda, calon pembeli sepeda serta pengguna sepeda yang telah berpengalaman membeli sepeda.
+
+3.3 Analisis Hasil Pengumpulan Data
+　　　Kuesioner yang disebarkan sebanyak 40 kuesioner, akan tetapi jumlah data yang dinyatakan valid dan terisi dengan benar berjumlah 30 kuesioner. Jumlah responden terdiri dari 23 orang responden laki-laki dan 7 orang responden perempuan, gambarannya dapat dilihat pada gambar 3-1.
+　　　
+Gambar 3- 1 Usia Responden
+
+　　Pada gambar 3-2 diketahui bahwa tidak terdapat responden yang berusia lebih kecil dari 17 tahun, 47% responden berusia antara 17-25 tahun, 23% responden berusia 25-40 tahun dan 30% sisanya berusia lebih dari 40 tahun.
+
+
+Gambar 3- 2 Jenis Kelamin Responden
+
+　　　Pada gambar 3-3, 80% dari jumlah responden pernah membeli sepeda sebelumnya, sedangkan 20% sisanya belum pernah membeli sepeda.
+　　　
+Gambar 3- 3 Sudah pernah membeli sepeda sebelumnya?
+　　　
+　　　
+　　　Pada gambar 3-4, dapat diketahui ekspektasi responden terhadap harga sepeda yang berkualitas berkisar pada angka Rp500,000 ? Rp2,000,000, secara lebih jelas 20% responden memilih kisaran kurang dari 500,000, 20% lainnya memilih kisaran harga Rp500,000 ? Rp1,000,000, 13% memilih kisaran harga Rp1,000,000 ? Rp1,500,000, 20% memilih kisaran harga Rp1,500,000 ? Rp2,000,000, 27 sisanya memilih kisaran harga lebih besar dari Rp2,000,000.
+
+Gambar 3- 4 Harga sepeda yang berkualitas
+　　　Berdasarkan kuesioner juga diketahui bahwa banyak orang lebih menyukai warna gelap untuk sepeda mereka, sesuai gambar 3-5, 53% responden lebih cocok dengan warna gelap di sepeda mereka, 43 responden lain lebih merasa cocok dengan warna cerah/terang.
+
+Gambar 3- 5 Kelompok warna sepeda
+　　　Dari gambar 3-6 diketahui orang mesih lebih mengenal sepeda BMX daripada jenis sepeda lainnya, komposisinya dapat terlihat pada gambar berikut ini, 27% responden mengetahui sepeda BMX, 17 % mengetahui sepeda gunung/mountain bike/MTB, 15% mengetahui sepeda balap/road bike, 17% mengetahui sepeda santai/city bike, 12% mengetahui sepeda onthel/kuno/kumbang, 10% sisanya mengetahui tentang sepeda anak, sepeda mini, twin bike.
+
+Gambar 3- 6 Jenis Sepeda yang paling diketahui
+　　　Pada gambar 3-7 diketahui bahwa masih banyak orang masih kesulitan untuk mendapatkan informasi tentang sepeda 60% menyatakan mengalami kesulitan mencari informasi sepeda, sedangkan 40% lainnya menyatakan tidak mengalami kesulitan mencari informasi sepeda.
+
+Gambar 3- 7 Apakah mengalami kesulitan mendapatkan informasi tentang sepeda?
+	Menurut hasil kuesioner 12% responden mendapatkan informasi dari keluarga, 32% mendapatkan informasi dari daru teman, 18% mendapatkan informasi dari surat kabar, 12% mendapatkan informasi dari televisi, 19% mendapatkan informasi dari internet, 2% mendapatkan informasi dari radio, dan 5% mendapatkan informasi dari toko, brosur, maupun melihat sepeda yang melintas, ditunjukkan pada gambar 3-8.
+
+Gambar 3- 8 Informasi tentang sepeda didapat dari?
+
+3.4 Metode Pengambilan Keputusan
+     SPK yang dibangun pada penelitian ini menggunakan metode sequential elimination by conjunctive constraint dan analytical hierarchy proess(AHP), 
+     
+3.4.1 Penetapan Kandidat Sepeda
+     Pada proses ini pengguna diminta untuk menetapkan kandidat sepeda berdasarkan jenis sepeda yang ingin dibeli.
+     Metode Sequential Elimination by Conjunctive Constraint digunakan untuk melakukan penetapan kandidat awal, variabel yang digunakan untuk penetapan kandidat awal adalah :
+1. Jenis Sepeda
+Nilai standar yang akan diatur adalah batasan jenis sepeda dimana terdapat 3 jenis sepeda yang paling umum diketahui dan digunakan oleh masyarakat/responden yaitu sepeda gunung/mountain bike, sepeda santai/city bike, dan sepeda BMX
+2. Harga Sepeda
+Nilai standar yang akan diatur adalah faktor harga yang tentu saja menjadi faktor yang cukup mempengaruhi orang dalam membeli sepeda, kisaran harga sepeda yang dianggarkan adalah :
+* Rp 1.000.000 ? Rp 1.500.000
+* Rp 1.500.000 ? Rp 2.000.000
+* Rp 2.000.000 ? Rp 2.500.000
+* Rp 2.500.000 ? Rp 3.000.000
+* > Rp 3.000.000
+3. Warna Sepeda
+Nilai standar yang akan diatur adalah warna sepeda dimana warna terbagi menjadi 2 kelompok besar, yaitu cerah/terang dan gelap, pembagian berdasarkan kelompok besar dimaksudkan agar tidak terjadi kerancuan di dalam pemilihan sepeda yang memiliki warna kombinasi dari warna-warna dasar.
+
+     Pada contoh di gambar 3-9 pengguna memberikan batasan untuk digunakan pada  metode sequential elimination by conjunctive constraint, setiap batasan yang bernilai false akan langsung dieliminasi, dan nantinya menghasilkan alternatif pilihan yang memenuhi standar batasan yang ada.
+
+Gambar 3- 9 Form Penentuan Batasan Secara Manual
+
+	Selanjutnya akan dilakukan pemilihan kandidat dengan menerapkan metode sequential elimination by conjunctive constraint, proses pemilihan digambarkan pada gambar 3-10
+
+Gambar 3- 10 Penggunaan Metode Sequential Elimination by Conjunctive Constraint
+	Berdasarkan proses pemilihan dengan metode sequential elimination by conjunctive constraint, maka didapatkan pilihan kandidat yaitu sepeda Premier 1.0, Vulcan XT, dan Broadway.
+3.4.2 Metode Analytical Hierarchy Process
+     Penggunaan Analytical Hierarchy Process(AHP) diawali dengan pengguna menggunakan pairwise comparison untuk setiap pasang variabel yang ada, adapun variabel yang diikutsertakan adalah :
+1. Tampilan/design
+Penilaian tiap orang akan design suatu produk sangat bersifat subjektif, oleh karena itu perlu dilakukan pairwise comparison sesuai penilaian pengguna terhadap kandidat produk yang ada.
+2. Safety/handling
+Faktor safety/handling dapat dikatakan merupakan faktor yang penting, faktor ini sangat mempengaruhi ketika sedang bersepeda agar dapat mengendalikan sepeda dengan baik dan aman.
+3. Merek diikutsertakan karena setiap merek memiliki tingkat prestise/kepopuleran yang berbeda di mata masyarakat sehingga seringkali pemilik merasa lebih bangga apabila memiliki sebuah sepeda merek A dibandingkan sepeda merek B. 
+　　　Melalui pairwise comparison user menentukan kepentingan antara sepasang variabel dengan skala 1 hingga skala 9, penghitungan skala dilakukan berdasarkan pada tabel preferensi yang terdapat pada gambar 3-11, sehingga untuk 3 variabel kriteria yang ditetapkan akan terdapat 3C2 perbandingan. 
+　　　
+Gambar 3- 11 Tabel Preferensi
+     Sistem telah memperoleh semua alternatif sepeda yang memenuhi batasan yang telah ditentukan oleh pengguna pada langkah sebelumnya dengan menggunakan metode sequential elimination by conjunctive constraint, sistem akan meminta pengguna untuk memberikan penilaian menggunakan pairwise comparison terhadap pasangan variabel yang muncul. Pada gambar 3-12 menunjukkan penilaian pengguna terhadap pasangan variabel secara manual.
+     
+Gambar 3- 12 Penilaian Pairwise comparison Pengguna
+
+	Setelah penilaian, maka sistem kemudian mengubah hasil penilaian dari pengguna ke dalam bentuk pairwise, sistem menggunakan metode Eigenvector, proses tersebut digambarkan pada gambar 3-13 dan selanjutnya dilakukan pengubahan ke dalam bentuk desimal yang digambarkan pada gambar 3-14.
+
+
+Gambar 3- 13 Matriks Pairwise berdasarkan Pairwise comparison pada variabel
+
+Gambar 3- 14 Matriks Pairwise variabel dalam bentuk desimal
+	Metode Eigenvector digunakan setelah matriks pairwise diubah ke bentuk desimal, matriks pairwise dikuadratkan menggunakan operasi perkalian matriks, lalu menjumlahkan setiap baris dan melakukan proses normalisasi, pada gambar 3-15 menunjukkan matriks pairwise yang sudah dikuadratkan, pada gambar 3-16 menunjukkan proses normalisasi.
+
+Gambar 3- 15 Hasil perkalian matriks dengan mengkuadratkan matriks pairwise
+
+Gambar 3- 16 Proses normalisasi hasil perkalian matriks pairwise
+
+	Melalui proses normalisasi, maka ditemukan hasil proses Eigenvector untuk setiap variabel, hasil metode Eigenvector ditunjukkan pada gambar 3-17
+
+Gambar 3- 17 Hasil metode Eigenvector iterasi pertama
+	Metode Eigenvector terus dijalankan hingga beda antara iterasi tidak terlalu besar, dalam kasus ini ditentukan bahwa beda iterasi ditentukan lebih kecil dari 0,00010 (10-4  ). Matriks yang menjadi matriks input pada iterasi selanjutnya adalah matriks hasil perkalian matriks pairwise pada iterasi sebelumnya. 
+	Oleh karena perbedaan antara iterasi pertama dan iterasi kedua masih lebih besar dari 0,00010 maka iterasi dilanjutkan hingga beda antar iterasi memenuhi syarat lebih kecil dari 0,00010. Pada iterasi ketiga, beda iterasi kedua dan ketiga sudah lebih kecil dari 0,00010 oleh karena itu penghitungan dapat dihentikan dan hasil metode Eigenvector pada iterasi ketiga menjadi bobot untuk setiap variabel. Hasil iterasi ketiga dapat dilihat pada gambar 3-18 
+
+Gambar 3- 18 Hasil metode Eigenvector iterasi ketiga
+	Setelah didapat eigenvalue untuk setiap variabel maka dilakukan pengecekan konsistensi terhadap masukan pengguna penentuan pairwise comparison untuk setiap pasang variabel. Langkah-langkah berikut menunjukkan proses pengecekan konsistensi :
+1) Hitung A wT :
+
+2) Hitung :
+
+=  (1/3).(1,88647/0,62502+ 0,71980/0,23848+ 0,41200/0,13650)
+=  3,01827
+3) Hitung CI(consistency index) :
+
+=  (3,01827 ? 3) / (3 - 1)
+=  0.00913
+4) Bandingkan CI dengan RI (random index) :
+CI/RI = 0. 00913/ 0.58
+	= 0.0157 
+　　　Jika perbandingan CI/RI < 0.10, maka tingkat kekonsistenan memuaskan, dan apabila yang terjadi sebaliknya maka terjadi ketidakkonsistenan dan AHP akan menghasilkan hasil yang tidak berarti. Melalui nilai perbandingan CI dan RI maka dapat diketahui bahwa penentuan pairwise comparison terhadap ketiga variabel kriteria diatas adalah konsisten. Data RI nilai sendiri dapat dilihat pada gambar 3-19
+　　　
+Gambar 3- 19 Data nilai RI
+　　　Selanjutnya sistem akan meminta pengguna untuk memberikan penilaian berdasarkan pairwise comparison untuk setiap pasang alternatif sepeda berdasarkan setiap variabel. Gambar 3-20 menunjukkan penilaian pengguna secara manual menggunakan pairwise comparison untuk setiap pasangan alternatif sepeda berdasarkan safety/handling, gambar 3-21 menunjukkan penilaian pengguna secara manual menggunakan pairwise comparison untuk setiap pasangan alternatif sepeda berdasarkan tampilan/design, gambar 3-22 menunjukkan penilaian pengguna secara manual menggunakan pairwise comparison untuk setiap pasangan alternatif sepeda berdasarkan merek.
+　　　
+Gambar 3- 20 Pairwise comparison terhadap setiap pasang alternatif sepeda berdasarkan variabel safety/handling
+　　　
+Gambar 3- 21 Pairwise comparison terhadap setiap pasang alternatif sepeda berdasarkan variabel tampilan/design
+
+Gambar 3- 22 Pairwise comparison terhadap setiap pasang alternatif sepeda berdasarkan variabel merek
+　　　
+　　　Setelah pengguna menentukan nilai, maka sistem mengubah hasil penilaian dari pengguna ke dalam bentuk matriks pairwise lalu menjalankan metode eigenvector. Setelah langkah eigenvector dikerjakan, beda iterasi ditentukan lebih kecil dari 0,00010 (10-4  ). Maka didapat hasil metode eigenvector untuk setiap alternatif sepeda berdasarkan setiap variabel ditunjukkkan oleh gambar 3-23, gambar 3-24, dan gambar 3-25.
+　　　
+Gambar 3- 23 Hasil metode eigenvector alternatif sepeda berdasarkan variabel safety/handling
+　　　
+Gambar 3- 24 Hasil metode eigenvector alternatif sepeda berdasarkan variabel tampilan/design
+
+Gambar 3- 25 Hasil metode eigenvector alternatif sepeda berdasarkan variabel merek
+
+　　　Proses pengecekan konsistensi untuk setiap variabel sepeda berdasarkan variabel, dilakukan setelah hasil eigenvalue dari masing-masing alternatif sepeda berdasarkan setiap variabel didapatkan. Setelah dilakukan penghitungan untuk masing-masing alternatif sepeda berdasarkan setiap variabel, penentuan pairwise comparison adalah konsisten.
+　　　Berdasarkan hasil penghitungan dengan menggunakan metode eigenvector untuk setiap variabel dan setiap alternatif berdasarkan masing-masing variabel, maka didapatkan pohon hirarki beserta bobot untuk masing-masing variabel dan alternatif, pohon hirarki bobot variabel dan alternatif ditunjukkan pada gambar 3-26
+　　　
+Gambar 3- 26 Pohon hirarki bobot variabel dan alternatif menggunakan metode eigenvector
+
+　　　Langkah selanjutnya adalah menentukan alternatif sepeda yang paling baik berdasarkan hirarki yang terbentuk dari hasil proses penghitungan dengan metode eigenvector. Penentuan alternatif sepeda yang paling baik dengan cara melakukan proses perkalian aljabar matriks antara matriks alternatif dengan matriks variabel. Proses perkalian matriks serta hasil penghitungan ditunjukkan oleh gambar 3-27
+
+Gambar 3- 27 Hasil perkalian matriks alternatif dan matriks variabel
+
+　　　Melalui matriks hasil pada gambar 3-27, ditemukan bahwa alternatif sepeda dengan tipe Vulcan XT memiliki bobot tertinggi oleh karena itu, Vulcan XT merupakan solusi alternatif terbaik berdasarkan penilaian pengguna dan penghitungan sistem menggunakan metode AHP.
+
+3.5 Analisis Kebutuhan Perangkat Lunak
+     Perangkat lunak ini adalah perangkat lunak berbentuk website, sehingga dapat digunakan oleh pengguna umum melalui internet, pada penelitian ini kebutuhan sistem direpresentasikan dengan analisis berorientasi objek.
+	Pengguna dari SPK PilihSepeda terbagi menjadi 2 kelompok, yaitu admin dan pengguna umum. Admin merupakan orang yang bertugas memelihara sistem SPK serta melakukan update terhadap data dan informasi yang ada di dalam sistem, untuk melakukan tugasnya admin terlebih dahulu harus login ke dalam sistem. Sementara pengguna umum adalah masyarakat umum yang dapat menggunakan fitur umum yang ada di sistem tanpa harus login terlebih dahulu ke dalam sistem.
+
+3.5.1 Use Case Diagram
+
+Gambar 3- 28 Use Case Diagram
+
+
+
+
+
+
+
+
+
+
+
+
+Skenario
+
+　　Aktor : Admin
+　　　Normal Skenario Login:
+1. Aktor login dengan memasukkan username dan password.
+2. Sistem akan melakukan pengecekan terhadap username dan password yang dimasukkan dengan data yang terdapat di table user.
+3. Username dan password valid, sistem akan menampilkan halaman utama admin.
+　　　Exception Skenario:
+1. Username atau password kosong, maka sistem akan menampilkan pesan kesalahan .
+2. Username dan password tidak valid, sistem menampilkan pesan kesalahan .
+　　　
+　　Aktor : Admin
+　　　Normal Skenario Mengelola data sepeda:
+1. Aktor memilih menu Mengelola data sepeda
+2. Sistem akan menampilkan pilihan menu seleksi dari pilihan Mengelola data sepeda.
+　　　
+　　Aktor : Admin
+　　　Normal Skenario Menambah data sepeda:
+3. Aktor memilih menu Mengelola data sepeda
+4. Sistem akan menampilkan pilihan menu seleksi dari pilihan Mengelola data sepeda.
+5. Aktor memilih pilihan Menambah data sepeda.
+6. Sistem akan menampilkan halaman untuk mengisi data sepeda  baru.
+7. Aktor mengisi data sepeda baru .
+8. Sistem menyimpan data sepeda baru yang dimasukkan.
+9. Sistem menampilkan pesan “Data Sepeda telah ditambahkan”.
+
+Exception Skenario:
+1. Data sepeda telah terdapat di dalam database sistem menampilkan pesan kesalahan.
+2. Data yang diisi tidak lengkap, sistem menampilkan pesan kesalahan.
+　　　
+　　Aktor : Admin
+　　　Normal Skenario Mengubah data sepeda:
+1. Aktor memilih menu Mengelola data sepeda.
+2. Sistem akan menampilkan pilihan menu seleksi dari pilihan Mengelola data sepeda.
+3. Aktor memilih pilihan Mengubah data sepeda.
+4. Sistem akan menampilkan pilihan seleksi data sepeda yang telah ada.
+5. Aktor memilih pilihan seleksi dan mengubah data sepeda yang diinginkan.
+6. Sistem menyimpan data sepeda baru yang dimasukkan.
+7. Sistem menampilkan pesan “Data Sepeda telah diubah”.
+　　　
+　　Aktor : Admin
+　　　Normal Skenario Menghapus data sepeda:
+1. Aktor memilih menu Mengelola data sepeda.
+2. Sistem akan menampilkan pilihan menu seleksi dari pilihan Mengelola data sepeda.
+3. Aktor memilih pilihan Menghapus data sepeda.
+4. Sistem akan menampilkan pilihan seleksi data sepeda yang dapat dihapus.
+5. Aktor memilih pilihan seleksi dan menghapus data sepeda yang diinginkan.
+6. Sistem menghapus data sepeda baru yang dipilih.
+7. Sistem menampilkan pesan “Data Sepeda telah dihapus”.
+　　　
+　　　
+　　　
+　　Aktor : Admin, Pengguna Umum
+　　　Normal Skenario Melakukan pemilihan sepeda
+1. Aktor memilih menu Melakukan pemilihan sepeda.
+2. Sistem menampilkan pilihan standar data kriteria yang akan dipilih oleh aktor.
+3. Aktor mengurutkan standar data kriteria yang diinginkan.
+4. Sistem memproses dengan melakukan penghitungan menggunakan metode sequential elimination by conjunctive constraint berdasarkan input yang dimasukkan aktor serta menyimpan data kandidat sepeda yang tidak tereliminasi agar dapat digunakan pada tahapan selanjutnya.
+5. Sistem menampilkan halaman untuk membandingkan variabel berdasarkan tingkat keutamaan sesuai pendapat aktor.
+6. Aktor memasukkan perbandingan setiap variabel sesuai pendapat aktor.
+7. Sistem memproses perbandingan variabel menggunakan metode Analytical Hierarchy Process(AHP).
+8. Sistem menampilkan halaman untuk membandingkan tingkat keutamaan kandidat sepeda yang tidak tereliminasi pada tahap pertama berdasarkan safety/handling sesuai pendapat aktor.
+9. Aktor memasukkan perbandingan setiap kandidat sepeda berdasarkan safety/handling sesuai pendapat aktor.
+10. Sistem memproses perbandingan kandidat sepeda berdasarkan safety/handling menggunakan metode Analytical Hierarchy Process(AHP).
+11. Sistem menampilkan halaman untuk membandingkan tingkat keutamaan kandidat sepeda berdasarkan tampilan/design sesuai pendapat aktor.
+12. Aktor memasukkan perbandingan setiap kandidat sepeda berdasarkan tampilan/design sesuai pendapat aktor.
+13. Sistem memproses perbandingan kandidat sepeda berdasarkan tampilan/design menggunakan metode Analytical Hierarchy Process(AHP).
+14. Sistem menampilkan halaman untuk membandingkan tingkat keutamaan kandidat sepeda berdasarkan merek sesuai pendapat aktor.
+15. Aktor memasukkan perbandingan setiap kandidat sepeda berdasarkan merek sesuai pendapat aktor.
+16. Sistem memproses perbandingan kandidat sepeda berdasarkan merek menggunakan metode Analytical Hierarchy Process(AHP).
+17. Sistem menampilkan data kandidat sepeda akhir berdasarkan pendapat aktor melalui proses seleksi dengan metode elimination by conjunctive constraint dan Analytical Hierarchy Process(AHP) pada halaman hasil.
+Exception Skenario:
+1. Data yang diisi tidak lengkap, sistem menampilkan pesan kesalahan.
+
+　　Aktor : Admin, Pengguna Umum
+　　　Normal Skenario Melihat informasi tentang sepeda
+1. Aktor memilih menu Melihat informasi tentang sepeda.
+2. Sistem akan menampilkan halaman web yang menampilkan informasi sepeda secara umum serta pilihan sepeda yang ingin diketahui informasinya.
+3. Aktor memilih salah satu pilihan sepeda yang ada.
+4. Sistem menampilkan informasi dari sepeda yang dipilih.
+5. Aktor dapat melihat informasi sepeda yang dipilih.
+　　　
+　　Aktor : Admin
+　　　Normal Skenario Menambah informasi tentang sepeda
+1. Aktor memilih menu Menambah informasi tentang sepeda.
+2. Sistem akan menampilkan form isian untuk diisi oleh aktor mengenai informasi sepeda.
+3. Aktor memasukkan informasi tentang sepeda.
+4. Aktor mengkonfirmasi informasi yang telah diisi ke dalam form isian dengan menekan tombol “Tambah”.
+5. Sistem menyimpan data informasi
+6. Sistem menampilkan pesan “Data Informasi telah berhasil dimasukkan”.
+Exception Skenario:
+1. Data yang diisi tidak lengkap, sistem menampilkan pesan kesalahan.
+3.5.2 Entity Relationship Diagram
+
+Gambar 3- 29 Entity Relationship Diagram 
+3.5.3 Class Diagram
+
+Gambar 3- 30 Class Diagram
+
+
+4 [Nomor Bab]
+BAB 4 
+PERANCANGAN
+
+
+4 
+4.1 Rancangan Antarmuka Sistem Pendukung Keputusan Pemilihan Sepeda
+4.1.1 Rancangan Antarmuka Home
+     Pada rancangan ini merupakan rancangan antarmuka home yang merupakan halaman utama ketika pengguna pertama kali mengakses website SPK pemilihan sepeda
+
+Gambar 4- 1 Rancangan Antarmuka Home
+
+
+4.1.2 Rancangan Antarmuka Login Admin
+　　　Untuk masuk dan me-maintenance sistem, admin terlebih dahulu harus melakukan login ke dalam sistem, rancangan berikut dimaksudkan untuk mengakomodasi admin untuk login ke sistem
+
+Gambar 4- 2 Rancangan Antarmuka Login Admin
+4.1.3 Rancangan Antarmuka Admin
+　　　Rancangan antarmuka ini merupakan antarmuka yang hanya dapat diakses oleh admin setelah melakukan proses login.
+
+Gambar 4- 3 Rancangan Antarmuka Admin
+4.1.4 Rancangan Antarmuka Informasi Sepeda
+　　　Rancangan antarmuka ini merupakan antarmuka yang memberikan informasi tentang sepeda kepada pengguna sehingga mendapatkan pengetahuan tentang sepeda
+
+Gambar 4- 4 Rancangan Antarmuka Informasi Sepeda
+4.1.5 Rancangan Antarmuka Memilih Sepeda
+　　　Rancangan antarmuka ini merupakan antarmuka yang digunakan pengguna untuk menentukan sepeda sesuai kriteria yang diinginkan
+
+Gambar 4- 5 Rancangan Antarmuka Memilih Sepeda
+
+4.1.6 Rancangan Antarmuka Perbandingan Variabel
+　　　Rancangan antarmuka ini merupakan antarmuka yang menampilkan halaman perbandingan antara variabel untuk diisi oleh user.
+
+Gambar 4- 6 Rancangan Antarmuka perbandingan variabel
+4.1.7 Rancangan Antarmuka Perbandingan Kandidat Alternatif Berdasarkan Safety/handling
+　　　Rancangan antarmuka ini merupakan antarmuka yang menampilkan halaman perbandingan kandidat alternatif berdasarkan safety/handling untuk diisi oleh user.
+
+Gambar 4- 7 Rancangan Antarmuka perbandingan kandidat alternatif berdasarkan safety/handling
+
+4.1.8 Rancangan Antarmuka Perbandingan Kandidat Alternatif Berdasarkan Tampilan/design
+　　　Rancangan antarmuka ini merupakan antarmuka yang menampilkan halaman perbandingan kandidat alternatif berdasarkan tampilan/design untuk diisi oleh user.
+
+Gambar 4- 8 Rancangan Antarmuka perbandingan kandidat alternatif berdasarkan tampilan/design
+4.1.9 Rancangan Antarmuka Perbandingan Kandidat Alternatif Berdasarkan Merek
+　　　Rancangan antarmuka ini merupakan antarmuka yang menampilkan halaman perbandingan kandidat alternatif berdasarkan merek untuk diisi oleh user.
+
+Gambar 4- 9 Rancangan Antarmuka perbandingan kandidat alternatif berdasarkan merek
+4.1.10 Rancangan Antarmuka Hasil Seleksi
+　　　Rancangan antarmuka ini merupakan antarmuka yang menampilkan hasil seleksi dan direkomendasikan sistem berdasarkan kriteria yang dimasukkan pengguna.
+
+Gambar 4- 10 Rancangan Antarmuka Hasil Seleksi
+5 [Nomor Bab]
+DAFTAR REFERENSI
+
+
+[BUR-74]	Burch, John G., Jr., Felix R., Jr., Information Systems : Theory and Practice, First edition, Hamilton Publishing Company, 1974.
+[KEN-02]	Kendal, Kenneth E., Kendal, Julie E., Sistem Analysis and Design, Fifth edition, Prentice Hall International, Inc. , 2002.
+[TUR-01]	Turban, Efraim, Aronson, Jay E., Decision Support Systems and Intelligent Systems, Sixth edition, Prentice Hall International, Inc., 2002.
+[URL-01]	Haas, Rainer., Meixner, Oliver., An Illustrated Guide to the Analytic Hierarchy Processing  [online], http://www.boku.ac.at/mi/ahp/ahptutorial.pdf, (Desember 2009)
+[URL-02]	United Bike, United Bike Official Website[online], http://www.unitedbike.com/, (November 2009)
+[URL-03]	Polygon Bike, Insera World Wide Polygon Indonesia[online], http://www.polygoncycle.com/home.php?count=1, (November 2009)
+[URL-04]	Wim Cycle, Wim Cycle Official Website[online], http://www.wimcycle.com/, (November 2009)
+[URL-05]	Zonasepeda, Tips dan Trik Anatomi Sepeda, http://zonasepeda.com , (Mei 2010)
+
+
+
+
+
+LAMPIRAN
+
+
+HASIL WAWANCARA
+
+
+　　　Wawancara dilakukan dengan Bapak Wawah, pemilik toko sepeda PD.Sinar Bangka yang berlokasi di Jl.Veteran no 78, Bandung.
+
+Pertanyaan	:  Mengapa masih banyak orang yang memakai sepeda saat ini?
+Jawaban	: Karena orang-orang membeli sepeda dengan alasannya masing-masing beberapa diantaranya membeli karena memang memiliki hobby bersepeda, ada juga yang membeli sepeda untuk berolahraga, selain itu melalui kegiatan bersepeda juga memiliki sebuah sebuah komunitas tersendiri dimana para pencinta sepeda berkumpul serta bertukar pengalaman bersepeda.
+
+Pertanyaan	:  Jenis sepeda apa saja yang dijual di toko ini?
+Jawaban	: Sepeda yang dijual di toko ini macam-macam, ada sepeda gunung, sepeda anak, BMX, sepeda balap, sepeda hybrid (city bike), sepeda ontel juga ada.
+
+Pertanyaan	:  Dapatkah anda memberi gambaran untuk tiap-tiap jenis sepeda?
+Jawaban	: Sepeda balap/racing dan city bike/hybrid memiliki ciri lebar ban yang lebih tipis sehingga cocok untuk digunakan di daerah perkotaan yang rata, perbedaannya ialah sepeda balap punya rangka yang lurus di tengahnya sedangkan city bike, rangkanya agak melengkung di bagian tengah, lalu MTB/mountain bike/sepeda gunung punya ban yang lebarnya tebal, cucuk untuk jalan tanah yang berbatu-batu selain itu sepeda gunung saat ini dilengkapi shock pada bagian atas garpu, sepeda BMX seperti yang anda ketahui lebih banyak digunakan anak muda karena bisa digunakan untuk freestyle dan gaya, kalau sepeda onthel/kumbang ukuran rodanya besar serta rangkanya berat, untuk sekarang sudah jarang orang yang menggunakan sepeda onthel, kalaupun ada umumnya orang lansia yang sudah merasa nyaman dengan sepeda khas ini ataupun kolektor sepeda.
+
+Pertanyaan	: Menurut anda apakah yang sering menjadi faktor penentu orang membeli sepeda?
+Jawaban	: Orang-orang seringnya membeli sesuai kantong masing-masing, kalo uangnya cukup bisa beli sepeda yang bermerek, sedangkan kalo seadanya biasanya kebanyakan membeli sepeda yang lebih murah, buatan China misalnya.
+
+Pertanyaan	: Jadi, harga sering menjadi faktor penentu?
+Jawaban	: Ya, kurang lebih begitu.
+
+Pertanyaan	: Apakah ada faktor lain yang bisa dipertimbangkan? Warna atau kelengkapan peralatan, atau aksesoris misalnya?
+Jawaban	: Masih banyak faktor lain yang mempengaruhi orang dalam memilih sepeda, kulitas sepeda itu sendiri juga menentukan penilaian seseorang dalam membeli sepeda, tentang faktor warna sebenarnya berpengaruh sedikit di dalam penilaian yang beli, tapi itu bukan faktor kuncinya, kalo aksesoris biasanya tambahan, ada juga sih memilih karena aksesoris bagus, aksesoris biasanya lebih banyak terdapat pada sepeda anak, untuk sepeda dewasa tidak terlalu banyak pilihannya. Oh ya selain itu jenis sepeda itu sendiri juga cukup berpengaruh karena tentu saja yang beli akan membeli sepeda sesuai kegunaannya, model/design sepeda juga termasuk apalagi kalau yang beli masih muda, tentunya design rangka yang unik atau stripping(tempelan/stiker/gambar pada sepeda) yang menarik menjadi daya tarik tersendiri
+
+Pertanyaan	: Oh ya, berdasarkan merek tadi, merek apa saja yang dijual di toko ini?
+Jawaban	: Merek sepeda banyak sih sebenarnya, tapi yang umum dicari masyarakat ya seperti United, Polygon, atau Wim Cycle, ada juga beberapa produk China seperti merek Emerson, untuk merek seperti Federal sendiri sebenarnya masih banyak peminatnya tetapi sudah tidak diproduksi oleh produsennya.
+
+Pertanyaan	:  Apakah pemberian garansi cukup menarik pembeli untuk memilih sepeda?
+Jawaban	: Pada umumnya produsen sepeda berkualitas baik sudah member garansi untuk setiap produknya, sehingga meningkatkan kepercayaan pengguna, banyak orang yang tertarik untuk membeli sepeda salah satunya kerena faktor garansi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KUESIONER
+
+Berilah tanda centang (√) pada kotak dibawah ini :
+1. Apakah jenis kelamin Anda?
+* Laki-laki
+* Perempuan
+2. Berapakah umur Anda?
+* < 17 tahun
+* 17 - 25 tahun
+* 25 ? 40 tahun
+* > 40 tahun
+3. Apakah Anda sudah pernah membeli sepeda sebelumnya?
+* Pernah
+* Tidak pernah
+4. Menurut Anda, sebuah sepeda yang berkualitas bagus memiliki kisaran harga ?
+* < Rp 500.000
+* Rp 500.000 ? Rp 1.000.000
+* Rp 1.000.000 ? Rp 1.500.000
+* Rp 1.500.000 ? Rp 2.000.000
+* > Rp 2.000.000
+5. Kelompok warna apa yang baik dan cocok untuk sepeda?
+* Cerah/terang
+* Gelap
+6. Jenis sepeda apakah yang Anda ketahui?
+Sebutkan (contoh : BMX, sepeda gunung, sepeda santai) :
+...........................................................................................................
+...........................................................................................................
+
+
+
+7. Diantara merek sepeda yang ada di bawah ini, urutkan merek sepeda yang paling Anda ketahui (urutkan berdasarkan angka, mulai dari yang paling diketahui (1) hingga yang kurang diketahui (6)) :
+* Phoenix
+* Emerson
+* Wim Cycle
+* Polygon
+* United 
+* Federal
+8. Apakah Anda kesulitan mendapatkan informasi tentang sepeda ?
+* Ya
+* Tidak 
+9. Darimanakah biasanya Anda mendapatkan informasi tentang sepeda ?
+* Keluarga
+* Teman
+* Surat kabar
+* Televisi
+* Internet
+* Radio
+* Lainnya (Sebutkan : .........................................................................)
+Berilah nomor  pada tempat yang disediakan :
+10. Secara berurutan, faktor apakah yang dimiliki oleh sebuah sepeda yang membuat anda tertarik dan mendorong anda untuk membeli sepeda tersebut (urutkan berdasarkan angka) ?
+* 
+* Warna sepeda
+* Aksesoris yang terdapat pada sepeda
+* Jenis sepeda
+* Model sepeda
+* Harga sepeda
+* Merk produk
+* Ukuran sepeda
+* Garansi
+??
+
+??
+
+??
+
+??
+
+2-13
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+iii
+
+
+		1-4	
+
+
+
+
+1-1
+
+		2-24	
+
+
+
+
+2-1
+
+3-25
+
+
+
+
+
+
+3-1
+
+		6	
+
+
+
+4-1
+
+
+

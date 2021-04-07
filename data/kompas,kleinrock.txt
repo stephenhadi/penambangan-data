@@ -1,0 +1,9 @@
+40 Tahun Internet
+40 tahun yang lalu, tepatnya tgl 29 Oktober 1969, Leonard Kleinrock memimpin sebuah tim yang kemudian dapat membuat satu komputer berkomunikasi dengan yang lain di dalam bagian riset.
+Kleinrock terdorong oleh keyakinan bahwa komputer dirancang untuk dapat berbicara satu sama lain sehingga menghasilkan jaringan yang sederhana, seperti penggunaan pesawat telepon.
+Dalam disertasinya, Kleinrock berhasil memecahkan kode digital dan menjadikannya sebagai paket-paket yang terpisah, dimana hal tersebut adalah kunci dalam pertukaran data antara satu komputer dan komputer lainnya. Hasil disertasinya tersebut kemudian diterbitkan dalam sebuah buku. Tetapi tidak ada yang peduli saat itu.
+Kleinrock melakukan presentasi kepada AT&T, yang merupakan perusahaan penyedia jasa sambungan telepon lokal dan interlokal terbesar di AS. Pihak AT&T mengatakan bahwa idenya tidak akan bisa diwujudkan, bahkan jika dapat terjadipun, mereka tidak mau melakukan apapun.
+Namun AT&T menyediakan sebuah jalur yang menghubungkan komputer untuk Arpanet, dimana Arpanet ini adalah sebuah proyek yang didukung oleh militer AS. Pada awalnya percobaan untuk menghubungkan Arpanet gagal. Lalu Tim Kleinrock mencoba mengirimkan data antara komputer di Arpanet dan berhasil. Dua komputer di dua unversitas lain juga terhubung pada akhir tahun 1969. Inilah jejak awal dari internet yang saat ini semakin berkembang.
+Tidak pernah terbayangkan dalam benak Kleinrock akan eledakanf facebook, twitter, YouTube ataupun aplikasi yang lain, yang terjadi saat ini.
+Saat ini Kleinrock sedang mempersiapkan perayaan ulang tahun internet ke-40. Beliau mengatakan, gInternet sudah menjadi anak remaja sekarang. Dia sudah belajar sesuatu, tetapi masih harus terus belajar.h
+Dikutip dari Kompas tgl 26 Okt 2009

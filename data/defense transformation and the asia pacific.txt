@@ -1,0 +1,264 @@
+﻿Defense transformation is an ambiguous but nevertheless bounded term. Generally, it is
+much more than the mere modernization of a country's armed forces; rather, it is
+seen as a discontinuous or disruptive change in the character and conduct of
+warfare occurring when new technologies are combined with innovative operational
+and organizational concepts.
+Currently, defense transformation is driven and enabled primarily by
+advances in information technologies (IT) and network-centric warfare.
+Key characteristics of a modern transformed force include: new
+command, control, communications, computing, intelligence, surveillance,
+and reconnaissance (C4ISR), networked with weapons
+and platforms; shared situational awareness; more accurate and
+standoff engagement; agility, speed, rapid deployability, and flexibility;
+and greater jointness and interoperability.
+Militaries and governments throughout the Asia-Pacific region
+have begun to consider the promise and requirements of
+defense transformation, including transformational concepts.
+Most of these typically entail the acquisition, development, and
+integration of new C4ISR systems and precision-guided
+weapons. Australia has termed its transformational concept the
+Knowledge Edge; Japan the Information-based Revolution in
+Military Affairs (Info-RMA); and Singapore the Integrated
+Knowledge-based Command and Control (IKC2).
+Interoperability with U.S. forces has been a key driver of current Asia-
+Pacific thinking about defense transformation. This enhanced interoperability
+is especially crucial for regional allies as the United States continues
+to transform its armed forces-it would permit these countries' militaries to tap
+into any progress the United States makes in transformational warfare.
+In other cases, defense transformation is driven by considerations related to the
+United States but not in pursuit of interoperability. For example, China has devoted increased
+attention to developing capabilities for asymmetric warfare using so-called assassin's mace weapons to
+defeat superior forces. For these reasons, transformation is an increasingly loaded and challenging issue
+with many implications for defense and security in the Asia-Pacific region.
+Defense Transformation and the Asia-Pacific: Implications for Regional Militaries
+ments in precision-strike and intelligence-gathering, surveillance,
+and reconnaissance (ISR).
+In particular, the ADF places increasing emphasis on NCW as
+a means to gain an edge over potential competitors in the region.
+The Knowledge Edge concept is defined as the effective exploitation
+of IT to allow the ADF to use its relatively small force to
+maximum effectiveness. NCW is intended not only to provide the
+ADF with a force multiplier to maintain a technological edge over
+its much larger potential adversaries (such as Indonesia), but also
+to enhance cooperation and interoperability with U.S. forces. In
+this regard, Australia seeks to leverage its limited indigenous
+high-technology core competencies--such as its Jindalee overthe-
+horizon radar network (JORN)--in collaborative weapons programs
+with the United States.
+China has also been particularly influenced by the emerging
+IT-based RMA. Beijing is currently engaged in a determined
+effort to modernize its armed forces, the People's Liberation Army
+(PLA), in order to fight and win limited wars under high-tech conditions.
+This doctrine revolves around short-duration, high-intensity
+conflicts characterized by mobility, speed, and long-range
+attack; employs joint operations fought simultaneously throughout
+the entire air, land, sea, space, and electromagnetic battle
+space; and relies heavily upon extremely lethal high-technology
+weapons. PLA operational doctrine also emphasizes preemption,
+surprise, and shock value since the earliest stages of conflict may
+be crucial to the outcome of a war.
+In this regard, Beijing sees considerable potential for force
+multipliers in such areas as information warfare, digitization of
+the battlefield, and networked systems. As already mentioned,
+China is greatly expanding its C4ISR capabilities. At the same
+time, adversaries who are highly dependent upon advanced technology
+(such as the United States) are seen as susceptible to lowtech
+countermeasures or attacks on their own command, control,
+and communications capabilities. Consequently, the PLA has
+devoted increasing attention to the development of asymmetric
+responses aimed at enabling "the inferior to defeat the superior."
+These systems are sometimes lumped together and referred to as
+assassin's mace or trump card weapons. Some assassin's mace
+weapons are intended to attack an enemy's vulnerabilities such as
+computer networks. Information warfare (IW) is a new, potentially
+critical development in the PLA's war fighting capabilities. The
+PLA is reportedly experimenting with IW operations, and it has
+established special IW units to carry out attacks on enemy computer
+networks in order to blind and disrupt an adversary's command,
+control, communications, computing, and intelligence
+(C4I) systems.
+India, following the events and outcome of the 1991 Gulf
+War, began to pay closer attention to the promise and challenges
+of the emerging IT-based RMA. Many Indians have become
+increasingly concerned about growing U.S. technological prowess
+and its near-global dominance as a conventional military power.
+Consequently, some have called for India to acquire corresponding,
+perhaps asymmetric capabilities to deal with this new military-
+technological reality. In particular, this response entails
+exploiting the emerging information revolution in warfare if India
+still wants to be taken seriously as a regional and global power,
+and if it still wants to have a fighting chance in future conflicts. In
+this regard, India's rapidly growing IT sector is seen as playing a
+critical role in this effort.
+Japan's interest in defense transformation has much of its
+roots in the 1998 North Korean Taepo Dong missile test, which
+alerted Tokyo of the need to reform and reorient its Self-Defense
+Forces (SDF) to new threats, particularly ballistic missiles and the
+proliferation of weapons of mass destruction (WMD). Other concerns
+affecting Japan's interest in transformation include the possibility
+of cyber attacks on its national information infrastructure,
+the likely expansion of SDF involvement in international military
+operations (such as in Iraq), and increased military cooperation
+with the United States in regional security undertakings.
+The Japan Defense Agency (JDA) has designated its transformational
+concept the Info-RMA. The Info-RMA is based on
+the premise that future warfare will be characterized by a huge
+leap in battle space awareness capability, precision-strike engagements,
+coordinated attacks by widely dispersed small units, the
+heavy use of cyberspace and unmanned battlefield systems, the
+expansion of the operational theater and increased speed, and the
+move from attrition to decisive (often called effects-based) warfare.
+The Info-RMA, according to JDA, is based on the application
+of advanced IT to the military sphere and entails informationsharing
+through the creation of an all-inclusive C4ISR network;
+greater jointness and speed (particularly when it comes to command
+and control); increased combat efficiency and effectiveness;
+greater organizational flexibility; the protection of critical information
+systems (such as command and control nodes); and
+expanded interoperability with U.S. forces. The objective of this
+Info-RMA is a quantum leap in the efficient achievement of military
+objectives.
+Many of the principles of the Info-RMA can be found in the
+SDF's future defense capabilities requirements. In particular, the
+JDA's 2003 defense posture review calls for the SDF to construct
+a joint information-sharing network for its ground, sea, and air
+self-defense forces; shift from a scale-oriented force structure to a
+technology-oriented force (i.e., use technology as a force multiplier);
+and maintain interoperability with the United States by
+catching up with U.S. force modernization and digitization. In
+addition, Japan plans to greatly increase its missile defense initiatives,
+such as upgrading its naval Aegis systems to defend against
+missile attacks and expanding cooperation with the United States
+on joint missile defense research and development (R&D). In fact,
+missile defense could become a catalyst for defense transformation
+in Japan since it could effect critical policy changes (e.g.,
+amending Article 9 of Japan's constitution in order to permit
+expanded U.S.-Japan cooperation in collective self-defense), promote
+the acquisition of a joint SDF C4ISR network, and help
+reform Japan's defense R&D and industrial infrastructure.
+Singapore's interest in defense transformation stems both
+from its strategic weaknesses--lack of strategic depth, a small and
+aging population, and relatively limited defense resources--and its
+economic and technological advantages, particularly a highly educated
+workforce and its IT sector. Singapore's Ministry of
+Defense (MINDEF) recognizes the criticality of IT as perhaps the
+most decisive factor in future conflict, as noted in its 2000 defense
+policy document, Defending Singapore in the 21st Century:
+[The IT-led RMA will] change the nature of warfare. Superior
+numbers in platforms...will become less of an advantage unless
+all these platforms can be integrated into a unified, flexible, and
+effective fighting system using advanced information technologies.
+At the same time, the ever-increasing reliance upon information
+technology means that protecting one's own information
+systems and disrupting the enemy's will become a major aspect of
+warfare.
+Accordingly, Singapore transformational efforts--the
+Integrated Knowledge-based Command and Control (IKC2) doctrinal
+concept--emphasize the acquisition, development, and integration
+of technologies for command and control with ISR systems
+and precision-guided weapons. RMA-related areas where
+MINDEF is currently focusing much of its efforts include
+advanced electronics and signal processing, information systems
+security, advanced guidance systems, communications, electronic
+warfare, sensors, and unmanned vehicles.
+To better aid the transformation of Singapore's armed forces
+3
+Defense Transformation and the Asia-Pacific: Implications for Regional Militaries
+along the lines of the IKC2 concept, MINDEF has established a
+Future Systems Directorate (FSD) and a Center for Military
+Experimentation (CME). These two organizations are tasked with
+helping to implement Singapore's proposed IKC2 concept.
+South Korea and Taiwan both appear to be still at the early
+conceptualization stage of defense transformation. The Republic of
+Korea (ROK) armed forces are conscious of the fact that future
+warfare will be quite different from today: nonlinear, small-scale,
+nonconcentrative, and far-separated. Consequently, future military
+forces need to develop improved capabilities for C4ISR, including
+the networking of platforms, unmanned systems, and real-time
+command and control as well as enhanced capacities for precisionstrike.
+Additionally, the ROK-U.S. alliance is undergoing a shift
+with South Korea expected to play a larger role in its defense. Seoul
+is interested in exploring ways to be more self-reliant (particularly
+when it comes to early warning, intelligence, and surveillance) and
+still be an interoperable partner with U.S. forces. Nevertheless, it is
+generally agreed that the Korean RMA is still very much at the
+starting line.
+Taiwan's RMA is largely predicated on Chinese threat scenarios
+and, therefore, is very much influenced by Chinese thinking
+about the RMA. Not surprisingly, Taipei is very concerned about
+defending against a missile strike and securing its command and
+control network from PLA attacks while also engaging in offensive
+information warfare against China. Elements of such a doctrine
+include early warning systems, reconnaissance capabilities, and an
+integrated and secure command and control system, along with
+antimissile interceptors and possibly retaliatory ballistic missile
+systems.
+In their efforts to implement an RMA, Seoul and Taipei are
+aided by the presence of large and growing IT sectors. South Korea
+and Taiwan are both highly wired in terms of cable and cellular systems,
+Internet use, and electronics industries. In particular, they
+possess sizable manufacturing bases in the fields of computers and
+telecommunications. Together they dominate the global production
+of dynamic random-access memory (DRAM) semiconductor chips.
+Conclusion
+Defense transformation has many implications for Asia-
+Pacific militaries. At the very least, the introduction of new technologies
+and new armaments promises to significantly affect strategy
+and operations on tomorrow's battlefield and hence alter the
+determinants of critical capabilities in modern warfare. Asia-
+Pacific militaries are clearly acquiring greater lethality and accuracy
+at greater ranges, improved battlefield knowledge and command
+and control, and increased operational maneuver and speed.
+Standoff precision-guided weapons, such as cruise and ballistic
+missiles and Global Positioning Systems (GPS)-homing guided
+munitions, have greatly increased combat firepower and effectiveness.
+The addition of modern submarines and surface combatants,
+amphibious assault ships, air-refueled combat aircraft, and transport
+aircraft have extended these militaries' theoretical range of
+action. Advanced reconnaissance and surveillance platforms have
+considerably expanded their capacities to look over the horizon and
+in all three dimensions. Through the increased use of stealth and
+active defenses (such as missile defense and longer-range air-to-air
+missiles), local militaries are significantly adding to their survivability
+and operational capabilities. Consequently, conflict in the
+region (should it occur) would likely be more high-tech: faster,
+more long-distance and yet more precise, and perhaps more devastating
+in its effect.
+Defense transformation also has the potential to greatly affect
+future interoperability between the United States and allied forces
+in the region. Interoperability has been a key factor driving much
+of the current thinking about defense transformation in the Asia-
+Pacific. U.S. allies and friendly partners in the region--Australia,
+Japan, South Korea, and Taiwan--are considering transformations
+of their respective militaries in order to remain compatible with
+U.S. forces, particularly as the likelihood of coalition operations
+with the United States (such as in Iraq and Afghanistan) is expanding.
+This enhanced interoperability is especially crucial for regional
+allies as the United States continues to transform its armed
+forces; it would permit these countries' militaries to tap into and
+take advantage of U.S. progress in transformational warfare. For
+example, Australia, Japan, and South Korea are all acquiring the
+Aegis combat system, which could enable their ships to link up
+with U.S. naval forces in cooperative engagements against opposing
+forces or, as in the case of Australia and Japan, permit it to work
+with the United States in developing and deploying ship-based missile
+defenses. At the same time, defense transformation on the part
+of key U.S. allies and friendly countries in the Asia-Pacific could
+greatly benefit the United States by strengthening bilateral military
+alliances and burden-sharing with U.S. forces in the region.
+Defense transformation means much more than the mere modernization
+of a country's armed forces; it is, in fact, the very promise
+of a paradigm shift in the character and conduct of warfare. For
+this reason, defense transformation entails more than simply overlaying
+new technologies and new hardware over existing force
+structures; rather, it also demands fundamental changes in the ways
+that future military will organize and fight wars. For these reasons,
+defense transformation will remain a controversial concept, challenging
+long-held concepts and cherished shibboleths when it
+comes to military organization, strategy, and tactics. Subsequently,
+defense transformation has the potential to greatly impact regional
+defense and security in the Asia-Pacific.
+Defense Transformation and the Asia-Pacific: Implications for Regional Militaries
+Asia-Pacific Center for Security Studies
+2058 Maluhia Road Honolulu, Hawaii 96815-1949 (808) 971-8900 fax: (808) 971-8999
+www.apcss.org

@@ -1,0 +1,1348 @@
+TUGAS AKHIR
+
+
+PEMBANGUNAN PERANGKAT LUNAK 
+SISTEM PENDUKUNG KEPUTUSAN MEMILIH EFEK UNIT GITAR 
+
+
+
+
+
+
+
+
+
+
+
+
+DIAN PRAMANA
+NPM: 2006730080
+
+
+
+PEMBIMBING: GEDE KARYA S.T., M.T.
+PEMBIMBING SERTA: BEATRIX, S.KOM 
+
+
+
+PROGRAM STUDI TEKNIK INFORMATIKA
+FAKULTAS TEKNOLOGI INFORMASI DAN SAINS
+UNIVERSITAS KATOLIK PARAHYANGAN
+BANDUNG
+2010
+TUGAS AKHIR
+
+
+PEMBANGUNAN PERANGKAT LUNAK 
+SISTEM PENDUKUNG KEPUTUSAN MEMILIH EFEK UNIT GITAR 
+
+
+
+
+
+
+
+
+
+
+DIAN PRAMANA
+NPM: 2006730080
+
+
+
+PEMBIMBING 
+
+
+
+
+GEDE KARYA S.T., M.T.
+PEMBIMBING SERTA
+
+
+
+
+BEATRIX, S.KOM 
+
+PROGRAM STUDI TEKNIK INFORMATIKA
+FAKULTAS TEKNOLOGI INFORMASI DAN SAINS
+UNIVERSITAS KATOLIK PARAHYANGAN
+BANDUNG
+2010
+ABSTRAK
+
+SISTEM PENDUKUNG KEPUTUSAN MEMILIH EFEK UNIT BERBASIS WEB
+
+DIAN PRAMANA
+NPM: 2006730080
+
+PEMBIMBING: GEDE KARYA S.T., M.T.
+PEMBIMBING SERTA: BEATRIX, S.KOM
+
+PROGRAM STUDI TEKNIK INFORMATIKA
+FAKULTAS TEKNOLOGI INFORMASI DAN SAINS
+UNIVERSITAS KATOLIK PARAHYANGAN
+BANDUNG
+2010
+
+
+　　　Sistem pendukung keputusan merupakan sebuah sistem yang berfungsi untuk memberikan dukungan keputusan kepada pengguna. Skripsi ini akan membahas pembangunan sistem pendukung keputusan yang dapat membantu pengguna untuk memilih efek unit gitar dengan menggunakan metode Sequential Elimination by Conjunctive Constraint dan Sequential Elimination by Lexicography.
+
+DAFTAR ISI
+　　　
+　　　
+ABSTRAK	i
+DAFTAR ISI	ii
+DAFTAR GAMBAR	v
+DAFTAR TABEL	vii
+BAB 1  PENDAHULUAN	1-1
+1.1	Latar Belakang	1-1
+1.2	Rumusan Masalah	1-2
+1.3	Tujuan	1-2
+1.4	Hipotesis	1-2
+1.5	Batasan Masalah	1-3
+1.6	Metodologi Penelitian	1-3
+1.7	Sistematika Pembahasan	1-4
+BAB 2  LANDASAN TEORI	2-1
+2.1	Sistem Informasi	2-1
+2.2	Pengambilan Keputusan	2-2
+2.2.1	Fase-Fase Pengambilan Keputusan	2-3
+2.2.2	Kondisi-Kondisi Dalam Pengambilan Keputusan	2-4
+2.2.3	Jenis Gaya Pengambilan Keputusan	2-5
+2.3	Sistem Pendukung Keputusan	2-7
+2.3.1	Definisi Sistem Pendukung Keputusan	2-8
+2.3.2	Klasifikasi Sistem Pendukung Keputusan	2-8
+2.3.3	Karakteristik dan Kemampuan Sistem Pendukung Keputusan	2-10
+2.4	Metode Pengambilan Keputusan Kriteria Ganda	2-13
+2.4.1	Metode Weighting	2-14
+2.4.2	Sequential Elimination by Consjuntive Constraint	2-14
+2.4.3	Sequential Elimination by Lexicography	2-16
+2.4.4	Analythical Hierarcy Processing	2-16
+2.5	Efek Gitar	2-19
+2.6	Menggunakan Efek  Gitar	2-24
+BAB 3     ANALISIS KEBUTUHAN  SISTEM	3-1
+3.1	Analisis Karakteristik dan Kemampuan SPK Efek Unit Gitar	3-1
+3.1.1	Komponen-Komponen SPK Efek Unit Gitar	3-2
+3.1.2	Manfaat Sistem Pendukung Keputusan Efek Unit Gitar	3-2
+3.2	Analisis Kebutuhan Data	3-3
+3.2.1	Observasi	3-3
+3.2.2	Penyebaran Kuisioner	3-3
+3.3	Analisis Hasil Pengumpulan Data	3-4
+Kesimpulan	3-6
+3.4	Metode Pengambilan Keputusan Efek Unit Gitar	3-7
+3.4.1	Metode Sequential Elimination by Conjunctive Constraints	3-7
+3.4.2	Metode Sequential Elimination by Lexicography	3-11
+3.5	Spesifikasi Perangkat Lunak Sistem Pendukung Keputusan	3-17
+3.6	Analisis Berorientasi Objek	3-17
+3.6.1	Usecase Diagram	3-18
+3.6.2	Class Diagram	3-24
+BAB 4  PERANCANGAN
+4.1	Rancangan Antarmuka SPK Efek Gitar	4-1
+4.2	Rancangan Antarmuka Login	4-1
+4.2.1	Rancangan Antarmuka Tambah Efek	4-4
+4.2.2	Rancangan Antarmuka Ubah Merk Efek	4-7
+4.2.3	Rancangan Antarmuka Hapus Merk Efek	4-9
+4.2.4	Rancangan Antarmuka Tambah Data Efek	4-10
+4.2.5	Rancangan Antarmuka Hapus Data Efek	4-13
+4.2.6	Rancangan Antarmuka Ubah Profil Efek	4-15
+4.2.7	Rancangan Antarmuka Tambah Data Lokasi	4-18
+4.3	Rancangan Antarmuka Use SPK	4-20
+4.3.1	Rancangan Antarmuka Kriteria Efek	4-21
+4.3.2	Rancangan Antar Muka Prioritas SPK	4-22
+4.4	Rancangan Antarmuka Solusi	4-23
+4.5	Rancangan Antarmuka Lihat Lokasi	4-24
+DAFTAR REFERENSI	ix
+
+
+ 
+DAFTAR GAMBAR
+　　　
+　　　
+Gambar 21 Sistem Informasi	2-1
+Gambar 22 Pemodelan Fase-Fase	2-4
+Gambar 23 Proses penggunaan algoritma Analythic Decision Making	2-6
+Gambar 24 Karakteristik dan kemampuan SPK	2-10
+Gambar 25 Komponen ? Komponen SPK	2-13
+Gambar 26 Efek Single Mode	2-19
+Gambar 27 Efek Bertipe Group Mode	2-19
+Gambar 28 Efek Bertipe Distorsi Berat atau Metal	2-20
+Gambar 29 efek bertipe distorsi standar	2-21
+Gambar 210 Efek Bertipe Chorus	2-21
+Gambar 211 Efek Bertipe Reverb	2-22
+Gambar 212 Efek Bertipe wah-wah	2-23
+Gambar 213 Efek Bertipe Flanging	2-23
+Gambar 214 Efek Bertipe  Pitch Shifting	2-24
+Gambar 215 Efek Vox ToneLab yang bisa menghasilkan dua suara dalam satu waktu	2-25
+Gambar 216 Bagian ? Bagian dari Efek Gitar	2-25
+Gambar 41 Rancangan Antarmuka Home	4-1
+Gambar 42 Rancangan Antarmuka Login	4-2
+Gambar 43 Rancangan Antarmuka Login username atau password kosong	4-2
+Gambar 44 Rancangan Antarmuka Login username atau password salah	4-3
+Gambar 45 Tampilan Sesudah Login	4-3
+Gambar 46 Rancangan Antarmuka Tambah Merk Efek	4-4
+Gambar 47 Tampilan Kesalahan Field	4-4
+Gambar 48 Rancangan Antarmuka Tampilan Setelah Penambahan Merk	4-5
+Gambar 49 Rancangan Antarmuka Ubah Merk Efek	4-6
+Gambar 410 Rancangan Antarmuka Ubah Merk Efek	4-7
+Gambar 411  Rancangan Antarmuka Ubah Merk Efek Ketika Field Kosong	4-7
+Gambar 412 Rancangan Antarmuka hapus Merk Efek	4-8
+Gambar 413 Rancangan Antarmuka hapus Merk Efek	4-9
+Gambar 414 Rancangan Antarmuka Tambah Data Efek	4-9
+Gambar 415 Rancangan Antarmuka Form Tambah Data Efek	4-10
+Gambar 416 Rancangan Antarmuka Tambah Data Efek Ketika Field Kosong	4-10
+Gambar 417 Rancangan Antarmuka Hapus Data Efek	4-12
+Gambar 418 Rancangan Antarmuka form hapus Data Efek	4-12
+Gambar 419 Rancangan Antarmuka Hasil penghapusan Data Efek	4-13
+Gambar 420 Rancangan Antarmuka Ubah profile Efek	4-14
+Gambar 421 Rancangan antarmuka Form Ubah Data Efek	4-14
+Gambar 422 Rancangan antarmuka Hasil Ubah Data Efek	4-15
+Gambar 423 Rancangan Antarmuka Tambah Data Lokasi	4-16
+Gambar 424 Rancangan Antarmuka Form Tambah Data Lokasi	4-17
+Gambar 425 Rancangan Antarmuka Use SPK	4-18
+Gambar 426 Rancangan Antarmuka Kriteria Efek	4-19
+Gambar 427  Rancangan Antarmuka Prioritas SPK	4-20
+Gambar 428 Rancangan Antarmuka bobot duplikat	4-21
+Gambar 429 Rancangan Antarmuka bobot belum diisi	4-21
+Gambar 430 Rancangan Antarmuka Solusi	4-22
+Gambar 431 Rancangan Antarmuka Lihat Lokasi	4-23
+
+
+DAFTAR TABEL
+　　　
+　　　
+Tabel  21 perbedaan antara pengambil keputusan heuristic dan analitik	2-7
+Tabel  22 Contoh Perhitungan weighting method	2-14
+Tabel  23 Contoh Perhitungan Metode Sequential Elimination by Conjunctive Constraint	2-15
+Tabel  24 Hasil Rangking metode conjunctive constraint	2-15
+Tabel  25 Sequential elimination by lexicography	2-16
+Tabel  26 Preferensi Pemilihan	2-18
+
+1 [Nomor Bab]
+BAB 1 
+PENDAHULUAN
+　　　
+　　　
+1.1 Latar Belakang
+　　　Musik adalah ritme, melodi,atau harmoni yang menyatukan beberapa macam suara yang secara rinci disusun dan  membentuk sebuah kesatuan yang berguna  untuk menyampaikan sebuah pesan, cara  berkomunikasi atau untuk menghibur [URL-2]. Musik telah  menjadi bagian hidup dari manusia, dan menjadi entitas dari aktualisasi diri manusia. 
+　　　Musisi adalah orang yang mampu untuk memainkan alat musik, menciptakan riff melody, menciptakan lagu. Untuk memproduksi musik yang kreatif dan mempunyai nilai jual tinggi musisi yang menggunakan efek unit   memerlukan satu atau beberapa macam efek yang mampu memperkaya melodi gitar yang dimainkan.
+     Efek unit  musik mempunyai karakteristik untuk mengubah/ memanipulasi hasil suara yang dikeluarkannya, efek bisa digunakan dalam  "real time", ketika aksi panggung langsung (biasanya digunakan dengan gitar listrik, keyboard electronic, atau bass electric), atau dalam proses rekaman, dengan merekam suara vokal dan instrumen. Untuk menggunakan efek dalam  pertunjukan langsung, efek di dihubungkan dengan konektor dari intrument. 
+     Sebuah efek unit terdiri dari analog atau sirkuit digital yang memproses sinyal audio. Dalam beberapa kasus, pemprosesan efek sama seperti yang digunakan dalam musik synthesizers, yang menyertakan aktif dan pasif filter,voltage-controlled oscillators, envelope followers atau envelope modifiers, wave-shaping circuits,?atau digital delay [VAL-08]. Pemilihan efek gitar yang tepat dan efisien masih menjadi suatu wacana permasalahan yang belum menemukan titik temu antara kepuasaan pengguna  dan jenis efek gitar.
+　　　 Karena itu, peneliti ingin membangun suatu sistem informasi berbasis WEB, yang menggunakan teknologi internet, untuk membantu para musisi menentukan efek unit  yang akan dibeli, yang sesuai dengan kebutuhan dan ekonomi mereka dengan menggunakan metode Sequential Elimination by Conjunctive Constraint dan Sequential Elimination by Lexicography. Di mana metode ini merupakan salah satu metode pengambilan keputusan yang menggunakan pendekatan kolektif dari proses pengambilan keputusannya dan mempunyai kemampuan untuk memecahkan masalah yang multi objektif dan multi kriteria.
+　　　
+1.2 Rumusan Masalah
+     Melihat latar belakang yang ada maka masalah dapat dirumuskan sebagai berikut :
+1. Informasi ? informasi apa saja yang dibutuhkan untuk memilih efek unit?
+2. Apa  jenis efek yang cocok berdasarkan genre musik yang diusung musisi dan apa kelebihan dan kekurangannya?
+3. Bagaimana cara membangun perangkat lunak sistem pendukung keputusan untuk memilih efek unit?
+1.3 Tujuan
+　　　Tujuan penelitian ini adalah untuk mengklasifikan varian dari efek unit yang digunakan oleh gitar serta membuat perangkat lunak sistem pendukung keputusan pemilihan efek unit berbasis WEB.
+1.4 Hipotesis
+　　　Metode Sequential elimination by conjunctive constraint dan Sequential elimination by lexicography dapat digunakan untuk memilih efek unit musik yang paling cocok dengan kriteria warna musik dan karakteristik dari musisi.
+
+1.5 
+Batasan Masalah
+          Batasan masalah penelitian ini sebagai berikut :
+1. Efek unit yang akan dibahas dalam penelitian ini adalah efek yang sudah terdapat dipasarkan dan dapat digunakan .
+2. Pengambilan keputusan hanya untuk pemilihan efek unit.
+3. Tipe efek unit dalam penelitian ini adalah gitar.
+1.6 Metodologi Penelitian
+Metode penelitian yang digunakan dalam penelitian ini sebagai berikut :
+1. Melakukan studi pustaka
+	Tahap ini untuk memahami hal-hal yang berkaitan dengan efek unit, konsep sistem pendukung keputusan, serta model sistem pendukung keputusan. 
+
+2. Pengumpulan data
+Pada tahap pengumpulan data ini akan dilakukan:
+1. Wawancara pada musisi yang sering menggunakan efek unit pada   lagu yang diciptakannya.
+2. Pengumpulan data-data informasi yang didapatkan dari wawancara terhadap musisi-musisi.
+3. Melakukan analisis rancangan perangkat lunak
+ 		Melakukan analisis kebutuhan sistem pendukung keputusan serta hasil   pengumpulan data-data dari informasi  yang didapat. 
+4. Membuat perancangan sistem pendukung keputusan 
+	Merancang sistem pendukung keputusan berbasis web yang mampu membantu pengguna dalam proses pengambilan keputusan terhadap alternatif efek unit yang tersedia. 
+
+
+5. Melakukan implementasi rancangan Perangkat Lunak
+	Implementasi terhadap sistem pendukung keputusan yang berbasis web, yang mampu  membantu pengguna dalam proses pengambilan keputusan terhadap alternatif efek unit yang tersedia.
+
+6. Menguji Perangkat Lunak
+Tahap ini akan dilakukan evaluasi terhadap rancangan sistem pendukung keputusan  yang sudah dibuat dengan melakukan pengujian pada suatu efek unit dan pada periode waktu tertentu.
+1.7 Sistematika Pembahasan
+　　　Sistematika pembahasan dalam peneletian ini sebagai berikut :
+1. BAB I Pendahuluan
+Membahas tentang latar belakang pemilihan judul penelitian, rumusan masalah, batasan masalah, metode penelitian yang digunakan, tujuan penelitan, dan hipotesis.
+2. BAB II Dasar Teori
+Membahas tentang teori ? teori yang digunakan pada penelitian ini, yaitu tentang sistem pendukung keputusan dan efek unit.
+3. BAB III Analisis
+Meliputi analisis kebutuhan perangkat lunak sistem pendukung keputusan yang akan dibuat.
+4. BAB IV Perancangan Perangkat Lunak
+Membahas tentang perancangan perangkat lunak berdasarkan hasil analisis.
+5. BAB V Implementasi dan Pengujian
+Membahas tentang implementasi perangkat lunak dan pengujian yang dilakukan pada perangkat lunak sistem pendukung keputusan.
+6. BAB VI Kesimpulan dan Saran
+　　　Berisi kesimpulan akhir yang diperoleh serta saran-saran yang diperlukan untuk pengembangan lebih lanjut.
+　　　
+2 [Nomor Bab]
+BAB 2 
+LANDASAN TEORI
+　　　
+　　　
+2.1 Sistem Informasi 
+　　　Sistem Informasi merupakan sekumpulan komponen yang saling berhubungan yang mengumpulkan, memproses, menyimpan, menganalisis dan mendistribusikan informasi untuk mendukung pembuatan keputusan dan pengendalian informasi[TUR05].
+　　　Sistem informasi menerima input dan memproses data untuk memberikan informasi bagi pengambil keputusan dan membantu untuk mengkomunikasikan hasil yang didapatkan. Sistem informasi terdiri dari tiga bagian yang dilingkupi oleh lingkungan. Di dalam sistem ini pengambil keputusan merupakan bagian dari sistem. Gambar 2-1 di bawah ini merupakan deskripsi sistem informasi : 
+　　　
+Gambar 21 Sistem Informasi
+
+
+Di bawah ini akan dijelaskan peran dari masing-masing komponen :
+
+1. Input
+Input adalah elemen yang masuk kedalam sistem. Contoh input adalah mahasiswa yang diterima di sebuah universitas atau institusi pendidikan.
+2. Proses
+Proses adalah semua elemen yang diperlukan untuk mengkonversi input ke dalam output . Contoh dari proses adalah proses komputasi dan penyimpanan informasi pada sebuah komputer.
+3. Output 
+Output adalah produk akhir yang dihasilkan oleh sistem. Contoh output yaitu laporan akhir dari sebuah sistem komputer atau orang yang berpendidikan dari sebuah universitas atau institusi pendidikan.
+4. Umpan Balik
+Pada gambar 2-1 Umpan balik merupakan aliran informasi dan muncul sebagai  closed loop. Umpan balik merupakan aliran informasi yang keluar dari komponen output ke pengambil keputusan sehingga berdasarkan aliran informasi yang keluar dari output , pengambil keputusan mampu mengontrol dan memutuskan untuk memodifikasi input, proses, atau keduanya.
+5. Lingkungan 
+Lingkungan sistem terdiri dari elemen diluar input, proses dan output. Akan tetapi memiliki pengaruh pada performansi sistem dan konsekuensi pencapaian tujuan sistem.
+6. Batasan 
+Batasan adalah pemisah antara sistem dan lingkungannya. Sistem berada dalam batasan dan lingkungan berada di luar batasan. Penentuan batasan pada sebuah sistem informasi ditentukan dengan mempersempit lingkup sistem untuk mempermudah analisis.
+　　　
+2.2 Pengambilan Keputusan
+　　　Pengambilan keputusan adalah sebuah proses memilih tindakan, diantara berbagai alternatif untuk mencapai suatu tujuan atau beberapa tujuan. [TUR-05]. Berikut adalah tahapan dalam proses pengambilan keputusan.
+　　　.
+　　　
+2.2.1 Fase-Fase Pengambilan Keputusan
+　　　Menurut Simon, Proses pengambilan keputusan meliputi tiga fase, yaitu:
+1. Intelegensi : Merupakan fase untuk mencari kondisi yang berhubungan dengan keputusan. Pada fase ini masalah diidentifikasi dan didefiniskan.
+2. Desain : Merupakan fase untuk menemukan, mengembangkan, dan menganalisis kemungkinan tindakan.
+3. Pemilihan : memilih sebuah  tindakan dari pilihan yang tersedia, solusi yang diajukan  harus masuk akal.
+　　　
+　　　Ketika alternatif solusi yang dihasilkan masuk akal. Maka tahap selanjutnya masuk ke  fase implementasi yang  merupakan  hasil dari tindakan yang berhasil dalam  memecahkan masalah  real. Failure  membawa kita kembali ke proses fase sebelumnya.
+　　　Gambar 2-2 di bawah ini merupakan gambaran detail dari  fase-fase tersebut:
+
+Gambar 22 Pemodelan Fase-Fase
+　　　
+2.2.2 Kondisi-Kondisi Dalam Pengambilan Keputusan
+　　　Dalam pengambilan keputusan terdapat beberapa kondisi yang mungkin terjadi berdasarkan karakteristik dari kemungkinan masalah tersebut diantaranya :
+1. Certainty
+Pada kondisi ini, pengambil keputusan menguasai segala sesuatu dalam melakukan proses pengambilan keputusan dikarenakan masalah tersebut pernah ditangani sebelumnya.
+
+
+
+2. Uncertainty
+Pada kondisi ini, pengambil keputusan tidak mengetahui apapun mengenai kemungkinan dan konsekuensi dari keputusan yang diambil.   Masalah tersebut kabur atau tidak jelas, kompleks dan masalah tersebut belum pernah terjadi sebelumnya sehingga tidak ada standar untuk menangani masalah pada kondisi ini.  
+
+3. Risk
+Kondisi ini berada diantara kondisi kepastian (certainty) dan ketidakpastian(uncertainty). Pengambilan keputusan berada pada posisi resiko jika pengambil keputusan memiliki pengetahuan yang terbatas terhadap alternatif yang tersedia. Pada kondisi ini, pengambil keputusan tidak mempunyai kemampuan untuk   mengontrol hasil akhir, namun pengambil keputusan dapat memperkirakan hasil akhir. 
+
+
+2.2.3 Jenis Gaya Pengambilan Keputusan
+　　　Berikut ini adalah jenis gaya pengambilan keputusan :
+　　　
+1. Analythic Decision Making
+Analythic Decision Making menggunakan rumus matematis untuk mendapatkan solusi optimal secara langsung atau untuk memperkirakan suatu hal yang pasti. Teknik analitik  digunakan sebagian besar  untuk memecahkan masalah yang terstruktur, biasanya digunakan dalam masalah operasional yang terjadi sehari-hari.
+
+　　　Algoritma :
+Teknik analitik menggunakan algoritma untuk meningkatkan efisiensi dari pencarian. Gambar 2-3 di bawah ini  merupakan proses algoritma dari  Analythic Decision Making: 
+
+
+
+
+
+
+Gambar 23 Proses penggunaan algoritma Analythic Decision Making
+
+
+Untuk mencapai solusi yang optimal, solusi dihasilkan dan diperiksa untuk kemungkinan perbaikan yang ada. Perbaikan dibuat  sedapat mungkin, dan solusi yang baru di periksa berdasarkan prinsip-prinsip pemilihan (objective value ditemukan). Proses berlanjut sampai tidak ada lagi kemungkinan perbaikan.  
+
+2. Heuristic Decision Making 
+Pengambilan keputusan yang menggunakan pendekatan heuristic merupakan mengambil keputusan dengan bantuan beberapa pedoman, walaupun pedoman tersebut tidak selalu diterapkan secara terus-menerus atau sistematik. Pengambil keputusan ini mencari solusi yang memuaskan, bukan solusi yang optimal. Biasanya, keputusan diambil berdasarkan pengalaman. Pengambilan keputusan  heuristic mempelajari aksi. Solusi dicari dengan menggunakan metode trial and error. 
+Tabel 2-1 di bawah ini merupakan  perbedaan antara pengambil keputusan heuristic dan analitik :
+
+Tabel  21 perbedaan antara pengambil keputusan heuristic dan analitik
+Pengambilan keputusan analitikPengambilan keputusan heuristicBerdasarkan analisisBerdasarkan aksiMenggunakan prosedur langkah per langkahMenggunakan trial and errorInformasi dari model kuantitatifPengalamanMembangun model dan algoritma matematikaBerdasarkan pada akal sehaMencari solusi yang optimalMencari solusi yang memuaskan
+
+2.3 Sistem Pendukung Keputusan 
+　　　Sistem pendukung keputusan (Decision Support System) adalah suatu sistem informasi berbasis komputer yang menghasilkan berbagai alternatif keputusan untuk membantu pengguna dalam menangani berbagai masalah yang memerlukan penilaian atau judgement  dari pengambil keputusan dengan menggunakan data dan model.
+　　　Sistem pendukung keputusan memberikan dukungan langsung pada permasalahan dengan menyediakan alternatif pilihan dan menekankan pada efektivitas pengambilan keputusan dalam upaya untuk menghasilkan keputusan yang lebih baik. Pada sistem ini yang memegang peranan terpenting adalah pengambil keputusan karena sistem hanya menyediakan alternatif keputusan, sedangkan keputusan akhir tetap ditentukan oleh pengambil keputusan.
+
+
+2.3.1 Definisi Sistem Pendukung Keputusan
+　　　Berikut ini merupakan definisi sistem pendukung keputusan :
+　　　	
+1. Garry & Scott Morton [TUR-05]
+Garry & Scott Morton merupakan orang pertama yang memberikan konsep sistem pendukung keputusan. Menurut kedua orang ini  sistem pendukung keputusan merupakan sistem yang interaktif yang mampu membantu para pengambil keputusan untuk menggunakan data dan berbagai model untuk memecahkan masalah-masalah semi terstruktur.
+
+2. Kendall (KEN-02)
+Berikut ini adalah definisi sistem pendukung keputusan menurut Kendall :
+a. Sistem pendukung keputusan adalah suatu kelas dari sistem informasi yang mendorong terjadinya proses pengambilan keputusan .
+b. Sistem pendukung keputusan  merupakan metode yang tepat untuk memecahkan masalah yang bersifat semi terstruktur yang masih membutuhkan keputusan dari manusia.
+
+2.3.2 Klasifikasi Sistem Pendukung Keputusan
+　　　Ada beberapa cara untuk mengklasifikasikan SPK, antara lain [TUR-05]:
+1. Klasifikasi output menurut Alter
+Klasifikasi ini berdasarkan tingkat implikasi tindakan dari output sistem atau tingkat di mana output sistem dapat langsung mendukung (atau menentukan) keputusan. Menurut klasifikasi ini terdapat 7 kategori SPK yaitu:
+1. Berorientasi pada data
+2. Menunjukan keterangan pada informasi atau analisis
+3. Hubungan antara data dan model
+4. Berorientasi pada model
+5. Menyediakan kemampuan simulasi
+6. Optimisasi
+7. Suggestion models
+
+2. Klasifikasi menurut Holsapple dan Whinston
+Klasifikasi ini terbagi menjadi enam kerangka kerja, yaitu:
+1. Sistem pengambilan keputusan berorientasi teks
+Sistem pengambilan keputusan berorientasi teks mendukung pengambil keputusan melacak informasi secara teks yang dapat mempengaruhi keputusan secara elektronik. Aplikasi spk ini dapat digabungkan dengan teknologi informasi seperti imaging dokumen berbasis web, hypertext, dan agen cerdas.
+
+2. Sistem pengambilan keputusan berorientasi basis data
+Sistem pengambilan keputusan berorientasi basis data menggunakan konfigurasi basis data relasional, sehingga mengandalkan generation report yang kuat dan kemampuan query yang baik.
+
+3. Sistem pengambilan keputusan berorientasi Spreadsheet
+Spreadsheet merupakan sistem pemodelan yang memungkinkan pengguna mengembangkan model-model untuk mengeksekusi analisis DSS. Pada spreadsheet terdapat paket statistik, pengembangan linier, ilmu manajemen  dan keuangan, serta macro  yang mendukung pengambilan keputusan.
+
+4. Sistem pengambilan keputusan berorientasi Solver
+Solver merupakan suatu algoritma atau prosedur yang ditulis sebagai satu program komputer untuk melakukan komputasi untuk memecahkan suatu masalah. Pengembangan SPK dapat menggabungkan beberapa solver ketika membuat aplikasi SPK, seperti pemrograman linier.
+
+5. Sistem pengambilan keputusan berorientasi aturan
+Komponen pengetahuan SPK mencakup aturan prosedural, inferensial (reasoning), atau sistem pakar. Komponen ini dapat diintegrasikan dengan model kualitatif SPK.
+
+6. Sistem pengambilan keputusan gabungan
+Sistem pengambilan keputusan gabungan merupakan sistem gabungan yang meliputi dua atau lebih dari lima struktur dasar orientasi SPK, yaitu teks, basis data, spreadsheet, solver, serta aturan.
+2.3.3 Karakteristik dan Kemampuan Sistem Pendukung Keputusan
+　　　Karakteristik dan kemampuan sistem pendukung keputusan memungkinkan para pengambil keputusan yang lebih baik dan konsisten. Sistem pendukung keputusan ditunjukan pada gambar 2-4 :
+　　　
+　　　
+　　　
+Gambar 24 Karakteristik dan kemampuan SPK
+
+
+　　　Karakteristik dan kemampuan kunci dari sistem pendukung keputusan [TUR-05]:
+1. Dukungan untuk pengambil keputusan, terutama pada situasi semi terstruktur, dengan menyertakan penilaian manusia dan informasi terkomputerisasi.
+2.  Dukungan untuk semua level manajerial, dari eksekutif sampai ke manajer bawah.
+3. Dukungan untuk individu dan kelompok.
+4. Dukungan untuk keputusan mandiri dan sekuensial.
+5. Dukungan dari berbagai fase proses pengambilan keputusan : intelegensia, desain, pilihan, dan implementasi.
+6. Dukungan di berbagai proses dan gaya pengambilan keputusan.
+7. Kemampuan untuk menyesuaikan diri sepanjang waktu. Pengambil keputusan seharusnya reaktif, dapat menghadapi perubahan kondisi
+
+8. User friendly, kemampuan grafi yang sangat kuat dan antarmuka yang interaktif antara manusia dan mesin.
+9. Peningkatan terhadap keefektifan pengambil keputusan yaitu: akurasi dan kualitas, dibandingkan efisiensi atau biaya pengambilan keputusan. 
+10. Kontrol penuh oleh pengambil keputusan terhadap semua langkah proses pengambilan keputusan dalam menyelesaikan suatu masalah. SPK secara khusus menekankan untuk mendukung pengambilan keputusan bukan menggantinya.
+11. SPK harus mendukung kebutuhan pengguna, diperlukan proses pengembangan apabila terdapat perkembangan kebutuhan.
+12. Kemampuan pemodelan memungkinkan eksperimen dengan berbagai strategi yang berbeda.
+13. Akses disediakan untuk berbagai sumber data.
+14. SPK dapat diperlukan standalone tool atau sistem yang berdiri sendiri, yang digunakan oleh seorang pengambil keputusan pada suatu lokasi atau di distribusikan di suatu organisasi  keseluruhan dan di beberapa organisasi yang masih berada dalam suatu jaringan.
+Komponen Sistem Pengambilan Keputusan
+Berikut ini adalah komponen-komponen dari sistem pengambilan keputusan:
+
+1. Subsistem Manajemen Data
+Subsistem manajemen data memasukkan suatu basis data sistem pengambilan keputusan yang berhubungan dengan situasi masalah yang memerlukan proses pengambilan keputusan, dan dikelola oleh perangkat lunak yang disebut dengan Database Management System(DBMS). DBMS mendukung adanya fasilitas query yang dibutuhkan untuk mengakses dan memanipulasi data sesuai dengan kebutuhan.
+
+2. Subsistem Manajemen Model 
+Subsistem manajemen model merupakan paket perangkat lunak yang mengikutsertakan model keuangan, statistik, ilmu manajemen atau model kuantitatif  lainnya yang memberikan kemampuan analisis dan manajemen perangkat lunak yang tepat, yang disebut model Basis Management System.
+
+3. Subsistem Antarmuka Pengguna
+Subsistem antarmuka pengguna diolah  oleh perangkat lunak disebut User Interface Management System (UIMS) atau sistem manajemen antarmuka pengguna.Cakupannya tidak hanya mengenai perangkat keras dan perangkat lunak, tapi juga faktor-faktor yang berkaitan dengan kemudahan pengguna, kemampuan untuk dapat diakses dan interaksi antara manusia dan mesin.
+
+4. Manajemen Berbasis Pengetahuan
+Terdapat masalah tidak terstruktur bahkan semi-terstruktur yang sangat kompleks, sehingga solusinya memerlukan keahlian. Keahlian tersebut dapat diberikan oleh suatu sistem pakar atau sistem cerdas lainya. Oleh karena itu, semakin banyak SPK cerdas yang dilengkapi suatu komponen yang disebut subsistem manajemen berbasis pengetahuan. Komponen ini dapat menyediakan keahlian yang diperlukan untuk memecahkan aspek masalah dan memberikan pengetahuan yang dapat meningkatkan operasi komponen SPK yang lain.
+
+
+
+Gambar 25 Komponen ? Komponen SPK
+
+
+2.4 Metode Pengambilan Keputusan Kriteria Ganda
+
+　　　Model pengambilan keputusan kriteria ganda memberi kemampuan lebih kepada pengambil keputusan untuk mengevaluasi alternatif-alternatif pada pengambil keputusan. Pendekatan kriteria ganda memperbolehkan pengambil keputusan untuk menentukan prioritas serta melakukan analisis sensitifitas dengan memberikan pertanyaan bagaimana-jika. Metode-metode pengambilan keputusan kriteria ganda melingkupi weighting method, Sequential eliminination by lexicography, sequential elimination by lexicography, sequential elimination by conjuntive constrains, dan analythic hierarchy processing [KEN-02].
+
+2.4.1 Metode Weighting 
+　　　Metode Weighting digunakan untuk membandingkan pilihan yang satu dengan yang lainnya dalam sebuah kompetisi untuk menyediakan fasilitas (dalam hal ini criteria yang dimiliki para efek gitar). Setiap kriteria akan diberikan bobot 0 sampai dengan 1, dan setiap efek gitar diberikan nilai 1 sampai dengan 10 untuk setiap kriteria. Bobot dari tiap kriteria akan dikalikan dengan nilai yang diberikan ke efek gitar. Nilai-nilai tersebut setelah dikalikan bobot akan dijumlahkan dan didapat nilai total dari setiap efek gitar dan diurutkan dari yang terbesar hingga yang terkecil.
+　　　Contoh perhitungan metode weighting method :
+
+ Tabel  22 Contoh Perhitungan weighting method
+
+2.4.2 Sequential Elimination by Consjuntive Constraint
+　　　Dibandingkan dengan metode weighting method, pendekatan metode conjunctive constraint adalah dengan memilih alternatif yang tersedia dengan altenatif pilihan lain. Metode ini menghilangkan alternatif yang gagal memenuhi syarat batasan. Dalam hal ini  Pengambil Keputusan menentukan batasan-batasan atau standard, dan kemudian  dilanjutkan dengan menghilangkan semua alternative yang tidak memenuhi semua syarat [Kendall 2003]. Daftar dari pilihan alternative yang secara sekuensial dihilangkan dengan tightering standards.Tabel dibawah ini adalah contoh perhitungannya :
+　　　.
+Tabel  23 Contoh Perhitungan Metode Sequential Elimination by Conjunctive Constraint
+ 
+ 
+　　　Dengan menggunakan metode ini, hanya pelamar G03, G04, dan G07 yang telah melalui seleksi. Pengambil Keputusan bias saja meloggarkan batasan dan mengijinkan G01 dan G09. Hal ini dilakukan untuk menambah alternatif solusi. Tabel di bawah ini merupakan rangking dari pelamar berdasarkan perhitungan metode conjunctive constraint: 
+　　　
+Tabel  24 Hasil Rangking metode conjunctive constraint
+　　　
+ 
+2.4.3 Sequential Elimination by Lexicography
+　　　Metode ini memungkinkan Pengambil keputusan untuk melihat kelemahan para pelamar dengan menggunakan weighting method atau elimination by Conjunctive Constraints. Dalam metode Lexicography, pengambil keputusan  dapat melihat rangking dari para pelamar berdasarkan atribut yang paling penting (dalam kasus ini transfer). Tabel dibawah ini merupakan contoh penggunaan sequential elimination by lexicography :
+　　　
+Tabel  25 Sequential elimination by lexicography 
+
+
+2.4.4 Analythical Hierarcy Processing
+　　　AHP (Analytical Hierarchy Process) adalah teknik pengambilan keputusan yang memasukkan kriteria ganda, baik yang bersifat nyata, tidak nyata, kualitatif, dan juga memperhitungkan adanya konflik maupun perbedaan.
+　　　AHP digunakan untuk mengukur prioritas dengan menyajikan kerangka logika dan penyelesaian masalah yang diaplikasikan secara luas oleh dunia bisnis dan organisasi, yaitu proses pengorganisasian persepsi, perasaan, penilaian dan pengalaman masa lalu ke dalam suatu hirarki yang akan mempengaruhi suatu keputusan.
+　　　AHP sangat cocok dan fleksibel digunakan untuk menentukan keputusan yang menolong seorang pembuat keputusan untuk mengambil keputusan yang kualitatif dan kuantitatif berdasarkan segala aspek yang dimilikinya. Kelebihan lain dari AHP adalah dapat memberikan gambaran yang jelas dan rasional kepada pembuat keputusan mengenai keputusan yang dihasilkan.
+     
+Jenis-jenis AHP:
+* Single criteria : Pengambilan keputusan melibatkan satu atau lebih alternatif dengan satu kriteria.
+* Multi criteria : Pengambilan keputusan melibatkan satu atau lebih alternatif dengan lebih dari satu kriteria.
+
+Langkah-langkah dalam menentukan keputusan dalam AHP:
+1. Menentukan masalah yang terjadi
+     User diminta untuk menentukan permasalahan apa yang terjadi dan menentukan keputusan apa yang akan dicari, pada langkah pertama ini user diminta untuk menentukan kriteria-kriteria apa saja yang dapat menentukan pengambilan keputusan.
+     
+2. Menentukan perbandingan setiap elemen
+     User diminta untuk menentukan prioritas-prioritas setiap elemen yang dapat mempengaruhi pengambilan keputusan.
+     
+3. Menggabungkan setiap prioritas yang ada
+     Sistem menggabungkan setiap prioritas-prioritas yang ada dan mencari hasil dan keputusan yang terbaik. 
+
+
+Metode AHP memiliki beberapa aksioma yang harus diperhatikan antara lain:
+1. Reciprocal Condition Axiom 
+     Aksioma ini menyatakan bahwa bila suatu alternatif atau kriteria A lebih disukai sebesar n kali daripada B, maka B lebih disukai sebesar 1/n kali daripada A.
+     
+2. Homogenity 
+     Aksioma ini menjelaskan bahwa dalam membandingkan suatu elemen harus seimbang.
+3. Dependence 
+     Aksioma ini mengizinkan adanya perbandingan antara sekumpulan elemen dengan elemen lainnya pada tingkat yang lebih tinggi, artinya perbandingan pada tingkat bawah bergantung pada tingkatan di atasnya.
+4. Expectations 
+     Aksioma ini menyatakan bahwa suatu perubahan pada struktur akan membutuhkan suatu evaluasi baru terhadap hirarki.
+     
+　　　Ukuran yang banyak digunakan dalam AHP adalah menggunakan konsep perbandingan berpasangan (pairwise comparison), yaitu proses membandingkan antara dua kriteria yang perlu dipertimbangkan untuk melakukan suatu pengambilan keputusan. Dalam menentukan nilai-nilai prioritas seringkali AHP menggunakan tabel preferensi standar.
+
+
+Tabel  26 Preferensi Pemilihan
+Level PreferensiNilai NumerikEqually preferred1Equally to moderately preffered 2Moderately preffered3Moderately to strongly preffered4Strongly preffered5Strongly to very strongly preffered6Very strongly preffered7Very strongly to extremely preffered8Extremely preffered9
+
+2.5 Efek Gitar
+     Efek gitar adalah suatu alat yang mendukung pemain gitar dalam menghasilkan output suara yang diinginkan. Efek unit biasa digunakan dalam single unit maupun unit yang saling terintegrasi, di bawah ini merupakan contoh efek unit single mode, dan group mode:
+     
+ 
+
+Gambar 26 Efek Single Mode
+
+　　　
+Gambar 27 Efek Bertipe Group Mode
+
+
+ Efek gitar mempunyai panel tombol yang mengatur konfigurasi yang akan dihasilkan. Berikut adalah beberapa efek gitar berdasarkan efek suara yang dihasilkan [URL-03]:
+1. Distortion
+Distorsi mempunyai karakter suara yang kasar. Biasanya dipakai oleh pemain gitar untuk memainkan lagu dengan jenis aliran Metal atau Rock. Gambar 2-8 di bawah ini adalah contoh efek unit bertipe distorsi berat / metal dan gambar 2-9 merupakan contoh efek bertipe distorsi :  	
+　　　　　　
+Gambar 28 Efek Bertipe Distorsi Berat atau Metal
+　　　
+　　　
+　　　
+　　　Gambar 29 efek bertipe distorsi standar
+　　　
+2. Chorus
+Chorus mengubah gelombang input yang datang, sehingga menghasilkan output seolah-olah input itu dihasilkan oleh banyak sumber yang berbeda dengan suara yang sama. Berikut adalah contoh efek bertipe chorus :
+
+　　　
+　　　Gambar 210 Efek Bertipe Chorus
+
+3. Reverb
+Reverb mengubah gelombang input yang datang menjadi tertunda, kemudian dikeluarkan lagi dengan jumlah yang banyak dengan waktu yang tidak bersamaan, perbedaan waktunya hanya per microsecond sehingga menimbulkan kesan suara itu berada dalam suatu ruangan. Berikut adalah contoh dari efek bertipe reverb:
+
+　　　
+Gambar 211 Efek Bertipe Reverb
+　　　
+4. Wah-Wah
+Wah-wah mengubah input yang datang sehingga menjadi output yang terdengar seperti orang yang mengatakan wah-wah. Biasanya digunakan bagi pemain gitar yang beraliran Funk. Berikut adalah contoh dari efek bertipe wah-wah:
+
+
+
+　　　Gambar 212 Efek Bertipe wah-wah
+
+
+5. Flanging
+Flanging mengubah input yang datang menjadi seolah-olah dua output, tetapi output lain tertunda keluarnya dengan beda ± 20 milidetik. Berikut adalah contoh dari efek bertipe flanging:
+
+
+
+Gambar 213 Efek Bertipe Flanging
+
+
+6. Pitch Shifting
+Pitch Shifting adalah efek yang  mengubah input yang datang menjadi output yang naik setengah nada, satu nada atau bahkan 1-2 oktaf. Berikut adalah contoh dari efek bertipe pitch shifting:
+
+
+　　　
+Gambar 214 Efek Bertipe  Pitch Shifting
+
+2.6 Menggunakan Efek  Gitar
+     Efek  gitar terus berkembang dan menghasilkan berbagai jenis suara yang masing-masing mempunyai ciri khas sound yang berbeda-beda. Efek gitar biasanya digunakan oleh seorang gitaris, produser ,dan komposer musik untuk memperkaya jenis suara yang dihasilkan. 
+     Pada perkembangan akhir-akhir ini efek gitar mengalami perkembangan yang pesat, hal ini didasari oleh perkembangan ilmu pengetahuan dan teknologi yang terus berkembang. Sebagai contoh, efek gitar sekarang banyak yang sudah mempunyai fitur multiple sound artinya satu efek gitar bisa menghasilkan berbagai suara. Penggabungan suara pada satu waktu pun sudah bisa dilakukan, contohnya penggabungan suara delay dan reverb dalam satu waktu, contoh efek Vox ToneLab pada gambar 2-15: 
+
+
+Gambar 215 Efek Vox ToneLab yang bisa menghasilkan dua suara dalam satu waktu
+
+	Efek gitar terdiri dari :
+　　1.	Panel Pengatur Suara
+　　2.	Input 
+　　3.	Output
+　　4.	Pedal
+
+
+
+Gambar 216 Bagian ? Bagian dari Efek Gitar
+
+　　　Sampai saat ini keputusan para calon pengguna efek gitar untuk menggunakan efek gitar didasari atas  informasi dari internet dan rekanan yang sudah mempunyai efek gitar.
+　　　Informasi dari internet belum cukup jelas dan detail menjelaskan tentang efek itu sendiri.
+　　　
+　　　
+3 [3]
+
+BAB 3 
+
+ANALISIS KEBUTUHAN  SISTEM
+
+3.1 Analisis Karakteristik dan Kemampuan SPK Efek Unit Gitar
+Terdapat 14 karakteristik dan kemampuan yang dimiliki oleh sistem pendukung keputusan, namun SPK efek unit gitar hanya mendukung 8 karakteristik dan kemampuan, yaitu :
+1. Masalah-masalah semi-terstruktur 
+Dengan mengikutsertakan penilaian manusia dan informasi yang terkomputerisasi, SPK efek unit gitar mampu memberikan keputusan bagi masalah yang bersifat semi-terstruktur, yaitu keputusan dalam menentukan efek unit gitar.
+2. Keputusan yang saling bergantung atau sekuential  
+Hasil dari sistem pendukung keputusan bergantung pada proses perhitungan melalui metode-metode yang saling bergantung. 
+3. Mendukung intelegensia, desain, pilihan, dan implikasi
+Sistem pendukung keputusan efek unit gitar mampu mendukung fase-fase proses dalam pengambilan keputusan, yaitu : intelegensia, desain, pilihan, dan implikasi
+4. Dapat diadaptasi dan fleksibel 
+SPK efek unit gitar mampu beradaptasi pada perubahan dan bersifat fleksibel di mana terdapat administrator yang mampu melakukan perubahan-perubahan pada data, yaitu tambah, hapus, dan edit data.
+5. Kemudahan dan penggunaan interaktif 
+SPK efek unit gitar dibangun dengan menggunakan aplikasi antarmuka berbasis web, dan bersifat interaktif.
+6. Keefektifan bukan efisiensi
+SPK efek unit gitar mampu meningkatkan akurasi dan kualitas dalam pengambilan keputusan daripada efisiensi waktu yang dibutuhkan.
+7. Manusia mengontrol mesin
+SPK efek unit gitar memberikan kontrol penuh kepada pengguna dalam setiap langkah proses pengambilan keputusan dalam memecahkan masalah. SPK efek unit gitar dibangun untuk membantu pengguna sebagai pengambil keputusan dan bukan untuk menggantikannya.
+8. Kemudahan pengembangan
+SPK efek unit gitar dapat dikembangkan sehingga mampu memenuhi kebutuhan pengguna.
+
+
+3.1.1 Komponen-Komponen SPK Efek Unit Gitar
+　　　SPK efek unit gitar terdiri dari subsistem-subsistem berikut ini, yaitu:
+1. Subsistem Manajemen Data
+Subsistem manajemen data yang terdapat dalam SPK efek unit gitar terdiri dari basis data yang berhubungan dengan permasalahan yang dibahas, dan hal ini dikelola oleh perangkat lunak yang disebut dengan Database Management System (DBMS).
+2. Subsistem Antarmuka Pengguna
+Subsistem antarmuka pengguna  yang digunakan oleh SPK efek unit gitar. 
+
+3.1.2 Manfaat Sistem Pendukung Keputusan Efek Unit Gitar  
+     Beberapa manfaat dari DSS pemilihan efek gitar yang akan dibuat ini antara lain:
+1. Memiliki kemampuan memilih efek unit gitar yang berkualitas.
+2. Dapat memberikan respon yang lebih cepat daripada pemilihan secara manual.
+3. Memiliki kemampuan untuk mencoba variasi dari kriteria yang ditetapkan sesuai dengan keinginan calon pengguna efek gitar.
+4. Menghemat biaya dan waktu yang diperlukan dalam proses pemilihan efek gitar.
+5. Keputusan yang dihasilkan SPK dapat disamakan dengan keputusan secara manual (intuitif).
+
+
+3.2 Analisis Kebutuhan Data
+　　    Untuk  menunjang analisis kebutuhan sistem, SPK efek unit menggunakan observasi dan quisioner sebagai acuan untuk mengetahui karakteristik pemilihan efek gitar yang dilakukan oleh pengguna. Selain itu dibutuhkan data yang akurat untuk bisa memahami karakteristik seseorang dalam memilih efek gitar.
+ 
+3.2.1 Observasi
+　　　Observasi dilakukan untuk mengetahui gambaran besar dari  karakteristik user. 
+     Observasi dilakukan di Tiga Negeri Music House, sebuah toko alat musik yang berlokasi di Jl. Soka No.4 Bandung. Di Tiga Negeri ini tidak hanya menjual efek gitar saja, setapi juga menjual gitar listrik / accoustic bass, drum, perkusi, keyboard, alat-alat untuk recording, live sound, DJ ,dan lighting. Toko Tiga Negeri termasuk toko alat musik yang terlengkap di Bandung.
+
+3.2.2  Penyebaran Kuisioner
+　　　Pada penelitian ini disebarkan 30 kuesioner untuk mengetahui faktor apa saja yang mendorong seseorang dalam memilih efek gitar dan kendala-kendala yang dihadapi ketika seseorang hendak memilih efek gitar. Responden adalah sejumlah pembeli dan pelanggan efek gitar di toko Tiga Negeri sebagai calon pengguna SPK memilih efek gitar.
+	Kuesioner yang disebarkan dalam bentuk kuesioner tertutup, artinya daftar pertanyaan telah disertai dengan sejumlah alternatif jawaban sehingga responden dapat langsung memilih jawaban yang dianggap paling sesuai.
+
+
+3.3 Analisis Hasil Pengumpulan Data
+     . Kuesioner disebarkan kepada 30 responden, reponden adalah calon pengguna/pembeli efek gitar, kuesioner disebarkan di sau lokasi yaitu 3 Negeri.
+     
+     Gambar 3.1 menunjukkan tingkatan usia responden. Dari 30 responden, 4% berusia antara 10-15 tahun, 36% berusia antara 16-20 tahun, 32% berusia antara 21-25 tahun, 18% berusia antara 26-30 tahun, 6% berusia antara 31-35 tahun, 4% berusia antara 41-45 tahun.
+     				
+     
+Gambar 3-1 Tingkat Usia
+     
+     Menurut hasil kuesioner, alasan yang dipertimbangkan masyarakat dalam memilih gitar adalah jenis suara 40%, harga 25%, merk 14%, Fitur Panel 12% dan jenis bahan material 9%.
+     
+     
+     
+     Gambar 3-2 Alasan yang Dipertimbangkan dalam Membeli atau memilih Efek Gitar
+     
+     
+     Kendala masyarakat dalam memilih efek gitar adalah ketidaktahuan harga gitar 34%, ketidaktahuan spesifikasi efek gitar 40%, ketidaktahuan merk efek gitar 22%, dan alasan pribadi 4%.
+     
+     Gambar 3-3 Kendala dalam memilih efek gitar
+
+Kesimpulan
+     Berdasarkan hasil analisis wawancara yang dilakukan terhadap Bapak David sebagai karyawan yang berinteraksi secara langsung di toko tiga negeri, efek gitar yang banyak diminati oleh masyarakat adalah efek gitar yang memiliki kriteria berikut: 
+1. Jenis Efek Gitar : Reverb, Distortion, Wah-wah, Flanger, Pitch Shifting, dan Delay
+2. Harga : Minimum < 1 juta 
+3. Merk : Zoom, Voz, Behringer, dan Metal Zone
+4. Fitur Panel :
+a. Foot Switch with LED Indicator
+b. Dual Sound (Effect)
+c. Active/Passive Input Switch
+d. PSU-SB DC power supply
+e. Dedicated Mode, Time, Tone and Level controls for awesome sound shaping
+f. Digital Changing Effect 
+5. Jenis Material : Besi, Plastik, dan Karbon
+
+     Seluruh hasil pengumpulan data ini digunakan untuk menetapkan variabel yang akan diberi batasan berdasarkan variabel kendala dalam memilih efek gitar yang dipilih responden dan menentukan bobot efek gitar berdasarkan variabel alasan yang dipertimbangkan responden dalam memilih efek gitar. Variabel-variabel tersebut adalah:
+
+1. Jenis Efek Gitar
+2. Harga
+3. Merk
+4. Fitur Panel
+5. Jenis Material
+
+3.4 Metode Pengambilan Keputusan Efek Unit Gitar
+　　　 Pada penelitian ini, SPK efek unit menggunakan metode sequential elimination by conjunctive constraints dan sequential elimination by lexicography. Untuk mendapatkan usulan solusi spesifikasi efek unit gitar tahap pertama yang dilakukan adalah menggunakan metode sequential elimination by conjunctive constraints. Pada tahap ini perangkat lunak sistem (web) akan meminta pengguna untuk mengisi batasan-batasan (constraints) beberapa variabel. Tahap selanjutnya adalah menggunakan  metode sequential elimination by lexicography. Pada tahap ini perangkat lunak sistem akan meminta pengguna untuk menentukan prioritas beberapa variabel. Setelah kedua metode dijalankan maka perangkat lunak sistem akan menghasilkan usulan solusi.
+　　　
+3.4.1 Metode Sequential Elimination by Conjunctive Constraints
+       Metode ini digunakan pada SPK untuk menghasilkan solusi berdasarkan batasan ?batasan (constraints) dan nilai standar yang diatur oleh perangkat lunak sistem atau pengguna umum. Oleh karena itu, pada tahap awal, pengguna umum akan diminta memasukkan batasan atau nilai standar terhadap terhadap beberapa variabel. Agar seluruh alternatif solusi tidak tereliminasi, maka variabel-variabel yang akan diberi batasan antara lain: 
+1. Jenis Suara
+Nilai standar yang akan diatur oleh variabel ini adalah jenis sound yang akan dipilih. Pengguna dapat memilih beberapa atau kombinasi jenis efek suara yang akan dipilih.
+2. Harga
+Nilai standar yang akan diatur oleh variabel ini adalah besarnya biaya yang akan dikeluarkan untuk sebuah efek unit gitar.
+3. Merk
+Nilai standar yang akan diatur oleh variabel ini adalah merk yang akan dipilih. 
+
+
+4. Fitur Panel
+Nilai standar yang  akan diatur oleh variabel ini adalah fitur luar panel yang akan dipilih. Pengguna dapat memilih beberapa atau seluruh fitur luar yang akan dipilih.
+5. Jenis Material
+Nilai standar yang akan diatur oleh variabel ini adalah fitur luar yang akan dipilih.
+
+Gambar 3-5 menunjukan form penentuan batasan untuk mencari  solusi alternatif berdasarkan variabel diatas.
+Form  penentuan batasan variabel efek unit gitar
+
+1. Jenis Suara :
+o Chorus
+o Delay
+o Distortion
+o Flanging
+o Pitch Shifting
+* Reverb
+o Wah-wah
+
+2. Harga :
+* Di bawah  Rp. 1.000.000
+o Diantara  Rp. 1.000.000  -  Rp. 2.000.000
+o Diantara  Rp. 2.000.000  -  Rp. 3.000.000
+o Diantara  Rp. 3.000.000  -  Rp. 4.000.000
+o Diantara  Rp. 4.000.000  -  Rp. 5.000.000
+o Diatas Rp. 5.000.000
+
+3. Merk
+o Aphex 
+o BBE 
+* Behringer 
+o Belcat 
+o Boss 
+o Damage Control 
+o Digitech 
+o DOD 
+o Electro Harmonix 
+o Hughes & Kettner 
+o JJ custom 
+o Korg 
+o Line 6 
+o Maxon 
+o MI Audio 
+o Morley 
+o MXR 
+o Snarling Dogs 
+o Tech 21 
+o Vox 
+o Xotic 
+o Zoom
+
+4. Fitur Panel : 
+* Foot Switch with LED Indicator
+* Dual Sound (Effect)
+* Active/Passive Input Switch
+* Dedicated Mode, Time, Tone and Level controls PSU-SB DC power supply
+* Digital Changing Effect
+
+5.     Jenis Material
+o Plastik
+* Besi 
+o Karbon
+
+
+
+Gambar 3-5 Form penentuan batasan constraint
+
+
+     Penerapan metode sequential elimination by conjunctive constraints secara manual berdasarkan batasan pada Gambar 3-5 ditunjukan pada Tabel 3-1 yaitu proses sistem mengeliminasi data efek yang tidak sesuai dengan batasan yang ditentukan oleh pengguna. Sistem akan mengambil data yang memenuhi batasan atau yang bernilai true.
+
+NoVariabelStandardPilihanT/FPilihanT/F DIGITAL REVERB DR600DIGITAL REVERB DR1001Jenis SuaraReverbReverbTReverbT2Harga<  Rp. 1.000.000Rp. 420.000TRp. 400.000T3MerkBehringerBehringerTBehringerT4Dedicated Mode, Time, Tone and Level controls 11T1T5Active/Passive Input Switch11T1T6Foot Switch with LED Indicator11T1T7PSU-SB DC power supply11T1T8Besi11T0F?1T1T"And"T"And"F
+Tabel 3-1  Penggunaan Metode Sequential Elimination by Conjunctive Constraint secara manual pada pemilihan efek gitar
+
+
+
+3.4.2 Metode Sequential Elimination by Lexicography
+　　　Dalam metode ini, proses yang dilakukan adalah menentukan prioritas terhadap lima variabel. Variabel-variabel untuk metode ini antara lain  jenis suara yang akan dipilih oleh pengguna, harga, merk dari efek gitar, fitur panel dari tampilan luar efek gitar, dan jenis material yang digunakan oleh efek gitar. Langkah yang digunakan oleh pengguna adalah menentukan skala prioritas suatu variabel, mulai dari prioritas tertinggi (ditunjukan oleh angka 1) hingga prioritas terendah (ditunjukan oleh angka 5). Form penentuan prioritas tiap variabel pada metode ini ditunjukan pada gambar 3-6  di bawah ini :  
+
+
+VariabelPrioritas12345Jenis SuaraHargaMerkFitur PanelJenis MaterialGambar 3-6 Form Penentuan Prioritas
+
+	Sistem bobot berskala 1-10 digunakan untuk setiap variabel dari jenis efek unit gitar yang dimiliki oleh efek unit gitar. Bobot total pada setiap variabel dihasilkan dari sejumlah pertanyaan yang masing-masing memiliki bobot. Penentuan masing-masing pertanyaan dan bobot dihasilkan berdasarkan data hasil survei, dan wawancara dengan Bapak David selaku karyawan di toko tiga negeri.
+	Form penentuan bobot total untuk tiap variabel bagi masing-masing efek gitar dapat dilihat pada Gambar 3-7 sampai Gambar 3-11 dan keterangan bobot untuk tiap jawaban dapat dilihat pada Tabel 3.2 sampai Tabel 3.5.
+
+Menentukan bobot variabel Jenis Suara :
+1. Perlukah ada kombinasi jenis suara dalam satu efek unit gitar ?  
+* Perlu
+* Tidak PerluGambar 3-7 Penentuan bobot variable jenis suara
+
+
+
+Tabel 3-2 Keterangan Bobot Jenis Gitar
+NoJawabanBobot1Ya6Tidak4
+
+Menentukan bobot variabel Harga
+1. Harga Terjangkau 
+o Ya 
+o Tidak
+2. Harga Sesuai dengan kualitas efek gitar
+o Ya 
+o Tidak
+3. Efek Gitar mempunyai fitur tambahan
+o Ya
+o TidakGambar 3-8 Pengisian Bobot Harga Gitar
+
+
+
+
+
+
+Tabel 3-3  Form Penentuan Bobot
+
+
+
+
+Menentukan Bobot Variabel Merk
+
+4. Eksistensi Merk 
+o Sangat Terkenal
+o Terkenal
+o Kurang Terkenal
+o Tidak Terkenal
+ Gambar 3-9 Pengisian Bobot Merk Efek Gitar
+
+
+Tabel 3-4 Keterangan Bobot Merk Efek Gitar
+NoJawabanBobot1Sangat Terkenal10Terkenal8Kurang Terkenal3Tidak Terkenal1
+
+Menentukan Bobot Variabel Fitur Panel
+
+1. Memiliki Fitur Foot Switch with LED Indicator ?
+o Penting
+o Tidak Penting
+2. Memiliki Fitur Dual Sound (Effect) ?
+o Penting
+o Tidak Penting
+3. Memiliki Fitur Active/Passive Input Switch ?
+o Penting
+o Tidak Penting
+4. Memiliki Fitur Dedicated Mode, Time, Tone and Level controls ?
+o Penting
+o Tidak Penting
+5. Memiliki Fitur PSU-SB DC power supply ?
+o Penting
+o Tidak Penting
+6. Memiliki Fitur Digital Changing Effect ?
+o Penting
+o Tidak PentingGambar 3-10 Form Penentuan Bobot Variabel Tetap Fitur Panel Dalam Efek Gitar
+
+
+Tabel 35 Keterangan Bobot Variabel Fitur Panel
+
+NoJawabanBobot1Penting1Tidak Penting02Penting1Tidak Penting03Penting1Tidak Penting04Penting1Tidak Penting05Penting1Tidak Penting0
+
+
+Menentukan Bobot Variabel Jenis Material
+1. Kekuatan material efek gitar
+o Bagus
+o Standar
+o KurangGambar 3-11 Form Penentuan Bobot Variabel Tetap Jenis Material
+	
+
+Tabel 3-5  Keterangan Bobot Variabel Jenis Material
+
+NoJawabanBobot1Bagus 3Standar2Kurang0
+　　　
+Dengan menggunakan metode Sequential Elimination by Lexicography, dari kedua efek gitar yang dihasilkan, akan dipilih efek gitar yang memiliki nilai tertinggi dari variabel pertama yang dipilih pengguna. Efek gitar yang tidak memiliki nilai tertinggi akan dieliminasi. Setelah mendapat nilai tertinggi dari variabel pertama, sistem kemudian memilih efek gitar yang memiliki nilai tertinggi pada variabel kedua. Proses ini terus berlanjut hingga sistem menghasilkan rekomendasi Efek gitar sebagai sebuah solusi. Pada contoh ini, sistem merekomendasikan Efek DIGITAL REVERB DR600 sebagai solusi. Penerapan metode ini dapat dilihat pada Tabel 3-6.
+
+
+
+Tabel 36 Solusi Penerapan metode Sequential Elimination by Lexicography
+AtributRankingDIGITAL REVERB DR600DIGITAL REVERB DR100Jenis Suara11010Harga277Merk366Fitur Panel452Material522
+
+
+3.5 Spesifikasi Perangkat Lunak Sistem Pendukung Keputusan
+     Perangkat lunak yang akan dibangun dalam SPK ini adalah berbasis web, dengan mempertimbangkan faktor kemudahan akses bagi user. User akan diminta untuk memasukkan variabel apa yang akan menjadi prioritas dalam pemilihan efek gitar. 
+     
+     Fitur ? Fitur yang akan dikembangkan :
+1. Web dilengkapi terintegrasi dengan  database , sehingga admin bisa menambah atau menghapus data. 
+2. User menentukan kriteria pemilihan.
+3. Web menampilkan efek unit berdasarkan hasil SPK, dan User mendapat informasi tentang tempat pembelian efek gitar tersebut.
+ 
+     Kriteria-kriteria user yang akan menggunakan sistem ini antara lain:
+?	Mengerti cara mengoperasikan komputer.
+?	Mengerti tentang varian dari efek gitar.
+?	Memiliki sedikit wawasan mengenai efek gitar
+
+3.6 Analisis Berorientasi Objek
+　　　Pada SPK Pemilihan efek gitar, Admin bertugas untuk meng-input data, dan memasukkan preferensi dan kriteria yang berdasarkan hasil analisis. Pemilihan kriteria dipegang  penuh  oleh user, dan keputusan akhir tetap berada di tangan user.
+　　　Sistem pendukung keputusan Pemilihan efek unit gitar menggunakan metode analisis berorientasi obyek, diagram-diagram yang diikutsertakan pada tahap analisis berorientasi obyek adalah use-case diagram, skenario dan class diagram.
+
+3.6.1 Usecase Diagram
+
+
+
+		
+
+
+
+Skenario :
+
+	
+　　　
+　　　Aktor : Admin
+　　　Normal Skenario Kelola Efek 
+　　　Pre-Kondisi : User masuk dan login ke website efek unit gitar
+　　　Post-Kondisi: User
+1. Aktor memilih menu data
+2. Sistem menampilkan jumlah data yang sudah ada
+3. Aktor memilih menu Tambah merk Efek.
+4. Aktor menginput data
+5. Sistem menyimpan penambahan data
+6. Aktor memilih menu Ubah merk efek
+7. Aktor memilih data yang akan di ubah
+8. Sistem menampilkan data hasil di ubah
+9. Sistem menyimpan perubahan data
+10. Aktor memilih menu Hapus merk efek.
+11. Aktor memilih data yang akan dihapus.
+12. Sistem menampilkan data hasil delete.
+13. Aktor mengkonfirmasi hasil Hapus merk efek.
+14. Sistem menyimpan perubahan data
+
+　　　Exception Skenario:
+2a.   Data masih kosong, sistem menampilkan “Data Kosong”
+5b. Nilai yang dimasukkan tidak lengkap, sistem menampilkan pesan kesalahan “Ada field kosong”.
+5c. Terjadi duplikasi data, sistem menampilkan “Data yang dimasukkan sudah ada”
+8a.  Data Field  masih kosong, sistem menampilkan “Data Kosong”
+8b. Nilai yang dimasukkan tidak lengkap, sistem menampilkan pesan kesalahan “Ada field kosong”
+
+
+
+　　　Aktor : Admin
+　　　Pre-Kondisi : Aktor memilih menu Kelola Data Efek
+　　　Post-Kondisi : Sistem menampilkan seluruh data efek gitar
+　　　Normal Skenario Kelola Data Efek :
+　　　
+1. Aktor memilih menu Tambah Data Efek
+2. Aktor meng-input data
+3. Sistem menampilkan data hasil penambahan data
+4. Aktor mengkonfirmasi hasil Tambah data efek
+5. Sistem menyimpan penambahan data
+6. Aktor memilih menu Ubah Data Efek.
+7. Aktor memilih data yang akan diubah
+8. Sistem menampilkan data hasil perubahan data
+9. Aktor mengkonfirmasi hasil ubah data efek
+10. Sistem menyimpan perubahan data
+11. Aktor memilih menu hapus data efek.
+12. Aktor memilih data yang akan di hapus.
+13. Sistem menampilkan data hasil penghapusan data.
+14. Aktor mengkonfirmasi hasil hapus data efek.
+15. Sistem menyimpan perubahan data
+
+　　　Exception Skenario:
+5a. Data efek yang dimasukkan tidak lengkap, sistem menampilkan pesan kesalahan
+5b. Data efek telah terdapat pada basis data, sistem menampilkan pesan  kesalahan
+8a.  Data Field masih kosong, sistem menampilkan “Data Kosong”
+8b. Nilai yang dimasukkan tidak lengkap, sistem menampilkan pesan kesalahan “Ada field kosong”
+　　　
+Aktor : Admin
+　　　Pre-Kondisi : Aktor memilih menu Tambah Data Lokasi
+　　　Post-Kondisi : Sistem menampilakan data lokasi
+　　　Normal Skenario Tambah Data lokasi :
+　　　
+1. Aktor memilih menu lokasi.
+2. Aktor memilih menu Tambah Data Lokasi.
+3. Aktor meng-input data lokasi.
+4. Aktor mengkonfirmasi hasil Tambah data Lokasi.
+5. Sistem menyimpan penambahan data.
+
+　　　Aktor : Calon Pengguna Efek
+　　　Pre-Kondisi : Aktor Memilih menu Menggunakan SPK
+　　　Post-Kondisi : Aktor mendapat satu atau lebih alternatif solusi
+　　　Normal Skenario Menggunakan  SPK 
+1. Aktor memilih menu Menggunakan SPK Efek Gitar.
+2. Sistem menampilkan halaman Kriteria Efek Gitar .
+3. Aktor mengisi pilihan nilai standard beberapa kriteria dalam form kriteria yang sesuai dengan keinginannya.
+4. Sistem memproses pilihan yang diinput oleh user.
+5. Sistem menampilkan halaman Prioritas SPK.
+6. Aktor memasukkan input data berupa prioritas terhadap variabel-variabel yang disediakan sistem.
+7. Sistem memproses input yang dimasukan oleh user.
+8. Sistem menampilkan spesifikasi Efek Gitar yang merupakan rujukan solusi.
+
+Exception:
+4.a Jika ada nilai standard yang tidak dipilih, sistem akan menampilkan pesan kesalahan.
+4b. Jika user tidak mengisi seluruh prioritas, sistem akan menampilkan pesan kesalahan.
+7a. Jika nilai standard yang dimasukkan oleh user terlalu ketat dan menyebabkan tidak adanya usulan solusi berdasarkan kriteria, maka sistem tidak akan melanjutkan ke proses berikutnya dan menampilkan bagi user untuk mengisi ulang nilai standard berdasarkan kriteria  
+　　　
+Aktor : Calon Pengguna Efek
+Pre-Kondisi : Aktor memilih menu Melihat Data Efek
+Post-Kondisi : Aktor mendapat informasi daftar  efek gitar
+Normal Skenario Melihat Data Efek :
+
+1. User memilih menu data efek gitar
+2. Sistem menampilkan halaman Daftar  Efek gitar yang sudah teridentifikasi
+
+
+Aktor : Calon Pengguna Efek
+Pre-Kondisi : Aktor memilih menu Melihat Lokasi Penjualan Efek
+Post-Kondisi : Aktor mendapat informasi lokasi penjualan
+Normal Skenario Melihat Lokasi Penjualan Efek :
+
+3. User memilih menu Lokasi Tempat Penjualan Efek gitar
+4. Sistem menampilkan halaman Lokasi Tempat Penjualan Efek gitar 
+5. 
+Entity Relationship Diagram 
+
+　　　
+
+Gambar 3-13 Entity Relationship Diagram SPK Efek Unit
+
+3.6.2 
+Class Diagram
+
+
+Gambar 3-14  Class Diagram
+                    
+                   BAB 4
+4 
+BAB 4
+
+PERANCANGAN 
+
+4.1 Rancangan Antarmuka SPK Efek Gitar
+     Rancangan antarmuka ini merupakan antarmuka home SPK Pemilihan Efek Unit Gitar. Pengguna akan diberi tampilan awal berupa efek gitar dan diberikan link untuk mengontak admin serta link untuk menggunakan SPK. Gambar 4-1 menunjukkan Rancangan Antarmuka Home.
+     
+
+     Gambar 4-1 Tampilan home web SPK efek Gitar
+
+　　　
+4.2 Rancangan Antarmuka Login
+     Rancangan antarmuka ini merupakan antarmuka halaman Login untuk admin yang memasukkan input username dan password. Gambar 4-2 menunjukkan Rancangan Antarmuka Login Admin. Menu yang dapat digunakan oleh Admin adalah Tambah Merk Efek, Ubah Merk Efek,  Hapus Merk Efek, Tambah Data Efek, Hapus Data Efek, Ubah Profile Efek, Tambah Data Lokasi .
+Gambar 42 Rancangan Antarmuka Login
+　　　
+　　　
+　　　
+　　　Untuk penanganan kesalahan seperti username atau password kosong, maka sistem akan menampilkan pesan kesalahan ”username atau password kosong” seperti yang ditunjukkan oleh Gambar 4-3. Gambar 4-4 menunjukkan username dan password tidak valid, sistem menampilkan pesan kesalahan ”Username atau password salah”.
+　　　
+　　　
+Gambar 43 Rancangan Antarmuka Login username atau password kosong
+
+
+Gambar 44 Rancangan Antarmuka Login username atau password salah
+
+
+　　　Setelah username dan password diisi dengan benar, maka akan muncul tampilan admin untuk Tambah Merk Efek, Ubah Merk Efek,  Hapus Merk Efek, Tambah Data Efek, Hapus Data Efek, Ubah Profile Efek, Tambah Data Lokasi.
+
+
+Gambar 45 Tampilan Sesudah Login
+
+4.2.1 
+Rancangan Antarmuka Tambah Efek 
+　　　Rancangan antarmuka ini merupakan antarmuka halaman Admin untuk menambahkan efek dengan memasukkan input merk efek ke field yang disediakan. Gambar 4-6 menunjukkan Rancangan Antarmuka Tambah Efek.
+
+
+
+Gambar 46 Rancangan Antarmuka Tambah Merk Efek
+
+
+	Apabila admin tidak menginput data (field masih kosong), maka akan muncul tampilan kesalahan “Field masih kosong… Silakan Lengkapi”. Gambar 4-7 menunjukan tampilan kesalahan tersebut.
+
+
+Gambar 47 Tampilan Kesalahan Field
+
+　　　Apabila Field Sudah terisi dengan benar, maka sistem akan menyimpan perubahan data tersebut dan menampilkan daftar merk input yang ada, sepert dintujukan oleh gambar 4-8 di bawah ini.
+
+
+Gambar 48 Rancangan Antarmuka Tampilan Setelah Penambahan Merk
+4.2.2 
+Rancangan Antarmuka Ubah Merk Efek 
+　　　Rancangan antarmuka ini merupakan antarmuka halaman Home Admin untuk mengubah nama merk efek . Gambar 4-9 menunjukkan Rancangan Antarmuka Ubah Merk Efek. 
+　　　
+
+Gambar 49 Rancangan Antarmuka Ubah Merk Efek
+
+　　　Apabila Admin sudah memilih merk yang akan di ubah, makan sistem akan menyediakan field untuk mengganti nama merk efek tersebut, seperti ditunjukan oleh gambar 4-10 di bawah ini. 
+
+Gambar 410 Rancangan Antarmuka Ubah Merk Efek
+
+　　　Apabila admin tidak menginput data (field masih kosong), maka akan muncul tampilan kesalahan “Field masih kosong… Silakan Lengkapi”. Gambar 4-11 menunjukan tampilan kesalahan tersebut.
+　　　
+
+Gambar 411  Rancangan Antarmuka Ubah Merk Efek Ketika Field Kosong
+
+
+4.2.3 
+Rancangan Antarmuka Hapus Merk Efek 
+　　　Rancangan antarmuka ini merupakan antarmuka halaman Home Admin untuk menghapus merk efek. Admin pertama  memilih efek mana yang akan dihapus. Gambar 4-12 menunjukkan Rancangan Antarmuka Ubah Merk Efek.
+　　　
+
+Gambar 412 Rancangan Antarmuka hapus Merk Efek
+
+　　　Apabila admin sudah mengkonfirmasi merk yang akan dihapus (klik tombol OK), maka akan muncul tampilan bahwa merk berhasi di hapus “Field Sudah di hapus”. Gambar 4-13 menunjukan tampilan tersebut.
+
+
+Gambar 413 Rancangan Antarmuka hapus Merk Efek
+
+4.2.4 Rancangan Antarmuka Tambah Data Efek
+　　　Rancangan antarmuka ini merupakan antarmuka halaman Home Admin untuk menambah Data efek. Admin pertama  memilih efek mana yang Datanya akan ditambah. Gambar 4-14 menunjukkan Rancangan Antarmuka Tambah Data Efek.
+　　　
+
+Gambar 414 Rancangan Antarmuka Tambah Data Efek
+
+	Setelah user mengkonfirmasi (klik tombol ‘OK’) kemudian user akan diberikan sebuah tampilan form data efek yang akan ditambah. Gambar 4-15 menunjukan tampilan tersebut . 
+
+
+Gambar 415 Rancangan Antarmuka Form Tambah Data Efek
+
+　　　Apabila terdapat field yang belum diisi maka sistem akan menampilkan kesalahan “field masih kosong ”. Gambar 4-16 menunjukan pesan kesalahan tersebut. 
+
+
+Gambar 416 Rancangan Antarmuka Tambah Data Efek Ketika Field Kosong
+
+　　　
+　　　Apabila tidak ada kesalahan, sistem akan menampilkan hasil penambahan data efek, seperti ditunjukan pada gambar 4-16.
+
+
+
+Gambar 4-16 Rancangan Antarmuka Hasil penambah Data Efek
+
+4.2.5 Rancangan Antarmuka Hapus Data Efek
+　　　Rancangan antarmuka ini merupakan antarmuka halaman Home Admin untuk menghapus Data efek. Admin pertama  memilih efek mana yang Datanya akan diubah. Gambar 4-17 menunjukkan Rancangan Antarmuka Hapus Data Efek.
+　　　
+
+Gambar 417 Rancangan Antarmuka Hapus Data Efek
+　　　
+　　　Setelah user mengkonfirmasi (klik tombol ‘OK’) kemudian user akan diberikan sebuah tampilan form data efek yang akan dihapus. Untuk menghapus data efek, admin hanya mengkosongkan salah satu data field . Gambar 4-18 menunjukan tampilan tersebut. 
+
+Gambar 418 Rancangan Antarmuka form hapus Data Efek
+　　　
+Kemudian, sistem akan menampilkan hasil penghapusan data efek, seperti ditunjukan pada gambar 4-19.
+　　　
+
+Gambar 419 Rancangan Antarmuka Hasil penghapusan Data Efek
+
+4.2.6 Rancangan Antarmuka Ubah Profil Efek
+　　　Rancangan antarmuka ini merupakan antarmuka halaman Home Admin untuk mengubah Data efek. Admin pertama  memilih efek mana yang Datanya akan diubah. Gambar 4-20 menunjukkan Rancangan Antarmuka Ubah Data Efek.
+
+Gambar 420 Rancangan Antarmuka Ubah profile Efek
+ 
+
+
+　　　Setelah user mengkonfirmasi (klik tombol ‘OK’) kemudian user akan diberikan sebuah tampilan form data efek yang akan diubah. Untuk mengubah data efek, admin tinggal mengubah data field yang akan dihapus. Gambar 4-21 menunjukan tampilan tersebut.
+　　　
+
+Gambar 421 Rancangan antarmuka Form Ubah Data Efek
+　　　
+　　　
+　　　Kemudian, sistem akan menampilkan hasil penghapusan data efek, seperti ditunjukan pada gambar 4-22.
+　　　
+
+Gambar 422 Rancangan antarmuka Hasil Ubah Data Efek
+4.2.7 Rancangan Antarmuka Tambah Data Lokasi
+　　　Rancangan antarmuka ini merupakan antarmuka halaman Home Admin untuk menambah data lokasi penjualan efek gitar. Pada langkah awal Admin memilih kota. Gambar 4-23 menunjukkan Rancangan Antarmuka Tambah Data Lokasi.
+
+Gambar 423 Rancangan Antarmuka Tambah Data Lokasi
+
+　　　Setelah user mengkonfirmasi (klik tombol ‘OK’) kemudian user akan diberikan sebuah tampilan form data penamban lokasi. Gambar 4-24 menunjukan tampilan tersebut.
+
+Gambar 424 Rancangan Antarmuka Form Tambah Data Lokasi
+4.3 Rancangan Antarmuka Use SPK
+　　　Rancangan Antar muka ini merupakan rancangan antarmuka menggunakan SPK atau use SPK, proses penentuan efek gitar  dilakukan dengan metode sequential elimination by conjunctive constraint dan sequential elimination by lexicography. Pada awalnya user menentukan batasan dari kriteria berdasarkan keinginan, Kemudian menentukan Prioritas SPK, setelah user akan mendapat solusi, seperti ditunjukan pada gambar 4-25.
+
+Gambar 425 Rancangan Antarmuka Use SPK
+4.3.1 Rancangan Antarmuka Kriteria Efek
+　　　Rancangan Antar muka ini merupakan rancangan antarmuka kriteria efek, user akan diminta untuk mengisi pilihan nilai standard beberapa kriteria dalam form kriteria yang sesuai dengan keinginannya, seperti ditunjukan pada gambar 4-26 berikut.
+
+Gambar 426 Rancangan Antarmuka Kriteria Efek
+4.3.2 Rancangan Antar Muka Prioritas SPK
+　　　Rancangan Antar muka ini merupakan rancangan antarmuka prioritas, user akan diminta untuk mengisi pilihan bobot yang disediakan oleh sistem, seperti ditunjukan pada gambar 4-27 berikut.
+
+Gambar 427  Rancangan Antarmuka Prioritas SPK
+　　　
+Apabila terdapat dua pengisian bobot dalam satu kriteria, maka sistem akan menampilkan pesan kesalahan seperti yang ditunjukan pada gambar 4-28. 
+　　　
+Gambar 428 Rancangan Antarmuka bobot duplikat
+　　　
+　　　
+　　　Apabila user tidak mengisi bobot maka sistem akan menampilkan pesan kesalahan seperti yang ditunjukan pada gambar 4-29
+　　　
+　　　
+
+Gambar 429 Rancangan Antarmuka bobot belum diisi
+.
+
+
+
+　　　
+4.4 Rancangan Antarmuka Solusi 
+　　　Rancangan Antar muka ini merupakan rancangan antarmuka solusi hasil proses kriteria dan perhitungan bobot yang dilakukan oleh sistem, sistem akan menampilkan hasil solusi SPK dan lokasi tempat Penjualan, seperti ditunjukan pada gambar 4-30 berikut.
+
+Gambar 430 Rancangan Antarmuka Solusi
+
+
+4.5 Rancangan Antarmuka Lihat Lokasi
+     Rancangan Antar muka ini merupakan rancangan antarmuka lihat solusi, sistem akan menampilkan data lokasi berdasarkan kota dan alamat lengkap dari lokasi tempat Penjualan, seperti ditunjukan pada gambar 4-31 berikut.
+
+
+
+Gambar 431 Rancangan Antarmuka Lihat Lokasi
+
+
+
+5 [Nomor Bab]
+DAFTAR REFERENSI
+　　　
+　　　
+[CON-02]	Connalen, Jim M., “Building Web Application With UML”, Third Edition, McGraw-Hill, 2002.
+
+[KEN-02]	Kendal, Kenneth, Julie., “System Analysis and Design ”, Fifth Edition, Prentice Hall International Edition,2002.
+
+[TUR-05]	Turban, Efraim, Aronson,J.E and Liang,T.P, “Decision Siupport System and Intelligent System”,7th Edition, Pearson Edu Incorporation, 2005. 
+
+[URL-01]	Greenwood, Jonny, “What is Music”, Tanggal Akses 1 Desember 2009,  http://en.wikipedia.org/wiki/Talk:Music
+
+[URL-02]	Blencowe, Merlin. "Understanding the Common-Cathode, Triode Gain Stage, Tanggal Akses 1 Desember 2009, http://www.freewebs.com/valvewizard1/Common_Gain_Stage.pdf
+
+[URL-03]	Tanggal Akses 25 Februari 2009, http://www.tiganegeri.com/products
+LAMPIRAN A
+KUISIONER
+
+Berilah tanda pada bulatan di bawah ini!
+
+1. Apakah jenis kelamin anda?
+o Laki-laki
+o Perempuan
+2. Berapakah umur anda?
+o <15 tahun
+o 16-20 tahun
+o 21-25 tahun
+o 26-30 tahun
+o 31-35 tahuno 36-40 tahun
+o 41-45 tahun
+o 46-50 tahun
+o >50 tahun3. Apakah pekerjaan anda?
+o Pelajar
+o Mahasiswa
+o Bekerjao Pengusaha
+o Lain-lain, ________________
+4. Apa alasan anda membeli efek gitar
+o belajar
+o tuntutan pekerjaan
+o mengkoleksi
+5. Apakah anda seorang pelaku industri musik?
+o Ya
+o tidak
+6. Apakah anda pernah memiiki pengalaman dalam memilih efek gitar?
+o Ya
+o Tidak
+7. Apakah yang menyebabkan anda mengalami kesulitan untuk memilih gitar?
+o Ketidaktahuan harga efek gitar
+o Ketidaktahuan Spesifikasi efek gitar
+o Alasan pribadi (_________________________)
+   Berilah nomor (1 s/d 6) pada kotak yang telah disediakan!
+8. Secara berurut, factor apa yang mempengaruhi anda untuk membeli gitar?
+1. Merk efek gitar
+2. Harga efek gitar
+3. Spesifikasi efek gitar
+4. Tipe efek Gitar
+(sebutkan : ___,___,___,___)
+
+
+LAMPIRAN B
+HASIL WAWANCARA
+
+
+　　　Hasil wawancara dengan salah satu karyawan yang berinteraksi langsung dengan calon pembeli di Toko Tiga Negeri Music House yang berada di Jl. Soka No.4 Bandung, 25- 03 - 2010:
+
+Pertanyaan	: Merk efek gitar saja apa yang dijual di tiga negeri?
+Jawaban	: banyak.. ada Akai, Alesis, Behringer, Boss.. Kalau pengen   lengkap, liat aja katalog websitenya.
+
+
+Pertanyaan 	: Efek Gitar apa yang paling banyak diminati oleh konsumen?
+Jawaban	: yang paling banyak di minati biasanya efek gitar merk Behringer ama Boss.
+
+Pertanyaan	: Biasanya konsumen memilih efek gitar dilihat dari apanya?
+Jawaban	: Biasanya dari spesifikasinya, merk,  harga, jenis material dan fitur panel  
+
+Pertanyaan	: Apa yang membuat harga efek gitar mahal?
+Jawaban	: Spesifikasi ama Merknya.
+
+Pertanyaan	: Yang biasanya menjadi konsumen tiga negeri siapa?
+Jawaban	: Kebanyakan para produser musik, anak band yg iseng ampe yang serius.
+
+
+
+
+
+
+
+
+??
+
+??
+
+??
+
+??
+
+
+
+
+
+
+
+
+
+
+
+
+
+vii
+
+
+1-4	
+
+
+
+
+1-1
+
+2-25	
+
+
+
+
+2-1
+
+3-24	
+
+
+
+3-1
+
+
+4-25	
+
+
+
+
+
+
+ix
+
+
+B-5-2
+
+

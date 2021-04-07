@@ -1,0 +1,9 @@
+Nama: Suci Ariestiani
+NPM: 2010730065
+Kelas: A
+Leonard Kleinrock
+
+
+      Leonard Kleinrock, lahir di New York 13 Juni 1934 adalah seorang engineer dan ilmuwan komputer. Sekitar 40 tahun yang lalu tepatnya 29 Oktober 1969, adalah hari yang bersejarah bagi perkembangan teknologi.
+      Pada saat itulah Beliau memperkenalkan teknologi yang bernama internet. Nah, siapa sangka penemuan beliau ini menjadi semakin berkembang hingga saat ini dan banyak membantu kita dalam keseharian. Awalnya beliau menemukan internet dikarenakan kecintaannya dengan dunia sains. Dalam disertasinya dia berhasil memecahkan kode digital dan menjadikannya sebagai paket-paket yang terpisah. Inilah yang menjadi kunci dalam pertukaran data antar komputer. 
+      Bersama timnya beliau melakukan penelitian untuk membuat satu komputer yang dapat berkomunikasi dengan komputer lainnya atau dengan kata lain membuat suatu jaringan yang teramat sederhana. Namun siapa sangka awalnya tidak ada yang peduli dengan tindak tanduknya dalam proyek besar ini. Bahkan AT & T, perusahaan penyedia sambungan telepon terbesar di AS menolak penelitian ini yang menurut mereka sebuah mission imposible. Meski demikian AT & T masih berbuat baik dengan menyediakan fasilitas berupa jalur yang menghubungkan komputer untuk Arpanet.

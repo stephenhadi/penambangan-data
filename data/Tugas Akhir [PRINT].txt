@@ -1,0 +1,1500 @@
+TUGAS AKHIR
+
+
+PEMBANGUNAN PERANGKAT LUNAK SPK UNTUK MEMILIH KAMERA DSLR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ANDRI MUHAMMAD RAMADHAN SATRIA RASPATI
+NPM: 2006730070
+
+
+
+PEMBIMBING UTAMA: Rosa de Lima E. P., Dra, M. Kom
+PEMBIMBING SERTA: Beatrix, S. Kom
+
+
+
+
+PROGRAM STUDI TEKNIK INFORMATIKA
+FAKULTAS TEKNOLOGI INFORMASI DAN SAINS
+UNIVERSITAS KATOLIK PARAHYANGAN
+BANDUNG
+2010
+DAFTAR ISI
+　　　
+　　　
+DAFTAR ISI	i
+DAFTAR GAMBAR	vi
+DAFTAR TABEL	viii
+DAFTAR LAMPIRAN	ix
+BAB 1  PENDAHULUAN	1-1
+1.1	Latar Belakang	1-1
+1.2	Rumusan Masalah	1-2
+1.3	Tujuan	1-3
+1.4	Batasan Masalah	1-3
+1.5	Metodologi Penelitian	1-3
+1.6	Sistematika Pembahasan	1-4
+BAB 2  DASAR TEORI	2-1
+2.1	Sistem Informasi	2-1
+2.1.1	Definisi Sistem Informasi	2-1
+2.1.2	Komponen Sistem Informasi	2-1
+2.1.3	Hierarki Sistem Informasi	2-2
+2.1.4	Kerangka Kerja Pengambilan Keputusan	2-3
+2.2	Pengambilan Keputusan	2-5
+2.2.1	Definisi Pengambilan Keputusan	2-5
+2.2.2	Fase Pengambilan Keputusan	2-5
+2.2.3	Corak Pengambilan Keputusan	2-7
+2.3	Sistem Pendukung Keputusan (SPK)	2-8
+2.3.1	Definisi SPK	2-8
+2.3.2	Karakteristik dan Kemampuan SPK	2-8
+2.3.3	Komponen SPK	2-10
+2.3.4	Manfaat SPK	2-11
+2.3.5	Proses Pembangunan SPK	2-12
+2.4	Pengambilan Keputusan Kriteria Ganda	2-14
+2.4.1	Weighting Method	2-15
+2.4.2	Sequential Elimination by Lexicography	2-15
+2.4.3	Sequential Elimination by Conjunctive Constraints	2-16
+2.4.4	Analytic Hierarchy Processing	2-18
+2.5	Kamera DSLR	2-24
+2.5.1	Definisi Kamera	2-24
+2.5.2	Sejarah Kamera	2-24
+2.5.3	Digital Single-lens Reflex	2-27
+2.5.4	Bagian-bagian Kamera DSLR	2-27
+2.5.5	Prinsip Kerja Kamera DSLR	2-29
+2.5.6	Unsus-unsur Dalam Pemilihan Kamera DSLR	2-30
+BAB 3  ANALISIS	3-1
+3.1	Analisis Kebutuhan Sistem	3-1
+3.1.1	Karakteristik dan Kemampuan	3-1
+3.1.2	Komponen	3-2
+3.1.3	Manfaat	3-2
+3.1.4	Proses Pembangunan	3-3
+3.2	Analisis Kebutuhan Data	3-4
+3.2.1	Wawancara	3-4
+3.2.2	Kuesioner	3-4
+3.2.3	Observasi	3-4
+3.3	Hasil Analisis Kebutuhan Data	3-4
+3.3.1	Wawancara	3-4
+3.3.2	Kuesioner	3-5
+3.3.3	Observasi	3-10
+3.4	Metode Pengambilan Keputusan	3-11
+3.4.1	Sequential Elimination by Conjunctive Constraints	3-11
+3.4.2	Sequential Elimination by Lexicography	3-13
+3.5	Analisis SPK DSS4DSLR	3-17
+3.5.1	Tujuan	3-17
+3.5.2	Pengguna	3-17
+3.5.3	Fitur Yang Dimiliki	3-17
+3.6	Kebutuhan Perangkat Lunak	3-18
+3.6.1	Use Case Diagram	3-19
+3.6.2	Skenario	3-19
+3.6.3	Class Diagram	3-31
+3.6.4	Entity Relationship Diagram	3-32
+BAB 4  PERANCANGAN	4-1
+4.1	Rancangan Antarmuka Pengguna	4-1
+4.1.1	Rancangan Antarmuka Login	4-1
+4.1.2	Rancangan Antarmuka Menu Utama Admin	4-2
+4.1.3	Rancangan Antarmuka Tambah Data Kamera DSLR	4-2
+4.1.4	Rancangan Antarmuka Ubah Data Kamera DSLR	4-3
+4.1.5	Rancangan Antarmuka Hapus Data Kamera DSLR	4-4
+4.1.6	Rancangan Antarmuka Tambah Data Lensa Kamera DSLR	4-5
+4.1.7	Rancangan Antarmuka Ubah Data Lensa Kamera DSLR	4-6
+4.1.8	Rancangan Antarmuka Tambah Data Aksesoris Kamera DSLR	4-7
+4.1.9	Rancangan Antarmuka Ubah Data Aksesoris Kamera DSLR	4-8
+4.1.10	Rancangan Antarmuka Tambah Lokasi Penjualan Kamera DSLR	4-9
+4.1.11	Rancangan Antarmuka Ubah Profil Tempat Penjualan Kamera DSLR	4-10
+4.1.12	Rancangan Antarmuka Lihat Standard Nilai	4-11
+4.1.13	Rancangan Antarmuka Ubah Standard Nilai	4-12
+4.1.14	Rancangan Antarmuka Menggunakan DSS4DSLR	4-13
+4.1.15	Rancangan Antarmuka Mencari Kamera DSLR	4-14
+4.1.16	Rancangan Antarmuka Mencari Lensa Kamera DSLR	4-15
+4.1.17	Rancangan Antarmuka Mencari Aksesoris Kamera DSLR	4-16
+4.1.18	Rancangan Antarmuka Lihat Lokasi Penjualan Kamera DSLR	4-17
+DAFTAR REFERENSI	ix
+LAMPIRAN A WAWANCARA	A-1
+LAMPIRAN B KUESIONER	B-1
+LAMPIRAN C DATA KAMERA	C-1
+
+
+DAFTAR GAMBAR
+　　　
+　　　
+Gambar 21 Hierarki Sistem Informasi	2-3
+Gambar 22 Fase Pengambilan Keputusan	2-6
+Gambar 23 Karakteristik dan Kemampuan SPK	2-9
+Gambar 24 Komponen SPK	2-11
+Gambar 25 Tahap Proses Pengembangan SPK	2-14
+Gambar 26 AHP Digunakan untuk Memilih Mobil Baru	2-18
+Gambar 27 Matriks Pairwise untuk Kriteria Pemilihan Mobil Baru	2-19
+Gambar 28 Hasil Matriks Pecahan dalam Bentuk Desimal	2-20
+Gambar 29 Hasil Perkalian Matriks dengan Mengkuadratkan Matriks Pairwise	2-20
+Gambar 210 Langkah Kedua dalam Proses Normalisasi Eigenvector	2-20
+Gambar 211 Iterasi Kedua Proses Normalisasi Eigenvector, Langkah Kedua	2-21
+Gambar 212 Hitung Beda antar Iterasi 1 dan 2	2-21
+Gambar 213 Eigenvalue Hasil Iterasi ke 3	2-21
+Gambar 214 Urutan Prioritas untuk Setiap Kriteria dari Hasil Normalisasi Eigenvector Iterasi ke 2	2-21
+Gambar 215 Matriks Pairwise Comparison untuk Setiap Alternatif Berdasarkan Kriteria Style	2-22
+Gambar 216 Hasil Perhitungan Menggunakan Metode Eigenvector untuk Setiap Alternatif Berdasarkan Kriteria	2-22
+Gambar 217 Pohon Hierarki Bobot Kriteria dan Alternatif Menggunakan Metode Eigenvector	2-23
+Gambar 218 Hasil Perkalian Matriks Alternatif dan Matriks Kriteria	2-23
+Gambar 219 Urutan Prioritas Alternatif, dengan Clio Menempati Urutan Tertinggi	2-23
+Gambar 220 Prinsip Kerja Camera Obscura	2-24
+Gambar 221 Kamera SLR Pertama	2-25
+Gambar 222 Kamera Daguerreo	2-26
+Gambar 223 Kamera Brownie	2-26
+Gambar 224 Prinsip Kerja Kamera DSLR	2-30
+Gambar 31 Grafik Responden Berdasarkan Jenis Kelamin	3-5
+Gambar 32 Grafik Responden Berdasarkan Tingkatan Umur	3-5
+Gambar 33 Grafik Responden Berdasarkan Pembelian Terakhir Kamera DSLR	3-6
+Gambar 34 Grafik Responden Berdasarkan Merk Kamera	3-6
+Gambar 35 Grafik Responden Berdasarkan Rekomendasi	3-7
+Gambar 36 Grafik Responden Berdasarkan Alasan Membeli Kamera DSLR	3-7
+Gambar 37 Grafik Responden Berdasarkan Faktor-faktor Dalam Pemilihan Kamera DSLR	3-8
+Gambar 38 Grafik Responden Berdasarkan Kelebihan Kamera DSLR yang Dimiliki	3-8
+Gambar 39 Grafik Responden Berdasarkan Kekurangan Kamera DSLR yang Dimiliki	3-9
+Gambar 310 Grafik Responden Berdasarkan Kesulitan yang Didapat Setelah Memiliki Kamera DSLR	3-9
+Gambar 311 Grafik Responden Berdasarkan Harapan Setelah Memiliki Kamera DSLR	3-10
+Gambar 312 Form Penentuan Batasan (Constraint)	3-12
+Gambar 313 Form Penentuan Prioritas	3-13
+Gambar 314 Form Penentuan Bobot Variabel Tetap Harga	3-14
+Gambar 315 Form Penentuan Bobot Variabel Tetap Spesifikasi	3-14
+Gambar 316 Form Penentuan Bobot Variabel Tetap Kemudahan Aksesoris	3-15
+Gambar 317 Form Penentuan Bobot Variabel Tetap Layanan Purna Jual	3-16
+Gambar 318 Use Case Diagram SPK DSS4DSLR	3-19
+Gambar 319 Class Diagram DSS4DSLR	3-31
+Gambar 320 Entity Relationship Diagram DSS4DSLR	3-32
+Gambar 41 Antarmuka Login	4-1
+Gambar 42 Antarmuka Menu Utama	4-2
+Gambar 43 Antarmuka Tambah Data Kamera DSLR	4-3
+Gambar 44 Antarmuka Ubah Data Kamera DSLR	4-4
+Gambar 45 Antarmuka Hapus Data Kamera DSLR	4-5
+Gambar 46 Antarmuka Tambah Data Lensa Kamera DSLR	4-6
+Gambar 47 Antarmuka Ubah Data Lensa Kamera DSLR	4-7
+Gambar 48 Antarmuka Tambah Data Aksesoris Kamera DSLR	4-8
+Gambar 49 Antarmuka Ubah Data Aksesoris Kamera DSLR	4-9
+Gambar 410 Antarmuka Tambah Lokasi Penjualan Kamera DSLR	4-10
+Gambar 411 Antarmuka Ubah Profil Tempat Penjualan Kamera DSLR	4-11
+Gambar 412 Antarmuka Lihat Standard Nilai	4-12
+Gambar 413 Antarmuka Ubah Standard Nilai	4-13
+Gambar 414 Antarmuka Penentuan Batasan	4-14
+Gambar 415 Antarmuka Penentuan Prioritas	4-14
+Gambar 416 Antarmuka Mencari Kamera DSLR	4-15
+Gambar 417 Antarmuka Mencari Lensa Kamera DSLR	4-16
+Gambar 418 Antarmuka Mencari Aksesoris Kamera DSLR	4-16
+Gambar 419 Antarmuka Lihat Lokasi Penjualan Kamera DSLR	4-17
+
+
+DAFTAR TABEL
+　　　
+　　　
+Tabel 21 Kerangka Kerja Pengambilan Keputusan	2-3
+Tabel 22 Corak Pengambilan Keputusan Analitik dan Heuristik	2-8
+Tabel 23 Weighting Methods Untuk Menilai Perangkat Lunak	2-15
+Tabel 24 Mengurutkan atribut berdasarkan rank	2-16
+Tabel 25 Mendapatkan alternatif	2-16
+Tabel 26 Lembar Kerja Sequential Elimination by Conjunctive Constraint	2-17
+Tabel 27 Trade-off attributes	2-17
+Tabel 28 Skala Pairwise Cmoparison	2-19
+Tabel 31 Penggunaan Metode Sequential Elimination by Conjunctive Constraints Secara Manual pada Kamera DSLR	3-13
+Tabel 32 Keterangan Bobot Variabel Tetap Harga	3-14
+Tabel 33 Keterangan Variabel Tetap Bobot Spesifikasi	3-15
+Tabel 34 Keterangan Bobot Variabel Tetap Kemudahan Aksesoris	3-15
+Tabel 35 Keterangan Bobot Variabel Tetap Layanan Purna Jual	3-16
+Tabel 36 Penggunaan Metode Sequential Elimination by Lexicography Secara Manual	3-16
+
+
+DAFTAR LAMPIRAN
+　　　
+　　　
+LAMPIRAN A   WAWANCARA	A-1
+LAMPIRAN B   KUESIONER	B-1
+
+
+
+1 [Nomor Bab]
+BAB 1 
+PENDAHULUAN
+　　　
+　　　
+1.1 Latar Belakang
+　　　Dunia fotografi telah lama diminati oleh banyak orang, dari mulai anak kecil hingga orang dewasa, sehingga kegiatan ini tidak terlepas dari kehidupan manusia. Fotografi muncul karena adanya kesadaran untuk menangkap momen yang terjadi dalam kehidupan, karena setiap orang sepakat bahwa momen tersebut belum tentu akan terulang kembali. Perkembangan fotografi pun tidak hanya sebatas untuk menangkap momen, namun kini berkembang menjadi salah satu media iklan yang efektif, media ekspresi diri, hobi, dan profesi. Fotografi tidak akan terlepas dari suatu alat yang mampu menangkap momen tersebut, yang dibantu dengan cahaya dan diolah sedemikian rupa sehingga menghasilkan sebuah foto. Alat yang dikenal dan digunakan oleh masyarakat adalah kamera.
+　　　Kamera berasal dari istilah bahasa Latin yaitu Camera obscura (dark chamber), suatu prinsip yang bekerja dengan menangkap cahaya dari objek yang diambil. Berdasarkan prinsip ini, kamera berkembang dengan pesat dengan adanya perbaikan-perbaikan untuk menghasilkan gambar yang baik seperti, menggunakan sistem jajaran lensa tunggal (Single-lens Reflex/SLR), hingga ditemukannya kamera berformat film. Saat era teknologi dijital mulai merambah ke setiap sendi-sendi kehidupan manusia, maka kamera pun dirancang secara dijital sebagai bentuk adaptasi terhadap perubahan tersebut. Kini banyak orang yang memiliki kamera dijital dengan beragam ukuran dan kebutuhan. Namun, ada satu jenis kamera dijital yang saat ini banyak diminati oleh masyarakat yaitu, kamera Digital Single-lens Reflex (DSLR).
+　　　Kamera DSLR merupakan bentuk adaptasi kamera SLR, dengan mekanisme yang serupa. Namun yang membedakan adalah media penyimpanan yang digunakan. Produsen kamera seperti, Canon dan Nikon, memasarkan produk-produk mereka dengan menawarkan keunggulan dari spesifikasi kamera DSLR tersebut dengan variasi harga yang berbeda untuk target pasar yang berbeda pula. Adanya variasi harga dengan keunggulan spesifikasi dari kamera DSLR tersebut, diikuti dengan ketidaktahuan kebutuhan dari pembeli dan pengguna kamera, membuat pemilihan dan penentuan kamera DSLR menjadi terasa sulit. Biasanya pembeli dan pengguna kamera mencari informasi dari internet atau meminta rekomendasi dari orang yang lebih berpengalaman. Tetapi kedua hal tersebut menjadi kurang efektif karena banyaknya rekomendasi dan kurangnya pengetahuan mengenai kamera DSLR.
+　　　Dengan adanya kesulitan tersebut, maka dibangun sebuah sistem pendukung keputusan (SPK) untuk membantu pembeli dan pengguna kamera dalam memilih dan menentukan kamera DSLR yang tepat untuk kelas pengguna tertentu. SPK yang dibangun akan mengolah data-data yang relevan dan pengetahuan yang dimiliki dengan menggunakan metode pendukung keputusan, dengan menentukan variabel-variabel terkait yang digunakan sebagai batasan dan skala prioritas dalam proses memberikan rekomendasi kamera DSLR yang tepat sesuai dengan penentuan variabel-variabel tersebut. Dengan dibangunnya SPK untuk memilih kamera DSLR ini, diharapkan pembeli dan pengguna kamera merasa terbantu dalam memilih dan menentukan kamera DSLR yang tepat untuk kelas pengguna tertentu.
+
+1.2 Rumusan Masalah
+　　　Terdapat beberapa masalah yang dapat dirumuskan dari latar belakang di atas antara lain,
+1. Apa yang menjadi pertimbangan pembeli dan pengguna kamera dalam memilih dan menentukan kamera DSLR?
+2. Kamera DSLR yang mana yang kira-kira tepat untuk kelas pengguna tertentu?
+3. Bagaimana membangun perangkat lunak SPK untuk memilih kamera DSLR?
+
+1.3 Tujuan
+　　　Tujuan dibangunnya perangkat lunak SPK untuk memilih kamera adalah untuk membantu pembeli dan pengguna kamera dalam memilih dan menentukan kamera DSLR mana yang tepat untuk kelas pengguna tertentu.
+
+1.4 Batasan Masalah
+　　　Batasan masalah diterapkan pada penelitian ini sehingga bahasan menjadi lebih fokus terhadap tujuan yang ingin dicapai. Batasan masalah tersebut antara lain,
+1. Merk kamera. Selama masa ujicoba dan pengembangan, merk dibatasi pada Canon, Nikon, Olympus, Pentax, dan Sony.
+2. Lensa kamera DSLR.
+3. Aksesoris kamera. Selama masa ujicoba dan pengembangan, aksesoris dibatasi pada battery, filter, flash, tripod, dan bags.
+4. Pembangunan perangkat lunak berbasis web. Masalah keamanan tidak dibahas pada penenlitian ini.
+
+1.5 Metodologi Penelitian
+　　　Metodologi yang digunakan dalam penelitian ini antara lain :
+1. Studi pustaka mengenai sistem pendukung keputusan, pemrograman berbasis web, dan jenis-jenis kamera DSLR.
+2. Melakukan survei sistem kini, meliputi pengumpulan dokumen dan data-data, wawancara kepada pihak penjualan kamera, memberikan kuesioner kepada pembeli dan pengguna kamera, dan melakukan observasi untuk mendapatkan data-data tambahan.
+3. Melakukan analisis terhadap hasil pengumpulan data, kebutuhan sistem pendukung keputusan, metode pengambilan keputusan, dan kebutuhan perangkat lunak.
+4. Membuat rancangan perangkat lunak sistem pendukung keputusan berbasis web yang dapat memberikan rekomendasi kamera DSLR yang tepat untuk kelas pengguna tertentu.
+5. Melakukan implementasi rancangan perangkat lunak sistem pendukung keputusan berbasis web yang dapat memberikan rekomendasi kamera DSLR yang tepat untuk kelas pengguna tertentu.
+6. Menguji perangkat lunak sistem pendukung keputusan dengan data yang relevan terhadap sistem pendukung keputusan yang dibangun.
+
+1.6 Sistematika Pembahasan
+　　　Sistematika penulisan penelitian ini akan terbagi menjadi beberapa bab sebagai berikut :
+　　　Bab 1 menjelaskan mengenai latar belakang dari penulisan penelitian ini, rumusan masalah yang timbul dari latar belakang tersebut, tujuan yang ingin dicapai, hipotesis,  batasan masalah dari penelitian, metodologi penelitian yang digunakan, sistematika pembahasan, dan rencana pelaksanaan dan jadwal.
+　　　Bab 2 menjelaskan mengenai dasar teori mengenai sistem informasi, pengambilan keputusan, sistem pendukung keputusan, dan kamera.
+　　　Bab 3 menjelaskan mengenai analisis data untuk kebutuhan sistem yang akan dibangun dari hasil survey sistem kini.
+　　　Bab 4 menjelaskan mengenai perancangan sistem yang akan dibangun berdasarkan analisis yang telah dilakukan.
+　　　Bab 5 menjelaskan mengenai implementasi perangkat lunak dan pengujian perangkat lunak tersebut
+　　　Bab 6 menjelaskan mengenai kesimpulan akhir yang diperolah dan saran-saran yang diperlukan untuk pengembangan lebih lanjut.
+
+
+
+
+2 [Nomor Bab]
+BAB 2 
+DASAR TEORI
+
+
+2.1 Sistem Informasi
+2.1.1 Definisi Sistem Informasi
+　　　Sistem informasi digunakan untuk mengumpulkan, memroses, menyimpan, menganalisis, dan menyebarkan informasi untuk suatu tujuan khusus [TUR-05]. Menurut Gordon B. Davis (1985), sistem informasi dapat diartikan sebagai sistem pengguna-mesin terintegrasi yang menyediakan informasi untuk mendukung operasi, manajemen, analisis, dan fungsi pengambilan keputusan dalam sebuah organisasi.
+
+2.1.2 Komponen Sistem Informasi
+　　　Sistem informasi memiliki komponen-komponen yang terdiri dari:
+1. Perangkat keras, berupa komputer dan piranti-piranti input-output yang mendukung kinerja perusahaan.
+2. Perangkat lunak, merupakan sekumpulan instruksi yang ditulis dengan aturan tertentu untuk menginstruksikan komputer mengerjakan tugas tertentu. Perangkat lunak dapat digolongkan menjadi sistem operasi, aplikasi, utility, dan bahasa.
+3. Data, merupakan komponen dasar dari informasi yang akan diproses lebih lanjut untuk menghasilkan informasi.
+4. Manusia, sebagai pihak pengendali dan pelaksana.
+5. Prosedur, yaitu dokumentasi prosedur dan proses sistem, buku penuntun operasional, aplikasi, dan teknis.
+
+2.1.3 Hierarki Sistem Informasi
+　　　Sistem informasi dikembangkan untuk tujuan yang berbeda-beda, tergantung pada kebutuhan bisnis [KEN-02]. Sistem informasi dibagi menjadi beberapa level dan pada setiap level terdapat sistem informasi yang mendukung pekerjaan pada level tersebut. Jenis-jenis sistem informasi dalam level-level tersebut dijelaskan dengan singkat sebagai berikut:
+1. Transaction Processing System
+Aplikasi sistem informasi yang mengambil data dan memroses data untuk transaksi bisnis, kadang-kadang disebut Data Processing System. Fungsinya berada pada level operasional organisasi.
+2. Knowledge Work System dan Office Automation System
+Sistem informasi yang mendukung sistem pekerjaan dalam level yang berbasis ilmu pengetahuan. Kedua sistem informasi ini mendukung aktifitas bisnis perkantoran dengan cakupan yang luas yang menyediakan peningkatan alur kerja dan komunikasi antara para pekerja, dengan mengabaikan apakah pekerja secara fisik berada dalam suatu kantor.
+3. Management Information System
+Suatu aplikasi sistem informasi yang menyediakan laporan berorientasi objek manajemen, biasanya dalam bentuk yang ditentukan dalam format tertentu.
+4. Decision Support System dan Executive Information System
+Suatu aplikasi sistem informasi yang berorientasikan keputusan secara realtime (kapan pun situasi kebutuhan untuk pengambilan keputusan muncul) pada penggunanya. Pada level strategis manajemen sistem ini disebut Sistem Informasi Eksekutif.
+5. Expert System
+Aplikasi sistem informasi yang mengambil pengetahuan dan keahlian dari seorang pakar atau ahli, lalu mensimulasikan pemikiran dari ahli tersebut bagi mereka yang kurang mempunyai keahlian.
+6. Group Decision Support System dan Computer-Supported
+Sistem yang membantu pengambilan keputusan pada level grup dari ragam semi terstruktur atau tidak terstruktur.
+
+Gambar 21 Hierarki Sistem Informasi
+
+　　　Dari hierarki tersebut, dapat dilihat bahwa Decision Support System (Sistem Pendukung Keputusan) merupakan bagian dari sistem informasi.
+
+2.1.4 Kerangka Kerja Pengambilan Keputusan
+　　　Kerangka kerja pengambilan keputusan menyediakan beberapa konsep utama yang digunakan dalam definisi dan membantu menutupi beberapa isu tambahan, seperti hubungan antara teknologi dengan evolusi dari sistem terkomputerisasi. Gorry dan Scott Morton (1971) menggabungkan hasil kerja Simon (1977) dan Anthony (1965), dan mengajukan kerangka kerja seperti pada Tabel 2-1 [TUR-05].
+Tabel 21 Kerangka Kerja Pengambilan Keputusan
+Type of DecisionType of ControlTechnology Support NeededOperational ControlManagerial ControlStrategic PlanningStructuredaccount receivable, account payable, order entrybudget analysis, short-term forecasting, personnel reports, make or buyfinancial management (investment), warehouse location, distributed systemsmanagement information system, management science models, transaction processing
+
+
+
+Tabel 21 Kerangka Kerja Pengambilan Keputusan (Lanjutan)
+Type of DecisionType of ControlTechnology Support NeededOperational ControlManagerial ControlStrategic PlanningSemi-structuredproduction scheduling, inventory controlcredit evaluation,budget preparation, plant layout, project scheduling, reward, system design, inventory categorizationbuilding new plant, mergers and cquisitions, new product planning, compensation planning, quality assurance planning, HR policies, inventory planningDSS, knowledge management system, group support system, customer relationship manager, supply chain managerUnstructuredselecting a cover for a magazines, buying software, approving loans help desknegotiating, recruiting an executive, buying hardware, lobbyingR&D planning, new technology development, social responsibility planningGSS, KMS, ES, neural networksTechnology Support Neededmanagement information system, management sciencemanagement science, DSS, ES, EIS, SCM, CRM, GSSGSS,CRM EIS, EIS, neural networks, KMS?
+　　　Pada sisi kiri dari Tabel 2-1 berdasarkan pada pemikiran dari Simon, bahwa proses pengambilan keputusan berada pada kisaran dari keputusan yang sangat terstruktur (kadang-kadang disebut programmed) hingga keputusan yang sangat tidak terstruktur (nonprogrammed). Proses terstruktur biasanya memiliki masalah yang berulang-ulang hingga muncul metode solusi standard, sedangkan proses tidak terstruktur memiliki masalah yang kompleks sehingga muncul metode solusi cut-and-dried. Simon kemudian menjelaskan mengenai proses pengambilan keputusan dengan tiga fase proses yaitu kecerdasan (intelligence), desain (design), dan pilihan (choice). Masalah yang tidak terstruktur merupakan salah satu yang tak satu pun dari ketiga fase tersebut terstruktur. Keputusan yang fasenya tidak semua terstruktur disebut semi terstruktur.
+　　　Pada masalah yang terstruktur, prosedur untuk mendapatkan solusi yang terbaik atau setidaknya cukup baik, diketahui. Tujuannya telah didefinisikan dengan melibatkan masalah penemuan tingkatan yang sesuai atau memilih strategi yang optimal. Pada masalah yang tidak terstruktur, intuisi manusia seringkali menjadi basis dari pengambilan keputusan. Masalah semi terstruktur berada diantara masalah yang terstruktur dan masalah yang tidak terstruktur, memiliki elemen yang terstruktur dan elemen yang tidak terstruktur.
+
+2.2 Pengambilan Keputusan
+2.2.1 Definisi Pengambilan Keputusan
+　　　Pengambilan keputusan adalah proses memillih diantara tindakan alternatif yang bertujuan untuk mencapai sebuah tujuan. Menurut Simon (1977), pengambilan keputusan mempertimbangkan kepentingan perencanaan fungsi-fungsi manajerial. Perencanaan melibatkan beberapa keputusan seperti apa yang harus dilakukan, kapan, dimana, mengapa, bagaimana, dan oleh siapa. Fungsi-fungsi manajerial lainnya, seperti pengorganisasian dan pengendalian, juga termasuk kedalam pengambilan keputusan [TUR-05].
+
+2.2.2 Fase Pengambilan Keputusan
+　　　Dalam mengambil keputusan, sangat disarankan untuk mengikuti sistematik dari proses pengambilan keputusan. Simon (1977) mengatakan bahwa ada tiga fase utama, yaitu intelligence, design, dan choice. Model dari Simon memiliki karakterisasi yang lengkap dalam pengambilan keputusan yang rasional. Gambar 2-2 menjelaskan tentang gambar konseptual dari proses pengambilan keputusan [TUR-05]. 
+　　　
+
+Gambar 22 Fase Pengambilan Keputusan
+
+　　　Pada gambar tersebut, realitas dari suatu masalah disederhanakan dengan asumsi-asumsi yang berkaitan dengan masalah, kemudian pada tahap atau fase intelligence ditentukan sasaran organisasional, prosedur pemindaian dan penelitian, pengumpulan data, identifikasi, klasifikasi dan pendefinisian. Setelah fase intelligence didefinisikan dengan jelas dan pernyataan masalah telah ditentukan, maka dapat dilakukan proses pada fase design yaitu memformulasikan sebuah model yang telah ditentukan, mencari solusi alternatif, lalu memprediksi dan mengukur hasil yang telah dirancang untuk mendapatkan beberapa solusi alternatif pemecahan masalah. Pada fase choice dilakukan analisis sensitivitas terhadap beberapa alternatif pilihan yang telah ditentukan, lalu dipilih alternatif terbaik untuk diimplementasikan. Jika implementasi solusi terhadap masalah gagal, maka dilakukan proses kaji ulang pada setiap fase sampai didapatkan solusi terbaik agar tahap implementasi terhadap masalah menjadi sukses. 
+　　　Fase-fase dalam proses pengambilan keputusan dijelaskan dengan sederhana sebagai berikut:
+1. Intelligence
+Proses penelusuran dan pendeteksian dari lingkup problematika serta proses pengenalan masalah. Data masukkan diperoleh, diproses, dan diuji dalam rangka mengidentifikasi masalah.
+2. Design
+Proses penelusuran menemukan, mengembangkan, dan menganalisis alternatif tindakan yang bisa dilakukan. Hal ini meliputi memahami masalah dan menguji kelayakan solusi. Model masalah pengambilan keputusan dibangun, diuji, dan divalidasi.
+3. Choice
+Proses pemilihan diantara berbagai alternatif tindakan yang mungkin dijalankan, lalu diimplementasikan dalam proses pengambilan keputusan.
+
+2.2.3 Corak Pengambilan Keputusan
+　　　Parameter corak pengambilan keputusan dibentuk dengan cara bagaimana informasi dikumpulkan, diproses, dan digunakan, bersamaan dengan ketentuan bagaimana keputusan dikomunikasikan dan diimplementasikan. Adapun pengambil keputusan dibagi menjadi  analitik dan heuristik [KEN-02].
+1. Corak Pengambilan Keputusan Analitik
+Corak pengambilan keputusan ini mengambil keputusan berdasarkan pada informasi yang diperoleh secara sistematis. Informasi tersebut kemudian dievaluasi secara sistematis untuk mempersempit alternatif dan membuat pilihan berdasarkan informasi tersebut.
+2. Corak Pengambilan Keputusan Heuristik
+Corak pengambilan keputusan ini mengambil keputusan dengan bantuan beberapa pedoman, walaupun pedoman tersebut tidak selalu diterapkan secara terus-menerus atau sistematik. Pengambilan keputusan ini mencari solusi yang memuaskan, bukan solusi yang optimal. Biasanya keputusan diambil berdasarkan pengalaman. Pengambil keputusan heuristik belajar dari aksi. Solusi dicari menggunakan trial and error.
+
+　　　Tabel 2-2 memperlihatkan beberapa perbedaan antara corak pengambilan keputusan analitik dan heuristik.
+Tabel 22 Corak Pengambilan Keputusan Analitik dan Heuristik
+AnalitikHeuristikBelajar dengan menganalisaBelajar dengan aksiMenggunakan prosedur langkah per langkahMenggunakan trial and errorMenghargai informasi dari model kuantitatifMenghargai pengalamanMembangun model dan algoritma matematikaBerdasarkan pada akal sehatMencari solusi yang optimalMencari solusi yang memuaskan
+2.3 Sistem Pendukung Keputusan (SPK)
+2.3.1 Definisi SPK
+　　　Terdapat beberapa definisi mengenai SPK antara lain [TUR-05],
+　　　Little (1970) mendefinisikan SPK sebagai sebuah kumpulan proses pengolahan data penilaian berbasis model untuk membantu manajer dalam mengambil keputusan. Little berpendapat bahwa sebuah sistem harus sederhana, kuat, mudah dikendalikan, mampu beradaptasi, menyelesaikan masalah-masalah penting, dan mudah dikomunikasikan.
+　　　Bonczek et al. (1980) mendefinisikan SPK sebagai sistem berbasis komputer yang terdiri dari tiga interaksi komponen: sistem bahasa (mekanisme yang menyediakan komunikasi antara pengguna dan komponen-komponen SPK lainnya), sistem pengetahuan (domain pengetahuan yang terkandung dalam SPK), dan sistem pengolahan masalah (hubungan antara dua komponen lainnya dan kemampuan manipulasi yang diperlukan untuk pengambilan keputusan).
+　　　Keen (1980) mendefinisikan SPK sebagai hasil dari proses perkembangan yang didalamnya terdapat pengguna SPK dan pembangun SPK, dan SPK itu sendiri merupakan seluruh kemampuan untuk mempengaruhi orang ke orang, mengakibatkan evolusi sistem dan pola penggunaan.
+
+2.3.2 Karakteristik dan Kemampuan SPK
+　　　Karakteristik dan kemampuan SPK dapat dilihat pada Gambar 2-3 [TUR-05].
+
+
+Gambar 23 Karakteristik dan Kemampuan SPK
+
+　　　Karakteristik dan kemampuan SPK dijelaskan dengan sederhana sebagai berikut:
+1. Mendukung pengambilan keputusan, sebagian besar dalam situasi yang semi terstruktur dan tidak terstruktur, dengan menyatukan penilaian manusia dan informasi yang terkomputerisasi.
+2. Mendukung seluruh level manajerial, mulai dari top executives hingga line managers.
+3. Mendukung individu maupun kelompok.
+4. Mendukung keputusan yang sekuensial.
+5. Mendukung seluruh fase dalam proses pengambilan keputusan.
+6. Mendukung variasi dalam proses dan corak pengambilan keputusan.
+7. Kemampuan beradaptasi dari waktu ke waktu. SPK itu sendiri bersifat fleksibel dan pengambil keputusan harus mampu mengatasi perubahan kondisi secepatnya dan mampu mengadaptasikan SPK dalam perubahan tersebut.
+8. User-friendly, interaksi antar muka manusia-mesin yang dapat meningkatkan keefektifitasan SPK.
+9. Perbaikan dalam keefektifitasan pengambilan keputusan (akurasi, ketepatan, dan kualitas) daripada efisiensi.
+10. SPK secara spesifik bertujuan untuk mendukung dan bukan untuk menggantikan pengambil keputusan.
+11. Pengguna akhir dapat mengembangkan dan merubah sistem yang sederhana oleh mereka sendiri.
+12. Model yang umumnya digunakan untuk menganalisis situasi pengambilan keputusan.
+13. Akses diberikan kepada berbagai sumber data, format, dan tipe.
+14. Dapat dipekerjakan sebagai perangkat yang berdiri sendiri yang digunakan oleh seorang individu pengambil keputusan dalam satu lokasi atau terdistribusi di seluruh organisasi.
+
+2.3.3 Komponen SPK
+　　　Ada 4 komponen dalam SPK yaitu [TUR-05]:
+1. Data-management subsystem. Subsistem manajemen data meliputi basis data yang mengandung data yang relevan untuk situasi dan dikelola oleh sebuah perangkat lunak yang disebut Database Management System (DBMS).
+2. Model management subsystem. Subsistem manajemen model menyediakan kemampuan analisis sistem dan manajemen perangkat lunak yang sesuai. Perangkat lunak ini seringkali disebut Model Base Management System (MBMS).
+3. User interface subsystem. Pengguna berkomunikasi dengan dan memerintahkan SPK melalui subsistem ini. Pengguna dapat dianggap bagian dari sistem.
+4. Knowledge-based management subsystem. Subsistem ini dapat mendukung berbagai subsistem lainnya atau bertindak sebagai komponen yang independen. Subsistem ini menyediakan kecerdasan untuk menambah apa yang dimiliki pengambil keputusan. Hal ini dapat dihubungkan dengan Organizational Knowledge Base.
+
+　　　Secara definisi, SPK harus meliputi tiga komponen utama dari DBMS, MBMS dan antar muka pengguna. Subsistem manajemen berbasis pengetahuan bersifat opsional, tapi dapat menyediakan keuntungan yang banyak dengan menyediakan kecerdasan dalam dan ketiga komponen utama tersebut. Seperti dalam sistem manajemen informasi lainnya, pengguna dapat dianggap sebagai komponen dari SPK. Skema dari SPK dapat dilihat pada Gambar 2-4.
+
+
+Gambar 24 Komponen SPK
+
+2.3.4 Manfaat SPK
+　　　SPK memiliki beberapa manfaat yaitu:
+1. Kemampuan untuk mendukung solusi dari masalah yang kompleks.
+2. Respon yang cepat pada situasi yang tidak terduga yang terjadi pada kondisi yang berubah. SPK memungkinkan analisis yang seksama, dan kuantitatif pada waktu yang singkat.
+3. Kemampuan untuk mencoba berbagai strategi yang berbeda pada konfigurasi yang berbeda secara cepat dan objektif.
+4. Pengetahuan dan proses belajar yang baru. Pengguna mendapatkan pengetahuan yang baru melalui komposisi dari model dan analisis sensitivitas yang ekstensif.
+5. Kemudahan komunikasi.
+6. Perbaikan kontrol dan performansi manajemen.
+7. Menghemat biaya.
+8. Keputusan yang objektif. Keputusan yang dihasilkan dari SPK lebih konsisten dan objektif dibandingkan keputusan yang dibuat secara intuitif.
+9. Meningkatkan keefektifan manajerial.
+10. Memperbaiki produktifitas dari para analis.
+
+2.3.5 Proses Pembangunan SPK
+　　　Proses pembangunan yang dijelaskan disini mencakup semua aktifitas yang mungkin ada di pembangunan SPK yang kompleks seperti ditunjukkan pada Gambar 2-5. Namun demikian, tidak semua aktifitas ditampilkan di setiap proses pembangunan SPK.
+1. Tahap A : Planning
+Tahap ini merupakan perencanaan usaha pembuatan sistem sesuai dengan tujuan akhir yang ingin dicapai.
+2. Tahap B : Research
+Tahap ini meliputi identifikasi dari pendekatan yang relevan untuk menempatkan kebutuhan pengguna dan sumber yang dibutuhkan.
+3. Tahap C : System Analysis and Conceptual Design
+Tahap ini meliputi penentuan pendekatan pembangunan yang terbaik dan spesifikasi sumber untuk mengimplementasikan SPK, kemudian diikuti dengan perencanaan pengerjaan (feasibility study) secara konseptual.
+4. Tahap D : Design
+Pada tahap ini, spesifikasi terperinci dari komponen sistem, struktur, dan ciri-ciri ditentukan.
+5. Tahap E : Construction
+Tahap ini merupakan implementasi teknis dari perancangan. Setelah sistem dibangun, sistem diuji secara kontinu dan diperbaiki.
+6. Tahap F : Implementation
+Tahap ini terdiri dari bagian-bagian berikut ini:
+a. Pengujian, pada tahap ini data dari output sistem dikumpulkan dan dibandingkan dengan spesifikasi perancangan.
+b. Evaluasi, selama tahap ini implementasi sistem dievaluasi untuk melihat sebaik apakah sistem memenuhi kebutuhan pengguna dan kemudian diidentifikasikan. Pengujian dan evaluasi biasanya menghasilkan perubahan dalam perancangan dan pembangunan, sehingga proses ini berputar dan diulang untuk beberapa kali.
+c. Demonstrasi, demonstrasi operasional sistem untuk pengguna adalah tahap penting. Pengguna kelak harus percaya dengan kemampuan sistem yang dibangun.
+d. Pelatihan, pengguna operasional dilatih tentang struktur sistem dan fungsi sistem.
+e. Penyebaran, sistem ini disebarkan untuk dipakai oleh semua anggota dari komunitas pengguna. 
+7. Tahap G : Maintenance and Documentation
+Perawatan meliputi perencanaan untuk memperbaharui sistem dan komunitas pengguna sistem. Dokumentasi yang tepat untuk penggunaan dan perawatan sistem juga dibuat.
+8. Tahap H : Adaptation
+Untuk menanggapi perubahan kebutuhan pengguna, tahap adaptasi diperlukan diikuti kembali ke langkah awal untuk memperbaharui sistem.
+
+
+Gambar 25 Tahap Proses Pengembangan SPK
+
+2.4 Pengambilan Keputusan Kriteria Ganda
+　　　Pendekatan kriteria ganda memungkinkan pengambil keputusan untuk menetapkan prioritas mereka, dan harus memungkinkan pengambil keputusan untuk melakukan analisis sensitivitas dengan menanyakan tipe pertanyaan what-if. Metode ini meliputi weighting methods, sequential elimination by lexicogragphy, sequential elimination by conjunctive constraints, dan analytic hierarchy processing [KEN-02].
+　　　
+2.4.1 Weighting Method
+　　　Contoh lembar kerja dari pendekatan bobot digambarkan pada Tabel 2-4. Setiap atribut diberikan sebuah nilai oleh pengambil keputusan. Setelah memeriksa paket perangkat lunak, pengambil keputusan memberi nilai untuk setiap atribut yang terdapat dalam setiap paket, dalam hal ini, nilai berada dalam rentang 0 sampai 10. Jumlah nilai kemudian dihitung di baris terakhir dari lembar kerja, dan pengambil keputusan memilih paket dengan nilai tertinggi. Pengambil keputusan memiliki kesempatan untuk merubah beberapa nilai atribut atau bahkan merubah nilai yang diisi di setiap paket dalam kasus analisis what-if yang diinginkan.
+Tabel 23 Weighting Methods Untuk Menilai Perangkat Lunak
+ABCDE%ATTRIBUTESDATAQUIXBIGBASEFLEXI FILE??.20FAST RESPONSE TIME1065.05MANY OUTPUTS OPTIONS647.25EASY TO USE587.20EASY ERROR RECOVERY1076.05FLEXIBILITY10810.10GOOD DOCUMENTATION8910.05HOT LINE SUPPORT8105.10ABLE TO HANDLE BIG FILES2105???TOTALS7.457.66.55
+2.4.2 Sequential Elimination by Lexicography
+　　　Metode yang memberi fitur penting dari atribut individual adalah elimination by lexicography. Metode ini mengurutkan atributnya secara sederhana sesuai kepentingannya. Nilai atribut tetap ditentukan seperti bobot.
+　　　Contoh dari lexicography dapat dilihat pada Tabel 2-5. Matriks dari atribut dan alternatif dimasukan kedalam lembar kerja. Lembar kerja diurutkan, pertama dari atribut teratas (sangat penting) hingga terendah (sangat tidak penting). Selanjutnya, alternatif diurutkan dari baris ke baris. Hanya atribut yang memiliki kemungkinan nilai tertinggi (dalam hal ini 10) untuk atribut pertama yang dipertimbangkan lebih lanjut. Dengan kata lain, hanya 5, 6, 3, dan 4 yang memiliki jawaban potensial. Lalu atribut kedua dipertimbangkan, dan hanya 5 dan 4 yang dipertimbangkan lebih lanjut, seperti yang terlihat di Tabel 2-6.
+Tabel 24 Mengurutkan atribut berdasarkan rank
+ABCDEFGHATTRIBUTERANKCAR 5CAR 6CAR 3CAR 4CAR 2CAR 1PRICE11010101054MILEAGE210851032SAFETY353831010RESALE479105510COMFORT510321023
+　　　Hasil akhir adalah alternatif kelima karena nilai atribut ketiga dari alternatif kelima lebih tinggi daripada alternatif keempat. Pengambil keputusan dapat melakukan analisis sensitivitas dan mengulangi prosedur pengurutan untuk melihat jika ada perubahan jawaban.
+Tabel 25 Mendapatkan alternatif
+ABCDEFGHATTRIBUTERANKCAR 5CAR 4CAR 6CAR 3CAR 2CAR 1PRICE11010101054MILEAGE210108532SAFETY353381010RESALE475910510COMFORT510103223
+2.4.3 Sequential Elimination by Conjunctive Constraints
+　　　Teknik eliminasi sekuensial yang lain adalah dengan conjunctive constraints atau penghubung kendala. Pengambil keputusan menetapkan kendala atau standard, dan mengeliminasi seluruh alternatif yang tidak memuaskan penetapan seluruh kendala. Jika kendala terlalu ketat, seluruh alternatif akan dieliminasi, tapi jika tidak terlalu ketat, alternatif akan tetap ada. Untuk menggunakan metode ini, pengambil keputusan dibutuhkan untuk mempekerjakan pendekatan interaktif.
+　　　Tabel 2-7 menunjukkan pendekatan lembar kerja untuk sequential elimination by conjunctive constraints. Dalam contoh ini, pengambil keputusan berusaha untuk memilih kendaraan perusahaan yang sangat layak. Atribut berada di kolom A, arah kendala ada di kolom B, dan nilai dari kendala berada di kolom C. kolom D, F, H digunakan untuk menampung semua nilai numerik, dan kolom E, G, dan I digunakan untuk menunjukkan hubungan benar atau salah. Dibawah lembar kerja, kondisi “AND” ditetapkan sehingga seluruh kendala harus bertemu agar hubungannya menjadi benar.
+Tabel 26 Lembar Kerja Sequential Elimination by Conjunctive Constraint
+ABCDEFGHIATTRIBUTESTANDARDCAR 1CAR 2CAR 3PRICE<1300011500T12600T12900TMILEAGE>1825T19T21TSAFETY>=57T6T5TRESALE>.20.10F.25T.25TCOMFORT>=53F5T5TFEATURES>=48T9T4T"AND"FTT
+　　　Pertama kali, banyak alternatif yang mungkin layak, jadi pengambil keputusan melakukan perubahan nilai pada kolom C hingga hanya satu alternatif yang tersisa. Dalam contoh yang ditunjukkan pada Tabel 2-8, pengambil keputusan merubah jarak tempuh dari 18 ke 20 mil per galon, meninggalkan Car 3 sebagai alternatif yang tersisa.
+Tabel 27 Trade-off attributes
+ABCDEFGHIATTRIBUTE?STANDARDCAR 1?CAR 2?CAR 3???PRICE<1300011500T12600T12900TMILEAGE>2025T19F21TSAFETY>=57T6T5TRESALE>.20.10F.25T.25TCOMFORT>=53F5T5TFEATURES>=48T9T4T??"AND"???F?F?T
+2.4.4 Analytic Hierarchy Processing
+　　　Proses ini mengharuskan pengambil keputusan untuk membuat keputusan yang berhubungan dengan kepentingan dari setiap kriteria dan kemudian mengindikasikan kecondongan berdasarkan keutamaan dari setiap kriteria untuk setiap alternatif.
+Terdapat 3 langkah dalam AHP, yaitu:
+1. Menentukan perbandingan antara satu alternatif dengan alternatif lain, disebut pairwise comparison. Dengan kata lain membandingkan antara 2 alternatif untuk menentukan mana yang lebih penting dan berapa perbandingannya.
+2. Mengulang proses di atas untuk setiap kriteria.
+3. Mengurutkan kriteria berdasarkan keutamaannya.
+
+　　　Gambar 2-6 menunjukkan penggunaan Analytic Hierarchy Process (AHP) dalam memilih mobil baru.
+
+
+Gambar 26 AHP Digunakan untuk Memilih Mobil Baru
+
+　　　Mula-mula diputuskan penentuan mengenai perbandingan urutan dari setiap kriteria, menggunakan pairwise comparison pada Tabel 2-9.
+Tabel 28 Skala Pairwise Cmoparison
+Verbal JudgmentNumerical PreferencesExtremely preferred9Very strongly to extremely preferred8Very strongly preferred7Strongly to very strongly preferred6Strongly preferred5Moderately to strongly preferred4Moderately preferred3Equally to moderately preferred2Equally preferred1
+Berdasarkan pairwise comparison, misalnya ditentukan:
+1. Reliability 2 kali lebih penting dibanding Style.
+2. Style 3 kali lebih penting dibanding Fuel Economy.
+3. Reliability 4 kali lebih penting dibanding Fuel Economy.
+
+　　　Setelah dilakukan pairwise comparison untuk setiap kriteria, langkah selanjutnya adalah membangun matriks pairwise, seperti ditunjukkan oleh Gambar 2-7. Gambar 2-7 merupakan matriks pairwise hasil dari pairwise comparison yang telah dilakukan sebelumnya.
+
+
+Gambar 27 Matriks Pairwise untuk Kriteria Pemilihan Mobil Baru
+
+　　　Setelah dibentuk ke dalam matriks pairwise, langkah berikutnya adalah mendapatkan urutan kriteria berdasarkan matriks pairwise yang telah terbentuk. Salah satu cara untuk mendapatkan urutan prioritas dari matriks pairwise adalah menggunakan metode Eigenvector. Langkah-langkah penggunaan Eigenvector adalah:
+1. Mengkuadratkan matriks pairwise dengan operasi perkalian matriks.
+2. Jumlahkan setiap baris dan lakukan normalisasi.
+3. Lakukan langkah 1 dan 2 hingga beda antar iterasi relatif kecil.
+
+　　　Gambar 2-8 merupakan matriks pairwise yang telah diubah dari bentuk pecahan ke dalam bentuk desimal. Langkah pertama Eigenvector ditunjukkan dalam Gambar 2-9. Gambar 2-9 menunjukkan iterasi pertama yang merupakan hasil dari matriks pairwise yang dikuadratkan menggunakan operasi perkalian matriks.
+　　　
+
+Gambar 28 Hasil Matriks Pecahan dalam Bentuk Desimal
+
+
+Gambar 29 Hasil Perkalian Matriks dengan Mengkuadratkan Matriks Pairwise
+
+　　　Dari hasil pada Gambar 2-9, dilakukan langkah kedua yaitu proses menjumlahkan setiap baris pada matriks hasil dari langkah pertama, kemudian melakukan normalisasi. Langkah-langkah ini ditunjukkan pada Gambar 2-10.
+　　　
+
+Gambar 210 Langkah Kedua dalam Proses Normalisasi Eigenvector
+
+　　　Langkah-langkah 1 dan 2 proses normalisasi Eigenvector dilakukan sampai beda antara iterasi relatif kecil. Gambar 2-11 menunjukkan iterasi kedua proses normalisasi menggunakan metode Eigenvector, yang hasil pertamanya telah dihitung sebelumnya.
+
+
+Gambar 211 Iterasi Kedua Proses Normalisasi Eigenvector, Langkah Kedua
+
+　　　Setelah dilakukan iterasi kedua maka langkah selanjutnya adalah menghitung beda antara iterasi. Gambar 2-12 menunjukkan perhitungan beda antar iterasi, dan terlihat bahwa beda antar iterasi pada baris ke dua masih lebih besar daripada 0.00001, maka iterasi ketiga dilakukan sehingga mendapatkan eigenvalue. Hasil eigenvalue iterasi ketiga ditunjukkan pada Gambar 2-13. Terlihat bahwa beda antar iterasi sudah lebih kecil dari 0.00001, sehingga iterasi dapat dihentikan.
+
+
+Gambar 212 Hitung Beda antar Iterasi 1 dan 2
+
+
+Gambar 213 Eigenvalue Hasil Iterasi ke 3
+
+　　　Setelah langkah-langkah metode Eigenvector selesai dilakukan maka didapatkan urutan prioritas untuk setiap kriteria. Gambar 2-14 menunjukkan ranking untuk setiap kriteria yang didapat dari hasil iterasi ke tiga.
+　　　
+
+Gambar 214 Urutan Prioritas untuk Setiap Kriteria dari Hasil Normalisasi Eigenvector Iterasi ke 2
+
+　　　Setelah didapatkan urutan untuk setiap kriteria, hal yang sama juga dilakukan untuk setiap alternatif. Proses AHP dilakukan untuk setiap alternatif berdasarkan kriteria yang ada. Gambar 2-15 menunjukkan matriks pairwise comparison untuk setiap alternatif berdasarkan kriteria style.
+
+
+Gambar 215 Matriks Pairwise Comparison untuk Setiap Alternatif Berdasarkan Kriteria Style
+
+　　　Pairwise comparison juga dilakukan untuk setiap alternatif berdasarkan kriteria yang ada. Setelah didapatkan matriks pairwise untuk setiap alternatif yang ada berdasarkan kriteria, selanjutnya adalah perhitungan dengan menggunakan metode Eigenvector. Gambar 2-16 menunjukkan hasil perhitungan dengan menggunakan metode Eigenvector untuk setiap alternatif berdasarkan kriteria yang ada.
+
+
+Gambar 216 Hasil Perhitungan Menggunakan Metode Eigenvector untuk Setiap Alternatif Berdasarkan Kriteria
+
+　　　Berdasarkan hasil perhitungan dengan menggunakan metode Eigenvector untuk setiap kriteria dan setiap alternatif berdasarkan masing-masing kriteria, maka didapatkan pohon hierarki beserta bobot untuk masing-masing kriteria dan alternatif, yang ditunjukkan pada Gambar 2-17.
+
+
+Gambar 217 Pohon Hierarki Bobot Kriteria dan Alternatif Menggunakan Metode Eigenvector
+
+　　　Langkah selanjutnya adalah menentukan alternatif mana yang paling baik, berdasarkan pohon hierarki yang terbentuk dari hasil proses perhitungan dengan menggunakan metode Eigenvector. Penentuan alternatif mana yang paling baik dengan cara melakukan proses perkalian aljabar matriks antara matriks alternatif dengan matriks kriteria. Proses perkalian matriks serta hasilnya ditunjukkan pada Gambar 2-18.
+
+
+Gambar 218 Hasil Perkalian Matriks Alternatif dan Matriks Kriteria
+
+　　　Dari hasil perkalian matriks yang ditunjukkan Gambar 2-18 maka dapat disimpulkan alternatif mana yang terbaik. Setelah diurutkan membesar, maka alternatif Clio mendapatkan ranking yang paling tinggi. Gambar 2-19 menunjukkan ranking untuk setiap kriteria.
+
+
+Gambar 219 Urutan Prioritas Alternatif, dengan Clio Menempati Urutan Tertinggi
+
+2.5 Kamera DSLR
+2.5.1 Definisi Kamera
+　　　Kamera adalah alat untuk merekam gambar, baik itu berupa gambar diam atau gambar bergerak yang lebih dikenal dengan nama video. Istilah ini berasal dari kalimat camera obscura (dalam bahasa Latin berarti “kamar gelap”), sebuah mekanisme awal yang memproyeksikan gambar yang seluruh ruangannya berfungsi sebagai sistem pencitraan secara real-time [URL-01].
+　　　
+2.5.2 Sejarah Kamera
+　　　Pada Gambar 2-20 diperlihatkan prinsip kuno camera obscura yang menjadi dasar fotografi modern saat ini.
+
+
+Gambar 220 Prinsip Kerja Camera Obscura
+
+　　　Sinar akan masuk ke dalam kamar gelap melalui lubang kecil sehingga akhirnya akan membentuk objek dari luar kamar gelap menjadi bayangan objek yang terbalik di dinding kamar gelap. Diyakini bahwa prinsip ini ditemukan oleh Aristoteles pada tahun 384 SM-322 SM, dan kemudian ditulis ulang oleh Leonardo da Vinci (1452-1519). Pada abad ke-16, perbaikan dilakukan pada sistem kamar gelap dan lubang pinhole kamera, namun sistem ini menghasilkan gambar yang terlalu gelap sehingga ditambahkan lensa optis untuk meningkatkan kecerahan gambar. Prinsip kamera dengan penambahan lensa optis tersebut telah dibuat di Inggris pada tahun 1770 dengan ukuran kotak 6cm x 6cm, yang ditunjukkan pada Gambar 2-21. Tipe kamera tersebut yang mendasari terbentuknya sistem kamera SLR dengan menempatkan beberapa cermin untuk menghasilkan gambar yang semakin baik. Beberapa sistem mekanis ditambahkan disertai dengan perbaikan posisi lensa sehingga gambar bisa menjadi lebih terang dan lebih fokus. Sistem camera obscura tersebut semakin berkembang dengan ditempatkannya beberapa lensa pada posisi tertentu sehingga kecerahan gambar dapat terbentuk secara sempurna.
+　　　
+　　　
+Gambar 221 Kamera SLR Pertama
+
+	Setelah konsep fotografi dan lensa telah ditemukan, permasalahan yang timbul adalah mencari media yang mampu merekam cahaya objek. Teknik pertama yang dikenal adalah Heliography yang ditemukan Frenchman Joseph Nicehore pada tahun 1765-1833. Teknik ini membutuhkan cahaya matahari sebagai sumber sinarnya untuk melakukan proses cetak yang memakan waktu 8 jam penyinaran, namun objek yang dihasilkan masih kurang sempurna dan proses yang tidak praktis sehingga penggunaan teknik ini tidak begitu populer. Teknik perekaman objek fotografi semakin berkembang dengan ditemukannya plate perak oleh Jacques Mande Daguerre pada tahun 1787-1851. Kamera Daguerreo, seperti yang diperlihatkan pada Gambar 2-22, mampu menghasilkan gambar yang cukup baik dan sensitivitas yang lebih baik untuk melakukan developing gambar dibandingkan teknik lama, yaitu 30 menit. Era teknologi film telah dimulai sejak populernya kamera Daguerreo.
+
+
+Gambar 222 Kamera Daguerreo
+　　　
+　　　Sejarah fotografi tidak akan terlepas dari sosok George Eastman. Pada tahun 1880, Eastman menghasilkan gambar half-tone pertama yang ditampilkan di Koran New York Graphic. Eastman membutuhkan waktu selama 4 tahun untuk mengembangkan film fotografis hingga muncul kamera dengan konsep film-base, yaitu kamera Brownie, seperti yang terlihat pada Gambar 2-23.
+
+
+Gambar 223 Kamera Brownie
+
+　　　Konsep tersebut merupakan jawaban dari masalah rumitnya proses kimia film pada saat itu. Pengguna kamera tersebut tidak perlu lagi melakukan proses cetak film, tetapi hanya melakukan proses perekaman objek ke dalam sebuah film yang dapat dicetak kapan pun pengguna menginginkannya. Proses tersebut menjadi dasar baru dalam proses cetak film. Pada tahun 1936, Kodak memproduksi film berwarna pertama yang bernama Kodakchrome, sehingga foto hasil bidikan kamera tidak hanya menampilkan sosok gambar, melainkan menampilkan warna yang sesuai dengan warna objek aslinya.
+	Kamera SLR pertama kali dikembangkan dan dikenalkan pada tahun 1936 oleh Exakta yang mempelopori munculnya kamera SLR 35mm. kamera tersebut menggunakan film warna dengan sistem film multilayered. Pengembangan kamera SLR diikuti oleh negara Swedia dengan membuat kamera berformat medium komersial pertama yang diproduksi oleh Hasselblad pada tahun 1948. Pada tahun yang sama, Pentax memperkenalkan konsep diafragma otomatis pada kamera SLR. Pada tanggal 20 Mei 1949, perusahaan kamera Contax di Jerman Timur memperkenalkan sistem penta prisma yang diletakkan pada sisi atas kamera. Sistem lensa dan prisma pada kamera tersebut ternyata menjadi acuan bagi perkembangan kamera selanjutnya hingga saat ini. Jepang kemudian sangat intensif dalam mengembangkan teknologi baru pada kamera SLR dengan dikeluarkannya kamera SLR Asahiflex pleh perusahaan Asahi pada tahun 1952. Perkembangan kamera SLR berlanjut dengan digunakannya penta prisma oleh perusahaan Asahi Pentax pada tahun 1957. Kepopuleran kamera SLR semakin meningkat dengan kehadiran beberapa produsen SLR baru antara lain Nikon, Canon, dan Yashica pada tahun 1959. Perkembangan kamera tidak terlepas dari perkembangan elektronika, seperti pengaturan cahaya, mengecilnya ukuran kamera, integrasi motor pengatur film, dan fungsi pembalikan arah pemutaran rol film saat film habis atau rewind. Perkembangan kamera dengan fitur-fitur tersebut berlangsung sangat pesat pada era 1970-1980.
+
+2.5.3 Digital Single-lens Reflex
+　　　Digital Single-Lens Reflex (DSLR) adalah kamera yang menggunakan sistem jajaran lensa jalur tunggal untuk melewatkan berkas cahaya menuju ke dua tempat, yaitu focal plane dan viewfinder, sehingga memungkinkan fotografer untuk dapat melihat objek melalui kamera yang sama persis seperti hasil fotonya. Pandangan yang terlihat di viewfinder bisa jadi berbeda dengan yang ditangkap di film, karena kamera jenis ini menggunakan jajaran lensa ganda, satu untuk melewatkan berkas cahaya ke viewfinder, dan jajaran lensa yang lain untuk melewatkan berkas cahaya ke focal plane. Hal ini yang membuat kamera DSLR berbeda dengan kamera lainnya [URL-03].
+
+2.5.4 Bagian-bagian Kamera DSLR
+　　　Kamera DSLR memiliki bagian-bagian seperti berikut [URL-05]:
+1. Pembidik
+Salah satu bagian yang penting dari kamera adalah pembidik (viewfinder). Ada dua sistem bidikan yaitu,
+a. Jendela bidik yang terpisah dari kamera (viewfinder type).
+b. Bidikan lewat lensa (reflex type)
+　　　Kamera DSLR menggunakan sistem bidikan jenis lensa. Mata fotografer melihat subjek melalui lensa, sehingga tidak terjadi parallax, yaitu keadaan saat fotografer tidak melihat secara akurat indikasi keberadaan subjek melalui lensa sehingga ada bagian yang hilang ketika foto dicetak. Keadaan parallax ini pada dasarnya terjadi pada pemotretan sangat close-up dengan menggunakan kamera viewfinder.
+2. Jendela bidik
+Jendala bidik merupakan sebuah kaca yang didalamnya tercantum banyak informasi dalam pemotretan. Jendela bidik memuat penemu jarak (range-finder), pilihan diafragma, shutter speed, dan pencahayaan (exposure).
+3. Lensa
+Dalam fotografi, lensa berfungsi untuk memfokuskan hingga mampu membakar medium penangkap (film). Di bagian luar lensa biasanya terdapat tiga cincin, yaitu cincin panjang fokus (untuk lensa jenis variabel), cincin diafragma, dan cincin fokus. Ada beberapa macam lensa yang digunakan antara lain [URL-05]:
+a. Lensa cepat, lensa dengan nilai tungkap yang merupakan nilai maksimumnya.
+b. Lensa lambat, digunakan untuk mengimbangi setting kecepataan bukaan rana sangat rendah di badan kamera.
+c. Lensa makro, ?lensa ini khusus digunakan untuk menangkap detail maksimal dari suatu objek.
+d. Lensa fokus tunggal, lensa dengan bidang fokus tunggal, biasanya disetel pada?jarak hiperfokal.
+e. Lensa fokus halus, didesain untuk menimbulkan efek blur tersebut namun tetap menjaga ketajaman setiap garis dari subyeknya.
+f. Lensa sudut lebar, lensa dengan panjang fokus lebih pendek daripada?lensa normal, sesuai dengan ukuran bingkai?citra?pada?bidang film?pada kamera film, maupun dimensi?sensor foto?pada?bidang fokal?pada?kamera dijital.
+g. Lensa tele, ?lensa dengan konstruksi panjang yang lebih pendek daripada panjang fokusnya sehingga mengakibatkan?pusat optis?(optical center) berada di luar badan lensa.
+h. Lensa variabel, lensa yang tidak dapat mempertahankan bidang fokus pada saat terjadi perubahan?panjang fokus.
+i. Lensa tetap, lensa dengan panjang fokus tunggal.
+j. Lensa normal, ?lensa yang memetakan?citra?yang nampak seperti perspektif pandang normal mata manusia.
+4. Fokus
+Fokus adalah bagian yang mengatur jarak ketajaman lensa, sehingga gambar yang dihasilkan tidak berbayang.
+5. Shutter speed
+Shutter speed (kecepatan rana) artinya penutup (to shut). Pada waktu kita menekan tombol untuk memotret, terjadi pembukaan lensa sehingga cahaya masuk dan mengenai film.
+6. Diafragma
+Diafragma atau aperture (sering disebut bukaan) berfungsi untuk mengatur jumlah volume cahaya yang masuk.
+
+2.5.5 Prinsip Kerja Kamera DSLR
+　　　Gambar 2-21 menjelaskan mengenai prinsip kerja dari kamera DSLR [URL-04].
+
+ 
+Gambar 224 Prinsip Kerja Kamera DSLR
+
+　　　Cahaya yang masuk, setelah melewati jajaran lensa (1) akan dipantulkan oleh cermin yang dipasang pada posisi kemiringan 45 derajat (2) dan diproyeksikan ke matte focusing screen (5). Melalui condensing lens (6) dan pantulan di dalam pentaprisma (7), gambar objek kemudian diteruskan ke lensa mata manusia (8). Ketika menekan tombol shutter (bidik) maka cermin (2) akan melipat ke arah panah, focal plane shutter (3) membuka dan kemudian gambar akan ditangkap oleh sensor (4) dan diteruskan ke prosesor gambar kemudian disimpan di media penyimpanan (MMC dan sebagainya).
+
+2.5.6 Unsus-unsur Dalam Pemilihan Kamera DSLR
+　　　Unsur-unsur dalam pemilihan kamera meliputi [URL-02],
+1. Kelas pengguna kamera
+Semua merk kamera DSLR membagi konsumen mereka di kelas-kelas pengguna kamera. Pembagian kelas ini juga menentukan harga yang mereka pasang untuk produk mereka di masing-masing kelas. Para produsen kamera biasanya membagi konsumen mereka menjadi beberapa kelompok seperti,
+a. Entry level, orang-orang yang baru mengenal kamera atau pemula.
+b. Hobby, orang-orang yang memakai kamera untuk hobi mereka.
+c. Semi-professional, orang-orang yang menggunakan kamera mereka untuk mencari uang, tetapi tidak membutuhkan fasilitas, ketahanan, dan kehandalan kamera seperti mereka yang profesional.
+d. Profesional, fotografer komersil yang melakukan pemotretan hampir setiap hari, dengan kata lain mereka yang menggunakan kamera hingga batasnya. Kamera untuk pengguna ini didesain dengan ketahanan yang kuat dan kehandalan yang tinggi.
+2. Merk
+Sekarang ini, di pasaran DSLR, hanya ada dua merk yang menguasai pasar kamera DSLR 35mm yaitu Canon dan Nikon. Kedua merk ini berhasil menguasai hampir 85% pangsa pasar kamera DSLR. Namun selain kedua merk tersebut, terdapat juga merk-merk lain yang memiliki kamera DSLR yang cukup bagus seperti, Olympus, Sony, Pentax, dan Sigma.
+3. Paket sistem kamera
+Begitu memilih salah satu merk kamera, paket sistem dari kamera pun telah terpilih seperti lensa, aksesoris, dan komunitasnya.
+4. Teknologi
+Produsen kamera menawarkan teknologi terbarunya pada konsumen mereka sesuai dengan kelas kamera yang bersangkutan dan sesuai dengan kebutuhan si pengguna.
+5. Feel
+Tidak cukup untuk menentukan sebuah kamera, hanya dengan membaca hasil review dan spesifikasi yang ada di majalah atau internet. Tentu saja kita harus merasakannya sendiri. Pada intinya, harus dilakukan test-drive terhadap kamera yang diincar.
+6. Model
+Untuk mengenali model dari sebuah kamera, pertama dapat dilihat dari harganya, dan selain harga dapat dilihat dari penamaan model-model kamera. Sebagai contoh, untuk kamera DSLR merk Nikon, kamera-kamera DSLR mereka selalu diawali dengan huruf “D” lalu beberapa angka tergantung kelasnya seperti D1 (satu digit angka) untuk kamera kelas profesional, D100 (tiga digit angka) untuk kelas semi-profesional, D90 (digit angka diatas angka 70) untuk kelas hobi, dan D40 (digit angka dibawah angka 70) untuk kelas entry level.
+7. Harga
+Dengan pemberian kelas-kelas pada kamera, maka harga kamera dapat dilihat sesuai dengan kelas kamera mana yang dituju; entry level, hobby, semi-profesional, dan profesional. Untuk mencari kamera dengan harga yang lebih murah, kita dapat mencari kamera dengan satu model lebih awal pada kelas tersebut, dengan syarat model tersebut masih memiliki stok yang banyak. Cara lain untuk mendapatkan kamera yang lebih murah adalah dengan membeli kamera second-hand. Namun, dalam membeli kamera second-hand ini, perlu diperhatikan beberapa hal seperti,
+a. Sebaiknya membeli kamera pada orang yang benar-benar dikenal.
+b. Sebaiknya bertanya pada orang yang telah berpengalaman.
+c. Sebaiknya membeli pada toko yang terpercaya.
+d. Sebaiknya membawa teman yang lebih berpengalaman sehingga dapat membantu memeriksa kondisi kamera.
+8. Garansi
+Ketika mencari informasi tentang kamera DSLR, sebaiknya berhati-hati ketika mencari kamera dengan harga yang murah, karena ada kemungkinan beberapa toko penjualan kamera menjual produk mereka tanpa disertai garansi resmi dari distributornya, dalam hal ini dari distributor di Indonesia.
+9. Membuat keputusan
+Setelah banyak membaca, melakukan riset, menentukan budget, menentukan pilihan model kamera yang diinginkan, mencoba dan merasakan kamera, maka langkah terakhir adalah menentukan model kamera mana yang sesuai dengan yang diinginkan dan sesuai kebutuhan.
+3 [Nomor Bab]
+BAB 3 
+ANALISIS
+
+
+3.1 Analisis Kebutuhan Sistem
+3.1.1 Karakteristik dan Kemampuan
+　　　SPK DSS4DSLR mendukung 8 karakteristik dan kemampuan dari 14 karakteristik dan kemampuan yang dimiliki oleh SPK yaitu,
+1. Masalah-masalah semi terstruktur
+SPK DSS4DSLR mampu memberikan keputusan bagi masalah yang bersifat semi terstruktur, dalam hal ini keputusan dalam menentukan kamera DSLR, dengan mengikutsertakan penilaian manusia dan informasi yang terkomputerisasi.
+2. Keputusan yang saling bergantung atau sekuensial
+SPK DSS4DSLR memberikan dukungan pada beberapa keputusan yang saling bergantung, dalam hal ini keputusan untuk memasukkan batasan variabel constraints dan menentukan skala prioritas variabel kriteria kamera DSLR.
+3. Mendukung kecerdasan, desain, dan pilihan
+SPK DSS4DSLR mendukung fase-fase dalam pengambilan keputusan, yaitu kecerdasan, desain, dan pilihan.
+4. Dapat diadaptasi dan fleksibel
+SPK DSS4DSLR mampu beradaptasi pada perubahan dan bersifat fleksibel karena terdapat administrator yang mampu melakukan perubahan-perubahan pada data yaitu, tambah data, ubah data, dan hapus data.
+5. Kemudahan dan penggunaan interaktif
+SSPK DSS4DSLR dibangun menggunakan aplikasi antarmuka berbasis web dan bersifat interaktif.
+6. Manusia mengontrol mesin
+SPK DSS4DSLR memberikan kontrol penuh kepada pengguna dalam setiap langkah proses pengambilan keputusan untuk memecahkan masalah. SPK DSS4DSLR dibangun untuk mendukung pengguna sebagai pengambil keputusan dan bukan untuk menggantikannya
+7. Mendukung berbagai proses dan corak keputusan
+SPK DSS4DSLR mendukung dua corak pengambilan keputusan yaitu Sequential Elimination by Conjunctive Constraints dan Sequential Elimination by Lexicography.
+8. Kemudahan pengembangan
+SPK DSS4DSLR dapat dikembangkan dengan mudah sehingga mampu memenuhi kebutuhan pengguna.
+
+3.1.2 Komponen
+　　　SPK DSS4DSLR terdiri dari subsistem-subsistem berikut ini yaitu,
+1. Subsistem Manajemen Data
+Subsistem manajemen data yang terdapat dalam SPK DSS4DSLR terdiri dari basis data yang berhubungan dengan permasalahan yang dibahas, dan hal ini dikelola oleh perangkat lunak yang disebut DBMS.
+2. Subsistem Antar-muka Pengguna
+Subsistem antar-muka yang digunakan oleh SPK DSS4DSLR berupa interface yang berbasis web.
+
+3.1.3 Manfaat
+　　　Terdapat 5 manfaat yang dimiliki oleh SPK DSS4DSLR yaitu,
+1. SPK DSS4DSLR mampu untuk mendukung solusi dari masalah pemilihan kamera DSLR.
+2. SPK DSS4DSLR mampu untuk mencoba berbagai variasi kamera DSLR yang berbeda pada konfigurasi yang berbeda secara cepat dan objektif.
+3. Pengguna SPK DSS4DSLR mendapatkan pengetahuan dari hasil analisis yang dilakukan.
+4. SPK DSS4DSLR dapat menghemat biaya yang diperlukan.
+5. Keputusan yang dihasilkan oleh SPK DSS44DSLR lebih konsisten dan objektif dibandingkan keputusan yang dihasilkan secara intuitif.
+
+3.1.4 Proses Pembangunan
+　　　Proses pembangunan SPK DSS4DSLR meliputi beberapa tahap seperti berikut,
+1. Tahap A : Planning
+Pada tahap ini dilakukan perkiraan kebutuhan, analisis masalah, dan tujuan yang ingin dicapai dari SPK DSS4DSLR.
+2. Tahap B : Research
+Pada tahap ini dilakukan identifikasi terhadap kebutuhan pengguna, sumber yang dibutuhkan, dan teknik pengumpulan data untuk membangun SPK DSS4DSLR.
+3. Tahap C : System Analysis and Conceptual Design
+Pada tahap ini dilakukan analisis terhadap spesifikasi sumber dan menentukan pendekatan yang terbaik untuk mengimplementasikan SPK DSS4DSLR.
+4. Tahap D : Design
+Pada tahap ini didesain antarmuka SPK DSS4DSLR untuk pengguna dan basis data dari SPK DSS4DSLR.
+5. Tahap E : Construction
+Pada tahap ini SPK DSS4DSLR mulai dibangun dengan menggunakan bahasa pemrogramam PHP, kemudian dilakukan pengujian terhadap SPK DSS4DSLR.
+6. Tahap F : Implementation
+Pada tahap ini dilakukan pengujian dan evaluasi dari SPK DSS4DSLR untuk melihat sebaik apa sistem memenuhi kebutuhan pengguna.
+
+3.2 Analisis Kebutuhan Data
+3.2.1 Wawancara
+　　　Wawancara dilakukan dengan pemilik toko kamera Kamal Photo yang terletak di Jalan Braga No. 91, untuk mengetahui faktor-faktor apa saja yang menjadi pertimbangan pembeli dan pengguna kamera dalam menentukan sebuah kamera DSLR yang tepat dengan kebutuhannya. Hasil wawancara dapat dilihat pada Lampiran A.
+
+3.2.2 Kuesioner
+　　　Kuesioner disebarkan kepada 20 orang pengguna kamera untuk mengetahui faktor-faktor apa saja yang menjadi pertimbangan pembeli dan pengguna kamera dalam menentukan sebuah kamera DSLR yang tepat dengan kebutuhannya. Bentuk kuesioner dapat dilihat pada Lampiran B.
+
+3.2.3 Observasi
+　　　Observasi dilakukan untuk mendapatkan data-data tambahan mengenai faktor-faktor yang menjadi pertimbangan pembeli dan pengguna kamera dalam menentukan sebuah kamera DSLR yang tepat dengan kebutuhannya. Observasi dilakukan di toko kamera Kamal Photo yang terletak di Jalan Braga No. 91 dan forum-forum di internet yang membahas tentang kamera.
+
+3.3 Hasil Analisis Kebutuhan Data
+3.3.1 Wawancara
+　　　Hasil wawancara yang dilakukan dengan pemilik toko kamera Kamal Photo, dapat disimpulkan bahwa pembeli dan pengguna kamera mempertimbangkan faktor harga, spesifikasi, dan aksesoris dalam menentukan kamera DSLR. Hal ini dilihat dari kebutuhan pembeli dan pengguna kamera saat menentukan kamera DSLR tersebut, apakah digunakan untuk kepentingan pribadi (belajar, hobi), profesi (wartawan, fotografer profesional), atau untuk kegiatan praktek bisnis (studio foto).
+
+3.3.2 Kuesioner
+　　　Pada hasil kuesioner yang disebarkan secara acak kepada 20 responden di daerah Bandung, didapat komposisi responden laki-laki sebanyak 13 orang dan responden perempuan sebanyak 7 orang, seperti yang ditunjukkan pada Gambar 3-1. Lalu pada Gambar 3-2 menunjukkan tingkatan usia responden, dan pada Gambar 3-3 menunjukkan jangka waktu pembelian terakhir kamera DSLR oleh fotografer.
+
+
+Gambar 31 Grafik Responden Berdasarkan Jenis Kelamin
+
+
+Gambar 32 Grafik Responden Berdasarkan Tingkatan Umur
+
+
+Gambar 33 Grafik Responden Berdasarkan Pembelian Terakhir Kamera DSLR
+
+　　　Menurut hasil kuesioner, 15 orang responden menggunakan merk Canon, 5 orang responden menggunakan merk Nikon, sedangkan kamera DSLR dengan merk Olympus,  Pentax, dan Sony dipilih oleh 0 orang responden. Grafik responden dapat dilihat pada Gambar 3-4.
+　　　Menurut hasil kuesioner, 17 orang responden mendapat rekomendasi untuk membeli kamera DSLR dari teman, 0 orang responden dari majalah, 15 orang responden dari internet, dan 2 orang responden menjawab lainnya. Grafik responden dapat dilihat pada Gambar 3-5.
+
+
+Gambar 34 Grafik Responden Berdasarkan Merk Kamera
+
+
+Gambar 35 Grafik Responden Berdasarkan Rekomendasi
+
+　　　Menurut hasil kuesioner, alasan pembelian kamera DSLR karena hobi sebanyak 14 orang responden, karena profesi sebanyak 12 orang responden, karena lainnya sebanyak 2 orang responden, dan alasan pembelian kamera DSLR karena mengikuti trend dan promo sebanyak 0 orang responden. Grafik responden dapat dilihat pada Gambar 3-6.
+　　　Gambar 3-7 menunjukkan faktor-faktor mana saja yang menjadi pertimbangan atau prioritas pembeli dalam memilih dan menentukan kamera DSLR. Menurut hasil kuesioner, 60% mempertimbangkan harga, 20% mempertimbangkan spesifikasi, 12% mempertimbangkan merk, dan masing-masing 4% yang mempertimbangkan kemudahan aksesoris dan layanan purna jual.
+
+
+Gambar 36 Grafik Responden Berdasarkan Alasan Membeli Kamera DSLR
+
+
+Gambar 37 Grafik Responden Berdasarkan Faktor-faktor Dalam Pemilihan Kamera DSLR
+
+　　　Menurut hasil kuesioner, seperti yang ditunjukkan pada Gambar 3-8, kelebihan dari kamera DSLR yang dimiliki oleh responden dari segi kualitas gambar yang baik sebesar 27%, dari segi kemudahan penggunaan sebesar 23%, dari segi kenyamanan sebesar 22%, dari segi kemudahan mendapatkan aksesoris sebesar 20%, dan dari segi fitur pelengkap sebesar 8%. Sedangkan kekurangan dari kamera kamera DSLR yang dimiliki oleh responden dari segi mahalnya aksesoris sebesar 67%, dari segi penggunaan baterai yang boros sebesar 17%, dari segi berat sebesar 13%, dan dari segi mekanisme yang bermasalah sebesar 3%. Gambar 3-9 menunjukkan grafik responden berdasarkan kekurangan dari kamera DSLR yang dimiliki.
+
+
+Gambar 38 Grafik Responden Berdasarkan Kelebihan Kamera DSLR yang Dimiliki
+
+
+Gambar 39 Grafik Responden Berdasarkan Kekurangan Kamera DSLR yang Dimiliki
+
+　　　Terdapat kesulitan-kesulitan yang dihadapi responden setelah memiliki kamera DSLR. Menurut hasil kuesioner, kesulitan yang dihadapi setelah memiliki kamera DSLR adalah masalah perawatan (71%), tempat service kamera (21%), dan lainnya (8%). Sedangkan untuk kemudahan mendapatkan aksesoris, responden dapat dikatakan tidak memiliki kesulitan setelah memiliki kamera DSLR (0%). Gambar 3-9 menunjukkan grafik responden tersebut.
+　　　Dibalik kesulitan yang dihadapi, responden memiliki harapan-harapan yang didapat setelah memiliki kamera DSLR. Menurut hasil kuesioner, harapan responden untuk dapat menangkap momen-momen penting dalam hidupnya sebesar 38%, untuk menyalurkan hobi sebesar 30%, untuk dijadikan profesi sebesar 24%, dan lainnya sebesar 8%. Gambar 3-10 menunjukkan grafik responden berdasarkan harapan setelah memiliki kamera DSLR.
+
+
+Gambar 310 Grafik Responden Berdasarkan Kesulitan yang Didapat Setelah Memiliki Kamera DSLR
+
+
+Gambar 311 Grafik Responden Berdasarkan Harapan Setelah Memiliki Kamera DSLR
+
+　　　Berdasarkan hasil kuesioner tersebut, disimpulkan bahwa faktor-faktor yang menjadi pertimbangan pembeli dan pengguna kamera dipertimbangkan untuk dijadikan variabel-variabel yang akan digunakan dalam metode pengambilan keputusan dari SPK DSS4DSLR. Faktor-faktor yang menjadi pertimbangan pembeli dan pengguna kamera tersebut antara lain merk, harga, spesifikasi, kemudahan mendapat aksesoris, dan layanan purna jual.
+
+3.3.3 Observasi
+　　　Hasil observasi yang dilakukan di toko kamera Kamal Photo disimpulkan bahwa pembeli dan pengguna kamera mempertimbangkan faktor harga dan spesifikasi dari kamera DSLR. Sedangkan kesimpulan hasil observasi yang didapat dari forum-forum yang membahas tentang kamera DSLR adalah perbandingan merk antara produsen kamera beserta harga spesifikasi dari merk kamera yang dibandingkan tersebut. Selain itu, layanan purna jual pun menjadi pertimbangan bagi pembeli dan pengguna kamera.
+
+　　　Dari hasil analisis kebutuhan data tersebut, didapat variabel-variabel yang menjadi pertimbangan pembeli dan pengguna kamera dalam menentukan kamera DSLR yaitu, merk, harga, spesifikasi, kemudahan aksesoris, dan layanan purna jual. Kelas pengguna atau kebutuhan pemakaian menjadi variabel selanjutnya dalam menentukan kamera DSLR karena produsen kamera memberi segmentasi pasar mereka kedalam tiga kelas yaitu entry-level, semi-professional, dan professional. Berdasarkan hasil analisis kebutuhan data tersebut, maka akan dibangun SPK DSS4DSLR yang diharapkan dapat membantu pembeli dan pengguna kamera untuk memilih dan menentukan kamera DSLR yang tepat untuk kelas pengguna tertentu. Variabel-variabel tersebut digunakan untuk menetapkan batasan dan penentuan bobot dari kamera DSLR. Variabel yang digunakan untuk menetapkan batasan adalah merk, kelas pengguna atau kebutuhan pemakaian, dan harga. Sedangkan untuk variabel yang digunakan dalam penentuan bobot adalah harga, spesifikasi, kemudahan mendapatkan aksesoris, dan layanan purna jual.
+
+3.4 Metode Pengambilan Keputusan
+     Pembangunan SPK pada penelitian ini menggunakan metode Sequential Elimination by Conjunctive Constraints dan Sequential Elimination by Lexicography. Untuk mendapatkan usulan solusi pemilihan kamera DSLR, sistem meminta pengguna untuk mengisi batasan-batasan (constraints) beberapa variabel. Tahap pertama ini dilakukan dengan menggunakan metode Sequential Elimination by Conjunctive Constraints. Tahap selanjutnya, menggunakan metode Sequential Elimination by Lexicography, adalah sistem akan meminta pengguna untuk menentukan prioritas beberapa variabel.
+
+3.4.1 Sequential Elimination by Conjunctive Constraints
+　　　Metode ini digunakan pada SPK untuk menghasilkan solusi berdasarkan batasan-batasan (constraints) yang diatur oleh sistem atau pengguna. Pada tahap awal, pengguna diminta untuk mengisi batasan-batasan terhadap beberapa variabel yang telah disediakan. Agar seluruh alternatif solusi tidak tereliminasi, maka variabel-variabel yang akan diberi batasan antara lain,
+1. Merk
+Batasan yang akan diatur oleh variabel ini adalah merk yang akan dipilih oleh pengguna. Pengguna dapat memilih salah satu atau beberapa merk dari kamera DSLR.
+2. Kelas Pengguna
+Batasan yang akan diatur oleh variabel ini adalah kelas pengguna dari kamera DSLR. Sejauh mana kebutuhan pengguna kamera dikategorikan menjadi beberapa kelas antara lain entry-level, semi-professional, dan professional. Pengguna harus memilih salah satu dari kelas pengguna tersebut.
+3. Harga
+Batasan yang akan diatur oleh variabel ini adalah harga kamera DSLR yang ada di pasaran.
+
+　　　Gambar 3-12 menunjukkan form penentuan batasan untuk mencari alternatif solusi dalam pemilihan kamera DSLR yang potensial.
+
+
+Gambar 312 Form Penentuan Batasan (Constraint)
+
+　　　Penerapan metode Sequential Elimination by Conjunctive Constraints secara manual berdasarkan batasan pada Gambar 3-12 ditunjukkan oleh Tabel 3-1.
+
+Tabel 31 Penggunaan Metode Sequential Elimination by Conjunctive Constraints Secara Manual pada Kamera DSLR
+AtributStandardPilihanT/FPilihanT/FPilihanT/FPilihanT/FMerkCanonEOS 1000DTEOS 400DTEOS 450DTEOS 500DTKelas PenggunaEntry-level3T3T3T3THarga>= 4.000.000 dan < 8.000.0004.480.000T5.570.000T5.970.000T6.620.000T??????????"AND"??T?T?T?T
+　　　Metode ini akan mengeliminasi pilihan yang tidak memenuhi batasan dan akan mengambil pilihan yang memenuhi batasan untuk menemukan solusi. Dalam penggunaan metode ini yang ditunjukkan oleh Tabel 3-1, seluruh pilihan menjadi kandidat solusi karena masing-masing pilihan memenuhi batasan yang telah ditentukan sebelumnya.
+
+3.4.2 Sequential Elimination by Lexicography
+　　　Metode ini melakukan proses dengan menentukan prioritas terhadap variabel-variabel yang diberikan. Dalam kasus ini, variabel yang diberikan adalah harga, spesifikasi, kemudahan aksesoris, dan layanan purna jual. Langkah yang dilakukan pengguna adalah menentukan skala prioritas suatu variabel, mulai dari prioritas tertinggi (ditunjukkan oleh angka 1) hingga prioritas terendah (ditunjukkan oleh angka 4). Form penentuan prioritas tiap variabel pada metode ini ditunjukkan pada Gambar 3-13.
+
+Variabel
+Prioritas1234HargaSpesifikasiKemudahan aksesorisLayanan purna jualGambar 313 Form Penentuan Prioritas
+
+　　　Sistem terlebih dahulu telah memberi bobot nilai (skala 1-8) untuk setiap variabel tetap dari tiap kamera DSLR. Penentuan bobot ini dilakukan berdasarkan data hasil wawancara dan hasil observasi. Contoh form penentuan bobot total untuk tiap variabel bagi masing-masing kriteria dapat dilihat pada Gambar 3-14 sampai Gambar 3-17 dan keterangan bobot untuk tiap jawaban dapat dilihat pada Tabel 3-2 sampai Tabel 3-5.
+
+
+Gambar 314 Form Penentuan Bobot Variabel Tetap Harga
+
+Tabel 32 Keterangan Bobot Variabel Tetap Harga
+No.JawabanBobota.Ya4Tidak0b.Ya4Tidak0
+
+Gambar 315 Form Penentuan Bobot Variabel Tetap Spesifikasi
+
+
+
+
+
+
+
+
+
+
+Tabel 33 Keterangan Variabel Tetap Bobot Spesifikasi
+No.JawabanBobota.Ya1Tidak0b.Ya1Tidak0c.Ya1Tidak0d.Ya1Tidak0e.Ya1Tidak0f.Ya1Tidak0g.Ya1Tidak0h.Ya1Tidak0
+
+Gambar 316 Form Penentuan Bobot Variabel Tetap Kemudahan Aksesoris
+
+Tabel 34 Keterangan Bobot Variabel Tetap Kemudahan Aksesoris
+No.JawabanBobota.Ya2Tidak0b.Ya2Tidak1c.Ya2Tidak0d.Ya2Tidak0 
+
+Gambar 317 Form Penentuan Bobot Variabel Tetap Layanan Purna Jual
+
+Tabel 35 Keterangan Bobot Variabel Tetap Layanan Purna Jual
+No.JawabanBobota.Ya2Tidak0b.Ya2Tidak1c.Ya2Tidak1d.Ya2Tidak1
+　　　Dengan menggunakan metode Sequential Elimination by Lexicography, dari ke empat kamera DSLR yang dihasilkan, akan dipilih kamera DSLR yang memiliki nilai tertinggi dari variabel pertama yang dipilih pengguna. Kamera DSLR yang tidak memiliki nilai tertinggi akan dieliminasi. Setelah mendapat nilai tertinggi dari variabel pertama, sistem kemudian memilih kamera DSLR yang memiliki nilai tertinggi pada variabel kedua. Proses ini terus berlanjut hingga sistem menghasilkan rekomendasi kamera DSLR sebagai sebuah solusi. Pada contoh ini, sistem merekomendasikan kamera DSLR Canon EOS 500D sebagai solusi. Penerapan metode ini dapat dilihat pada Tabel 3-6.
+
+Tabel 36 Penggunaan Metode Sequential Elimination by Lexicography Secara Manual
+AtributRankingEOS 500DEOS 1000DEOS 450DEOS 400DHarga18888Spesifikasi27665Kemudahan aksesoris37555Layanan purna jual47765
+3.5 Analisis SPK DSS4DSLR
+3.5.1 Tujuan
+　　　Tujuan dibangunnya SPK DSS4DSLR adalah memberikan kemudahan kepada pembeli dan pengguna kamera untuk menentukan kamera DSLR yang tepat untuk kelas pengguna tertentu. Selain itu, SPK DSS4DSLR memberikan informasi mengenai data-data lensa, aksesoris, dan lokasi penjualan kamera (seller).
+
+3.5.2 Pengguna
+　　　SPK DSS4DSLR ditujukan untuk pengguna umum yang meliputi pembeli dan pengguna kamera, yang ingin mendapatkan kamera DSLR yang tepat untuk kelas pengguna tertentu berdasarkan hasil rekomendasi dari sistem dan memperoleh informasi mengenai lensa, aksesoris, dan lokasi penjualan kamera (seller). SPK DSS4DSLR dikelola oleh seorang administrator untuk melakukan proses pembaharuan sistem.
+
+3.5.3 Fitur Yang Dimiliki
+　　　SPK DSS4DSLR digunakan oleh dua pengguna sistem, yaitu administrator sebagai pengguna yang mampu mengelola data, dan pengguna umum (terdiri dari pembeli dan pengguna kamera) sebagai pengguna sistem untuk memilih dan menentukan kamera DSLR. SPK DSS4DSLR memberikan fitur-fitur yang dapat digunakan oleh pengguna umum antara lain,
+1. Menentukan kamera DSLR
+2. Mencari kamera DSLR
+3. Mencari lensa kamera DSLR
+4. Mencari aksesoris kamera DSLR
+5. Melihat lokasi penjualan kamera DSLR
+
+　　　SPK DSS4DSLR memberikan fitur-fitur yang dapat digunakan oleh administrator antara lain,
+1. Mengelola data kamera DSLR
+2. Mengelola data lensa kamera DSLR
+3. Mengelola data aksesoris kamera DSLR
+4. Mengelola data lokasi penjualan kamera DSLR
+5. Melihat bobot nilai kamera DSLR
+6. Mengubah bobot nilai kamera DSLR
+
+3.6 Kebutuhan Perangkat Lunak
+　　　Pada penelitian ini, kebutuhan perangkat lunak sistem akan direpresentasikan dengan paradigma berorientasi objek. Diagram-diagram yang akan digunakan pada tahap analisis ini antara lain use case diagram, skenario, class diagram, dan E-R diagram.
+3.6.1 Use Case Diagram
+
+Gambar 318 Use Case Diagram SPK DSS4DSLR
+
+3.6.2 Skenario
+3.6.2.1 Skenario Mengelola Data Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+　　　Post-kondisi: Admin mengelola data kamera DSLR
+　　　Skenario:
+1. Admin memilih menu Daftar Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Kamera DSLR
+3. Admin mengelola data kamera DSLR yang meliputi tambah data, ubah data, dan hapus data, yang terdapat dalam database PL sistem
+3.6.2.1.1 Skenario Tambah Data Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+Post-kondisi: PL sistem menambahkan data kamera DSLR yang diinput admin ke dalam database
+　　　Skenario:
+1. Admin memilih menu Daftar Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Kamera DSLR
+3. Admin memilih menu Tambah Data Kamera DSLR
+4. PL sistem menampilkan halaman Tambah Data Kamera DSLR
+5. Admin memasukkan data kamera DSLR
+6. PL sistem menyimpan data yang diinput ke dalam database
+7. PL sistem menampilkan pesan bahwa data kamera DSLR berhasil ditambahkan ke dalam database
+8. PL sistem menampilkan halaman Daftar Kamera DSLR
+　　　Exception:
+1. Data kamera yang dimasukkan tidak lengkap, PL sistem menampilkan pesan kesalahan
+2. Data kamera telah terdapat dalam database, PL sistem menampilkan pesan kesalahan
+3.6.2.1.2 Skenario Ubah Data Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+Post-kondisi: PL sistem mengubah data kamera DSLR yang terdapat dalam database sesuai input dari admin
+　　　Skenario:
+1. Admin memilih menu Daftar Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Kamera DSLR
+3. Admin mencari kamera DSLR yang akan dirubah
+4. Admin memilih menu Ubah Kamera DSLR
+5. PL sistem menampilkan halaman Ubah Kamera DSLR
+6. Admin merubah data kamera yang dipilih
+7. PL sistem menyimpan perubahan data kamera DSLR yang diinput oleh admin ke dalam database
+8. PL sistem menampilkan pesan bahwa data kamera DSLR berhasil dirubah dan disimpan ke dalam database
+9. PL sistem menampilkan halaman Daftar Kamera DSLR
+　　　Exception:
+Data kamera yang dimasukkan tidak valid, PL sistem menampilkan pesan kesalahan
+3.6.2.1.3 Skenario Hapus Data Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+Post-kondisi: PL sistem menghapus data kamera DSLR yang terdapat dalam database
+　　　Skenario:
+1. Admin memilih menu Daftar Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Kamera DSLR
+3. Admin mencari kamera DSLR yang akan dihapus
+4. Admin memilih menu Hapus Kamera DSLR
+5. PL sistem menampilkan konfirmasi bahwa kamera DSLR yang dipilih akan dihapus
+6. PL sistem menghapus data kamera dari database
+7. PL sistem menampilkan pesan bahwa data kamera telah terhapus dari database
+8. PL sistem menampilkan halaman Daftar Kamera DSLR
+3.6.2.2 Skenario Mengelola Data Lensa Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+　　　Post-kondisi: Admin mengelola data lensa kamera DSLR
+　　　Skenario:
+1. Admin memilih menu Daftar Lensa Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Lensa Kamera DSLR
+3. Admin mengelola data lensa kamera DSLR yang meliputi tambah data dan ubah data, yang terdapat dalam basis data PL sistem
+3.6.2.2.1 Skenario Tambah Data Lensa Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+Post-kondisi: PL sistem menambahkan data lensa kamera DSLR yang diinput admin ke dalam database
+　　　Skenario:
+1. Admin memilih menu Daftar Lensa Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Lensa Kamera DSLR
+3. Admin memilih menu Tambah Data Lensa Kamera DSLR
+4. PL sistem menampilkan halaman Tambah Data Lensa Kamera DSLR
+5. Admin memasukkan data lensa kamera DSLR
+6. PL sistem menyimpan data yang diinput ke dalam database
+7. PL sistem menampilkan pesan bahwa data lensa kamera DSLR berhasil ditambahkan ke dalam database
+8. PL sistem menampilkan halaman Daftar Lensa Kamera DSLR
+　　　Exception:
+1. Data lensa kamera yang dimasukkan tidak lengkap, PL sistem menampilkan pesan kesalahan
+2. Data lensa kamera telah terdapat dalam database, PL sistem menampilkan pesan kesalahan
+3.6.2.2.2 Skenario Ubah Data Lensa Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+Post-kondisi: PL sistem mengubah data lensa kamera DSLR yang terdapat dalam database sesuai input dari admin
+　　　Skenario:
+1. Admin memilih menu Daftar Lensa Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Lensa Kamera DSLR
+3. Admin mencari lensa kamera DSLR yang akan dirubah
+4. Admin memilih menu Ubah Lensa Kamera DSLR
+5. PL sistem menampilkan halaman Ubah Lensa Kamera DSLR
+6. Admin merubah data lensa kamera yang dipilih
+7. PL sistem menyimpan perubahan data lensa kamera DSLR yang diinput oleh admin ke dalam database
+8. PL sistem menampilkan pesan bahwa data lensa kamera DSLR berhasil dirubah dan disimpan ke dalam database
+9. PL sistem menampilkan halaman Daftar Lensa Kamera DSLR
+　　　Exception:
+Data lensa kamera yang dimasukkan tidak valid, PL sistem menampilkan pesan kesalahan
+3.6.2.3 Skenario Mengelola Data Aksesoris Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+　　　Post-kondisi: Admin mengelola data aksesoris kamera DSLR
+　　　Skenario:
+1. Admin memilih menu Daftar Aksesoris Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Aksesoris Kamera DSLR
+3. Admin mengelola data aksesoris kamera DSLR yang meliputi tambah data dan ubah data, yang terdapat dalam basis data PL sistem
+3.6.2.3.1 Skenario Tambah Data Aksesoris Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+Post-kondisi: PL sistem menambahkan data aksesoris kamera DSLR yang diinput admin ke dalam database
+　　　Skenario:
+1. Admin memilih menu Daftar Akseoris Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Aksesoris Kamera DSLR
+3. Admin memilih menu Tambah Data Aksesoris Kamera DSLR
+4. PL sistem menampilkan halaman Tambah Data Aksesoris Kamera DSLR
+5. Admin memasukkan data aksesoris kamera DSLR
+6. PL sistem menyimpan data yang diinput ke dalam database
+7. PL sistem menampilkan pesan bahwa data aksesoris kamera DSLR berhasil ditambahkan ke dalam database
+8. PL sistem menampilkan halaman Daftar Aksesoris Kamera DSLR
+　　　Exception:
+1. Data aksesoris kamera yang dimasukkan tidak lengkap, PL sistem menampilkan pesan kesalahan
+2. Data aksesoris kamera telah terdapat dalam database, PL sistem menampilkan pesan kesalahan
+3.6.2.3.2 Skenario Ubah Data Aksesoris Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+Post-kondisi: PL sistem mengubah data aksesoris kamera DSLR yang terdapat dalam database sesuai input dari admin
+　　　Skenario:
+1. Admin memilih menu Daftar Aksesoris Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Aksesoris Kamera DSLR
+3. Admin mencari aksesoris kamera DSLR yang akan dirubah
+4. Admin memilih menu Ubah Aksesoris Kamera DSLR
+5. PL sistem menampilkan halaman Ubah Aksesoris Kamera DSLR
+6. Admin merubah data aksesoris kamera yang dipilih
+7. PL sistem menyimpan perubahan data aksesoris kamera DSLR yang diinput oleh admin ke dalam database
+8. PL sistem menampilkan pesan bahwa data aksesoris kamera DSLR berhasil dirubah dan disimpan ke dalam database
+9. PL sistem menampilkan halaman Daftar Aksesoris Kamera DSLR
+　　　Exception:
+Data aksesoris kamera yang dimasukkan tidak valid, PL sistem menampilkan pesan kesalahan
+3.6.2.4 Skenario Mengelola Data Lokasi Penjualan Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+　　　Post-kondisi: Admin mengelola data lokasi penjualan kamera DSLR
+　　　Skenario:
+1. Admin memilih menu Daftar Lokasi Penjualan Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Lokasi Penjualan Kamera DSLR
+3. Admin mengelola data lokasi penjualan kamera DSLR yang meliputi tambah data dan ubah data, yang terdapat dalam basis data PL sistem
+3.6.2.4.1 Skenario Tambah Data Lokasi Penjualan Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+Post-kondisi: PL sistem menambahkan data lokasi penjualan kamera DSLR yang diinput admin ke dalam database
+　　　Skenario:
+1. Admin memilih menu Daftar Lokasi Penjualan Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Lokasi Penjualan Kamera DSLR
+3. Admin memilih menu Tambah Data Lokasi Penjualan Kamera DSLR
+4. PL sistem menampilkan halaman Tambah Data Lokasi Penjualan Kamera DSLR
+5. Admin memasukkan data lokasi penjualan kamera DSLR
+6. PL sistem menyimpan data yang diinput ke dalam database
+7. PL sistem menampilkan pesan bahwa data lokasi penjualan kamera DSLR berhasil ditambahkan ke dalam database
+8. PL sistem menampilkan halaman Daftar Lokasi Penjualan Kamera DSLR
+　　　Exception:
+1. Data lokasi penjualan kamera yang dimasukkan tidak lengkap, PL sistem menampilkan pesan kesalahan
+2. Data lokasi penjualan kamera telah terdapat dalam database, PL sistem menampilkan pesan kesalahan
+3.6.2.4.2 Skenario Ubah Lokasi Penjualan Kamera DSLR
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+Post-kondisi: PL sistem mengubah data lokasi penjualan kamera DSLR yang terdapat dalam database sesuai input dari admin
+　　　Skenario:
+1. Admin memilih menu Daftar Lokasi Penjualan Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Lokasi Penjualan Kamera DSLR
+3. Admin mencari lokasi penjualan kamera DSLR yang akan dirubah
+4. Admin memilih menu Ubah Lokasi Penjualan Kamera DSLR
+5. PL sistem menampilkan halaman Ubah Lokasi Penjualan Kamera DSLR
+6. Admin merubah data lokasi penjualan kamera yang dipilih
+7. PL sistem menyimpan perubahan data lokasi penjualan kamera DSLR yang diinput oleh admin ke dalam database
+8. PL sistem menampilkan pesan bahwa data lokasi penjualan kamera DSLR berhasil dirubah dan disimpan ke dalam database
+9. PL sistem menampilkan halaman Daftar Lokasi Penjualan Kamera DSLR
+　　　Exception:
+Data lokasi penjualan kamera yang dimasukkan tidak valid, PL sistem menampilkan pesan kesalahan
+3.6.2.5 Skenario Melihat Bobot Nilai
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+　　　Post-kondisi: Admin melihat bobot nilai kamera DSLR
+　　　Skenario:
+1. Admin memilih menu Daftar Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Kamera DSLR
+3. Admin memilih kamera DSLR untuk melihat bobot nilai
+4. Admin memilih menu Lihat Bobot Nilai
+5. PL sistem menampilkan halaman Bobot Nilai
+3.6.2.6 Skenario Mengubah Bobot Nilai
+　　　Aktor: Admin
+　　　Pre-kondisi: Admin melakukan login terlebih dahulu
+　　　Post-kondisi: Admin melihat bobot nilai kamera DSLR
+　　　Skenario:
+1. Admin memilih menu Daftar Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Kamera DSLR
+3. Admin memilih kamera DSLR untuk melihat bobot nilai
+4. Admin memilih menu Lihat Bobot Nilai
+5. PL sistem menampilkan halaman Bobot Nilai
+6. Admin memilih menu Ubah Bobot Nilai
+7. PL sistem menampilkan form untuk merubah bobot nilai
+8. Admin mengubah bobot nilai kamera DSLR yang dipilih
+9. PL sistem menyimpan bobot nilai yang diubah ke dalam database
+10. PL sistem memberikan pesan perubahan bobot nilai berhasil disimpan dalam database
+11. PL sistem menampilkan halaman Bobot Nilai
+3.6.2.7 Skenario Menentukan Kamera DSLR
+　　　Aktor: Admin, Pengguna Umum
+Pre-kondisi: User menentukan kamera DSLR sesuai dengan variabel yang tersedia untuk kelas pengguna tertentu
+Post-kondisi: PL sistem merekomendasikan solusi yang dihasilkan kepada user berdasarkan variabel-variabel yang telah ditentukan
+Skenario:
+1. User memilih menu Menentukan Kamera DSLR
+2. PL sistem menampilkan halaman Batasan DSLR
+3. User mengisi pilihan batasan dalam form yang disediakan
+4. PL sistem memroses pilihan yang diinput oleh user
+5. PL sistem menampilkan halaman Prioritas DSLR
+6. User menentukan skala prioritas dari kamera DSLR berdasarkan variabel yang diberikan
+7. PL sistem memroses input yang ditentukan oleh user
+8. PL sistem menampilkan rekomendasi kamera DSLR yang sesuai dengan batasan dan skala prioritas yang ditentukan oleh user
+Exception:
+1. Jika ada batasan yang tidak dipilih, PL sistem akan menampilkan pesan kesalahan.
+2. Jika user tidak mengisi seluruh prioritas, PL sistem akan menampilkan pesan kesalahan.
+3. Jika batasan yang dimasukkan oleh user terlalu ketat dan menyebabkan tidak adanya rekomendasi berdasarkan batasan, maka PL sistem tidak akan melanjutkan ke proses berikutnya dan menampilkan pesan bagi user untuk mengisi batasan.
+3.6.2.8 Skenario Mencari Kamera DSLR
+　　　Aktor: Admin, Pengguna Umum
+　　　Pre-kondisi: User mencari kamera DSLR berdasarkan merk
+　　　Post-kondisi: User mendapatkan informasi kamera DSLR yang dicari
+　　　Skenario:
+1. User memilih menu Daftar Kamera DSLR
+2. PL sistem menampilkan halaman Daftar Kamera DSLR
+3. User mencari kamera DSLR berdasarkan merk
+4. PL sistem melakukan pencarian kamera DSLR dalam database
+5. PL sistem menampilkan hasil pencarian di halaman Hasil Pencarian Kamera
+Exception:
+Data kamera DSLR yang dicari berdasarkan merk tidak terdapat dalam database, PL sistem menampilkan pesan kesalahan.
+3.6.2.9 Skenario Mencari Lensa Kamera DSLR
+　　　Aktor: Admin, Pengguna Umum
+　　　Pre-kondisi: User mencari lensa kamera DSLR berdasarkan merk
+Post-kondisi: User mendapat informasi lensa kamera DSLR yang dicari
+　　　Skenario:
+1. User memilih menu Daftar Lensa DSLR
+2. PL sistem menampilkan halaman Daftar Lensa DSLR
+3. User mencari lensa kamera DSLR berdasarkan merk
+4. PL sistem melakukan pencarian lensa kamera DSLR dalam database
+5. PL sistem menampilkan hasil pencarian di halaman Hasil Pencarian Lensa Kamera
+Exception:
+Data lensa kamera DSLR yang dicari berdasarkan merk tidak terdapat dalam database, PL sistem menampilkan pesan kesalahan.
+3.6.2.10 Skenario Mencari Aksesoris Kamera DSLR
+　　　Aktor: Admin, Pengguna Umum
+　　　Pre-kondisi: User mencari aksesoris kamera DSLR berdasarkan jenis
+Post-kondisi: User mendapat informasi aksesoris kamera DSLR yang dicari berdasarkan jenis
+　　　Skenario:
+1. User memilih menu Daftar Aksesoris DSLR
+2. PL sistem menampilkan halaman Daftar Aksesoris DSLR
+3. User mencari aksesoris kamera DSLR berdasarkan jenis
+4. PL sistem melakukan pencarian aksesoris kamera DSLR dalam database
+5. PL sistem menampilkan hasil pencarian di halaman Hasil Pencarian Aksesoris Kamera
+Exception:
+Data lensa kamera DSLR yang dicari berdasarkan merk tidak terdapat dalam database, PL sistem menampilkan pesan kesalahan.
+3.6.2.11 Skenario Melihat Lokasi Penjualan Kamera DSLR
+　　　Aktor: Admin, Pengguna Umum
+Pre-kondisi: User melihat lokasi penjualan kamera DSLR di kota-kota di Indonesia
+Post-kondisi: User mendapatkan informasi mengenai lokasi penjualan kamera DSLR
+　　　Skenario:
+1. User memilih menu Lokasi Penjualan Kamera DSLR
+2. PL sistem menampilkan halaman lokasi penjualan kamera DSLR
+3. User melihat lokasi penjualan kamera DSLR yang berada di kota-kota di Indonesia
+
+3.6.3 Class Diagram
+
+Gambar 319 Class Diagram DSS4DSLR
+
+3.6.4 Entity Relationship Diagram
+
+Gambar 320 Entity Relationship Diagram DSS4DSLR
+
+4  [Nomor Bab 
+BAB 4 
+PERANCANGAN
+
+
+4.1 Rancangan Antarmuka Pengguna
+     SPK DSS4DSLR memiliki dua pengguna secara umum yaitu Admin dan Pengguna Umum. Berikut ini adalah tampilan antarmuka bagi Admin dan Pengguna Umum.
+4.1.1  Rancangan Antarmuka Login
+　　　Bagian ini berfungsi sebagai sarana login bagi admin. Bila data yang dimasukkan valid, admin dapat melakukan aktivitas berikutnya dan apabila data yang dimasukkan tidak valid, akan muncul pesan kesalahan dan admin harus kembali mengisi data yang diminta. Antarmuka Login untuk admin dapat dilihat pada Gambar 4-1.
+
+
+Gambar 41 Antarmuka Login
+
+4.1.2 Rancangan Antarmuka Menu Utama Admin
+　　　Pada bagian ini admin dapat memilih menu-menu yang tersedia, admin juga dapat memilih menu yang disediakan untuk pengguna umum. Bila salah satu menu dipilih maka akan muncul antarmuka yang sesuai dengan pilihan admin. Antarmuka Menu Utama Admin dapat dilihat pada Gambar 4-2.
+
+
+Gambar 42 Antarmuka Menu Utama
+
+4.1.3 Rancangan Antarmuka Tambah Data Kamera DSLR
+　　　Pada bagian ini admin dapat menambah data kamera DSLR yang baru. Mula-mula admin memilih menu DSLR List, kemudian memilih menu Add New DSLR. Admin kemudian mengisi data-data kamera DSLR yang baru pada form yang tersedia, lalu menekan tombol Submit. Antarmuka Tambah Data Kamera DSLR dapat dilihat pada Gambar 4-3.
+
+
+Gambar 43 Antarmuka Tambah Data Kamera DSLR
+
+4.1.4 Rancangan Antarmuka Ubah Data Kamera DSLR
+　　　Pada bagian ini admin dapat mengubah data kamera DSLR yang telah ada. Mula-mula admin memilih menu DSLR List, kemudian admin dapat mencari kamera DSLR yang akan dirubah datanya secara satu per satu atau berdasarkan merk, lalu memilih menu Change Existing DSLR. Admin kemudian mengubah data-data kamera DSLR yang dipilih pada form yang tersedia. Antarmuka Ubah Data Kamera DSLR dapat dilihat pada Gambar 4-4.
+　　　
+
+
+
+
+
+
+
+
+	
+
+Gambar 44 Antarmuka Ubah Data Kamera DSLR
+
+4.1.5 Rancangan Antarmuka Hapus Data Kamera DSLR
+　　　Pada bagian ini admin dapat menghapus data kamera DSLR yang telah ada. Mula-mula admin memilih menu DSLR List, kemudian admin mencari kamera DSLR yang akan dihapus secara satu per satu atau berdasarkan merk, lalu memilih menu Delete DSLR yang kemudian akan muncul pesan apakah data akan benar-benar dihapus atau tidak. Antarmuka Hapus Data Kamera DSLR dapat dilihat pada Gambar 4-5.
+
+
+Gambar 45 Antarmuka Hapus Data Kamera DSLR
+
+4.1.6 Rancangan Antarmuka Tambah Data Lensa Kamera DSLR
+　　　Pada bagian ini admin dapat menambah data lensa kamera DSLR yang baru. Mula-mula admin memilih menu Lenses, kemudian memilih menu Add New Lens. Admin kemudian mengisi data-data lensa kamera DSLR yang baru pada form yang tersedia, lalu menekan tombol Submit. Antarmuka Tambah Data Lensa Kamera DSLR dapat dilihat pada Gambar 4-6.
+
+
+Gambar 46 Antarmuka Tambah Data Lensa Kamera DSLR
+
+4.1.7 Rancangan Antarmuka Ubah Data Lensa Kamera DSLR
+　　　Pada bagian ini admin dapat mengubah data lensa kamera DSLR yang telah ada. Mula-mula admin memilih menu Lenses, kemudian admin dapat mencari lensa kamera DSLR yang akan dirubah datanya secara satu per satu atau berdasarkan merk, lalu memilih menu Change Existing Lens. Admin kemudian mengubah data-data lensa kamera DSLR yang dipilih pada form yang tersedia. Antarmuka Ubah Data Lensa Kamera DSLR dapat dilihat pada Gambar 4-7.
+
+
+Gambar 47 Antarmuka Ubah Data Lensa Kamera DSLR
+
+4.1.8 Rancangan Antarmuka Tambah Data Aksesoris Kamera DSLR
+　　　Pada bagian ini admin dapat menambah data aksesoris kamera DSLR yang baru. Mula-mula admin memilih menu Accessories, kemudian memilih menu Add New Accessories. Admin kemudian mengisi data-data aksesoris kamera DSLR yang baru pada form yang tersedia, lalu menekan tombol Submit. Antarmuka Tambah Data Aksesoris Kamera DSLR dapat dilihat pada Gambar 4-8.
+
+
+Gambar 48 Antarmuka Tambah Data Aksesoris Kamera DSLR
+
+4.1.9 Rancangan Antarmuka Ubah Data Aksesoris Kamera DSLR
+　　　Pada bagian ini admin dapat mengubah data aksesoris kamera DSLR yang telah ada. Mula-mula admin memilih menu Accessories, kemudian admin dapat mencari aksesoris kamera DSLR yang akan dirubah datanya berdasarkan jenis aksesoris, lalu memilih menu Change Existing Accessories. Admin kemudian mengubah data-data aksesoris kamera DSLR yang dipilih pada form yang tersedia. Antarmuka Ubah Data Aksesoris Kamera DSLR dapat dilihat pada Gambar 4-9.
+
+
+Gambar 49 Antarmuka Ubah Data Aksesoris Kamera DSLR
+
+4.1.10 Rancangan Antarmuka Tambah Lokasi Penjualan Kamera DSLR
+　　　Pada bagian ini admin dapat menambah data lokasi penjualan kamera DSLR yang baru. Mula-mula admin memilih menu Seller, kemudian memilih menu Add New Seller. Admin kemudian mengisi data-data lokasi penjualan kamera DSLR yang baru pada form yang tersedia, lalu menekan tombol Submit. Antarmuka Tambah Lokasi Penjualan Kamera DSLR dapat dilihat pada Gambar 4-10.
+
+
+Gambar 410 Antarmuka Tambah Lokasi Penjualan Kamera DSLR
+
+4.1.11 Rancangan Antarmuka Ubah Profil Tempat Penjualan Kamera DSLR
+　　　Pada bagian ini admin dapat mengubah profil tempat penjualan kamera DSLR yang telah ada. Mula-mula admin memilih menu Seller, kemudian admin mencari tempat penjualan kamera DSLR yang akan dirubah datanya, lalu memilih menu Change Seller Profile. Admin kemudian mengubah data-data profil tempat penjualan kamera DSLR yang dipilih pada form yang tersedia. Antarmuka Ubah Profil Tempat Penjualan Kamera DSLR dapat dilihat pada Gambar 4-11.
+
+
+Gambar 411 Antarmuka Ubah Profil Tempat Penjualan Kamera DSLR
+
+4.1.12 Rancangan Antarmuka Lihat Standard Nilai
+　　　Pada bagian ini admin dapat melihat standard nilai dari kamera DSLR berdasarkan kriteria yang telah ditentukan. Mula-mula admin memilih menu DSLR List, lalu mencari kamera DSLR yang akan dilihat standard nilainya secara satu per satu atau berdasarkan merk, kemudian memilih menu Standard Value pada kamera DSLR yang dipilih. Antarmuka Lihat Standard Nilai dapat dilihat pada Gambar 4-12.
+
+
+Gambar 412 Antarmuka Lihat Standard Nilai
+
+4.1.13 Rancangan Antarmuka Ubah Standard Nilai
+Pada bagian ini admin dapat mengubah standard nilai dari kamera DSLR. Mula-mula admin memilih menu DSLR List, lalu mencari kamera DSLR yang akan diubah standard nilainya secara satu per satu atau berdasarkan merk, kemudian memilih menu Standard Value pada kamera DSLR yang dipilih. Pada halaman berikutnya, admin memilih menu Change Standard Value. Kemudian admin mengubah standard nilai pada form yang tersedia. Antarmuka Ubah Standard Nilai dapat dilihat pada Gambar 4-13.
+
+
+Gambar 413 Antarmuka Ubah Standard Nilai
+
+4.1.14 Rancangan Antarmuka Menggunakan DSS4DSLR
+　　　Pada bagian ini pengguna umum dapat menggunakan DSS4DSLR untuk menentukan kamera DSLR yang sesuai dengan kriterianya. Mula-mula pengguna umum memilih menu DSS4DSLR, lalu pada halaman berikutnya pengguna umum menetapkan batasan-batasan yang sesuai dengan kriterianya, seperti yang ditunjukkan pada Gambar 4-14. Pada proses selanjutnya, pengguna umum menentukan prioritas pada form yang tersedia, seperti yang ditunjukkan pada Gambar 4-15.
+
+
+Gambar 414 Antarmuka Penentuan Batasan
+
+
+Gambar 415 Antarmuka Penentuan Prioritas
+
+4.1.15 Rancangan Antarmuka Mencari Kamera DSLR
+　　　Pada bagian ini pengguna umum dapat mencari kamera DSLR secara satu per satu atau berdasarkan merk dengan memilih menu DSLR List, serta melihat spesifikasi dari kamera DSLR tersebut dengan memilih menu Show Specification. Antarmuka Mencari Kamera DSLR dapat dilihat pada Gambar 4-17.
+
+
+Gambar 416 Antarmuka Mencari Kamera DSLR
+
+4.1.16 Rancangan Antarmuka Mencari Lensa Kamera DSLR
+　　　Pada bagian ini pengguna umum dapat mencari lensa kamera DSLR dengan memilih menu Lenses. Antarmuka Mencari Lensa Kamera DSLR dapat dilihat pada Gambar 4-18.
+
+
+Gambar 417 Antarmuka Mencari Lensa Kamera DSLR
+
+4.1.17 Rancangan Antarmuka Mencari Aksesoris Kamera DSLR
+　　　Pada bagian ini pengguna umum dapat mencari aksesoris kamera DSLR berdasarkan jenisnya dengan memilih menu Accessories. Antarmuka Mencari Aksesoris Kamera DSLR dapat dilihat pada Gambar 4-19.
+
+
+Gambar 418 Antarmuka Mencari Aksesoris Kamera DSLR
+
+4.1.18 Rancangan Antarmuka Lihat Lokasi Penjualan Kamera DSLR
+　　　Pada bagian ini pengguna umum dapat melihat lokasi tempat penjualan kamera DSLR dengan memilih menu Seller. Antarmuka Lihat Lokasi Penjualan Kamera DSLR dapat dilihat pada Gambar 4-20.
+
+
+Gambar 419 Antarmuka Lihat Lokasi Penjualan Kamera DSLR
+DAFTAR REFERENSI
+　　　
+　　　
+[KEN-02]	Kendall, K.E., dan Kendall, J.E., “System Analysis and Design”, Prentice Hall, Inc, New Jersey, 5th Edition, 2002.
+
+[MUL-07]	Mulyanta, Edi S., “Teknik Modern Fotografi Digital”, ANDI, 2007.
+
+[TUR-05]	Turban, Efraim, Aronson, Jay E., dan Liang, Ting Peng, “Decision Support System and Intelligent System”, Pearson Education, Inc, New Jersey, 7th Edition, 2005.
+
+ [URL-01]	Wikipedia, “Camera”, tanggal akses 22 Februari 2010, http://en.wikipedia.org/wiki/Camera.
+
+[URL-02]	MK-Photograpy, “Pedoman Membeli Kamera DSLR”, tanggal akses 23 Februari 2010, http://www.mk-photography.biz/articles/umum/pedoman_beli_dslr.html
+
+[URL-03]	Wikipedia, “Digital Single Lens Reflect Camera”, tanggal akses 25 Februari 2010, http://www,en.wikipedia.org/wiki/Digital_single-lens_reflect_camera
+
+[URL-04]	Wikipedia, “Kamera SLR”, tanggal akses 25 Februari 2010, http://id.wikipedia.org/wiki/Kamera_SLR
+
+[URL-05]	Wikipedia, “Lensa Fotografi”, tanggal akses 3 Maret 2010, http://id.wikipedia.org/wiki/Lensa_fotografi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LAMPIRAN
+
+
+
+
+
+
+
+1 [Nomor Bab]
+LAMPIRAN A
+WAWANCARA
+Wawancara dilakukan di toko penjualan kamera Kamal Photo yang terletak di Jalan Braga No. 91, dengan mewawancarai pemilik toko tersebut. Wawancara ini dilakukan pada tanggal 25 Februari 2010.
+
+1. Bagaimanakah minat calon pembeli kamera DSLR saat ini?
+Minat pembeli kamera DSLR saat ini sangat baik. Hal ini dapat dilihat dari makin banyaknya orang yang menggunakan kamera DSLR.
+2. Bagaimanakah pengetahuan calon pembeli saat hendak membeli kamera DSLR?
+Pengetahuan pembeli relatif sudah cukup tahu.Kebanyakan dari mereka menggunakan fasilitas Internet untuk mengetahui spesifikasi dari kamera yang mereka inginkan sebelum datang kesini.
+3. Apakah yang menjadi pertimbangan atau alasan calon pembeli untuk membeli kamera DSLR?
+Kebanyakan dari mereka karena ingin mengabadikan apapun yang terjadi dalam hidup mereka.
+4. Merk kamera DSLR apakah yang banyak dibeli? Apakah aksesoris dari merk tersebut mudah didapat?
+Saat ini yang laku di pasaran ada dua, yaitu Canon dan Nikon.
+5. Dari mulai kelas pengguna kamera mana saja kira-kira yang datang untuk membeli kamera DSLR?
+Semua kelas pengguna datang ke tempat ini.
+6. Apakah calon pembeli sering menanyakan kira-kira kamera DSLR yang mana yang sesuai dengan kebutuhannya saat ini?
+Sering. Sebagai contoh, jika pembeli ingin membuka studio foto, maka saya sering mengarahkan untuk membeli alat-alat yang dibutuhkan untuk sebuah studio foto.
+　　　
+
+2 [Nomor Bab]
+LAMPIRAN B
+KUESIONER
+Kuesioner ini ditujukan kepada calon pembeli dan pengguna kamera Digital Single-lens Reflex (DSLR) dengan tujuan untuk mengetahui faktor apa saja yang menjadi acuan bagi calon pembeli dan pengguna kamera DSLR bila hendak membeli kamera DSLR.
+
+
+1. Apakah jenis kelamin Anda?
+o Laki-lakio Perempuan
+2. Berapakah umur Anda?
+o < 20 tahuno 30-40 tahuno > 50 tahuno 20-30 tahuno 40-50 tahun
+3. Kapan terakhir kali Anda membeli kamera DSLR?
+o < 3 bulano 3-6 bulano 6-12 bulano > 12 bulan
+4. Apa nama merk/tipe kamera DSLR yang Anda beli dan dimana Anda membeli kamera tersebut? (Sebutkan nama tempat penjualan kamera DSLR dan/atau kota Anda membeli)
+_____________________________________________________________________________________________________________________________________________________________________________________________
+
+5. Untuk membeli kamera DSLR tersebut, Anda mendapat rekomendasi dari mana? Jawaban boleh lebih dari satu.
+[   ] Teman
+[   ] Majalah
+[   ] Internet
+[   ] Lainnya:____________________________________________________
+
+
+
+
+6. Apa yang menjadi alasan Anda untuk membeli kamera DSLR? Jawaban boleh lebih dari satu.
+[   ] Mengikuti tren
+[   ] Hobi
+[   ] Profesi
+[   ] Promo
+[   ] Alasan lainnya:_______________________________________________
+
+7. Faktor-faktor apa saja yang menjadi bahan pertimbangan Anda saat memilih dan membeli kamera DSLR? Urutkan faktor-faktor tersebut berdasarkan angka (1-5).
+(   ) Harga(   ) Merk(   ) Spesifikasi(   ) Kemudahan mendapatkan aksesoris(   ) Layanan purna jual
+8. Apa saja yang menjadi kelebihan dan/atau kekurangan dari kamera DSLR yang Anda miliki?
+_____________________________________________________________________________________________________________________________________________________________________________________________
+
+9. Apa yang menjadi kesulitan ketika memilih dan membeli kamera DSLR?
+[   ] Kemudahan mendapatkan aksesoris
+[   ] Tempat service kamera
+[   ] Perawatan
+[   ] Alasan lainnya:_______________________________________________
+
+10. Apa yang menjadi harapan Anda ketika telah membeli kamera DSLR?
+_____________________________________________________________________________________________________________________________________________________________________________________________
+3 [Nomor Bab] 
+LAMPIRAN C
+DATA KAMERA
+
+
+1. CANON
+
+CANON EOS 550D
+CANON EOS-1D Mark IV
+CANON EOS 7D
+CANON EOS 500D
+CANON EOS 5D Mark II
+CANON EOS 50D
+CANON EOS 1000D
+CANON EOS-1Ds Mark III
+CANON EOS 40D
+CANON EOS-1D Mark III
+CANON EOS 400D
+CANON EOS 450D
+CANON EOS 5D
+
+2. NIKON
+
+NIKON D3S
+NIKON D3000
+NIKON D300S
+NIKON D5000
+NIKON D3X
+NIKON D90
+NIKON D700
+NIKON D60
+NIKON D3
+NIKON D300
+NIKON D40X
+NIKON D40
+NIKON D80
+
+3. OLYMPUS
+
+OLYMPUS E-600
+OLYMPUS E-450
+OLYMPUS E-620
+OLYMPUS E-30
+OLYMPUS E-520
+OLYMPUS E-420
+OLYMPUS E-3
+OLYMPUS E-410
+OLYMPUS E-510
+OLYMPUS E-40
+
+
+
+
+4. PENTAX
+
+PENTAX K-x
+PENTAX K-7
+PENTAX K2000/K-m
+PENTAX K200D
+PENTAX K20D
+PENTAX K100D Super
+PENTAX K10D
+PENTAX K110D
+PENTAX K100
+
+5. SONY
+
+SONY ALPHA DSLR-A450 
+SONY ALPHA DSLR-A850
+SONY ALPHA DSLR-A550
+SONY ALPHA DSLR-A500
+SONY ALPHA DSLR-A380
+SONY ALPHA DSLR-A230
+SONY ALPHA DSLR-A330
+SONY ALPHA DSLR-A900
+SONY ALPHA DSLR-A350
+SONY ALPHA DSLR-A300
+SONY ALPHA DSLR-A200
+SONY ALPHA DSLR-A700
+SONY ALPHA DSLR-A100
+
+??
+
+??
+
+??
+
+??
+
+
+
+
+
+
+
+
+
+
+
+
+
+i
+
+
+3-32	
+
+
+
+
+1-1
+
+
+
+2-1
+
+
+
+
+4-1
+
+
+4-17
+
+
+
+
+
+
+ix
+
+
+
+
+
+
+
+
+A-1
+
+
+B-2
+
+
+C-2
+
+
