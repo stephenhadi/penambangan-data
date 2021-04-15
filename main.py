@@ -67,7 +67,7 @@ def main():
         result adalah hasil tf nya
 
         fileName adalah dictionary untuk mapping dengan key adalah kalimat dan valuenya adalah
-        array file yang ada kalimat tersebut
+        array file yang memiliki kalimat tersebut
         
         """
         sentence,tfidf,result,fileName = vectorize(f)
