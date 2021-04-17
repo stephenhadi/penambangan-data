@@ -1,5 +1,6 @@
 import sys
 import nltk
+import numpy as np
 from os import walk
 import os
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -49,10 +50,6 @@ def vectorize(f):
 
 
 def main():
-    #variabel untuk menyimpan hasil cluster
-    c1_Agglomerative = []
-    c2_Agglomerative = []
-    c3_Agglomerative = []
 
     if len(sys.argv)!= 2:
         print("masukkan arguments basic atau wa")
@@ -69,11 +66,20 @@ def main():
         fileName adalah dictionary untuk mapping dengan key adalah kalimat dan valuenya adalah
         array file yang memiliki kalimat tersebut
         
-        """
+        """ 
         sentence,tfidf,result,fileName = vectorize(f)
         df = pd.DataFrame(result.toarray(),columns=tfidf.get_feature_names(),index = sentence)
-        print(df)
-
+        #print(df)
+        
+        """
+        Menghapus vector yang semua fitrunya bernilai 0, karena jika tidak maka 
+        #saat melakukan clustering dengan affinity Cosine akan terdapat pesan error :
+            "affinity cannot be used when X contains zero vectors"
+        
+        """
+        new_df = df[~np.all(df == 0, axis=1)]  
+        print(new_df)
+    
 
         #
         # #kmeans_model = KMeans(n_clusters=3).fit(tfidf)
@@ -111,9 +117,54 @@ def main():
         # for ca3, idx in zip(c3_Agglomerative, range(0,len(c3_Agglomerative))):
         #     print(idx+1,"",ca3)
         
+        # buat model clustering dengan menggunakan jarak euclidean linkage single
+        clustering_model = AgglomerativeClustering(distance_threshold=1, n_clusters=None,linkage = 'single', affinity = 'cosine')
+        
+        clustering_model.fit(new_df)
+        
+        #Jumlah cluster
+        nClusters = clustering_model.n_clusters_
+        print("Jumlah cluster :", nClusters)
+          
+        #Jarak antar cluster
+        distances = clustering_model.distances_
+        print("Jarak antar cluster :", distances)
+        
+        #Jarak terkecil
+        print("Jarak terkecil antar cluster :",distances.min())
+       
+        #Jarak terbesar
+        print("Jarak terbesar antar cluster :",distances.max())
+        
+       
+        labels_single = clustering_model.labels_    
+        print(labels_single)      
+        
+        df_result = pd.DataFrame([])
+        for ca, sentence, doc in zip(labels_single, new_df.index, fileName.values()):  
+            row = pd.Series([ca, sentence, doc])
+            row_df = pd.DataFrame([row])  
+            #Insert baris baru ke data frame
+            df_result = pd.concat([row_df, df_result], ignore_index=True)         
+        
+        #Rename kolom
+        df_result.rename(columns = {0:'Cluster',1:'Sentence',2:'Document'}, inplace = True)   
+        
+        print(df_result)  
+        
+        #Menampilkan nama dokumen di setiap cluster
+        for q in range(nClusters): 
+            df_unique = df_result[df_result['Cluster'] == q]
+            #print("Cluster ",q," : \n",df_unique)            
+            df2 = df_unique['Document']
+            print("Cluster ",q," : \n",df2)                
+        
+        
+                     
     elif sys.argv[1] == "wa":  
         print("test")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":   
     main()
+  
