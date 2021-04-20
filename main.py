@@ -56,7 +56,8 @@ def vectorize(f):
             tokenText = nltk.sent_tokenize(i)
 
             documents = documents + tokenText
-            fileName[i].add(key)
+            for z in tokenText:
+                fileName[z].add(key)
 
     tfidf = TfidfVectorizer(use_idf=False)
     result = tfidf.fit_transform(documents)
@@ -124,16 +125,12 @@ def main():
         #Jarak terbesar
         print("Jarak terbesar antar cluster :",distances.max())
 
-
         labels_single = clustering_model.labels_
         print(labels_single)
 
         df_result = pd.DataFrame([])
         for ca, sentence, docs in zip(labels_single, new_df.index, fileName.values()):
-            arr=[]
-            for doc in docs:
-                if doc not in arr:
-                    arr.append(doc)
+            arr = fileName[sentence]
             row = pd.Series([ca, sentence, arr])
             row_df = pd.DataFrame([row])
             #Insert baris baru ke data frame
@@ -147,7 +144,7 @@ def main():
         for q in range(nClusters):
             df_unique = df_result[df_result['Cluster'] == q]
             #print("Cluster ",q," : \n",df_unique)
-            df2 = str(df_unique['Document']), str(df_unique['Sentence'])
+            df2 = df_unique[['Document','Sentence']]
             print("Cluster ",q," : \n",df2)
 
         print("program berjalan selama {:.5f} seconds".format(time.time()-start_time))
