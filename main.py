@@ -149,7 +149,7 @@ def main():
                 doc = fileName[row['Sentence']]
                 arr = arr + doc
             
-           
+            arr = list(set(arr))
             print("Cluster ",q," : \n",arr)
 
         print("program berjalan selama {:.5f} seconds".format(time.time()-start_time))
