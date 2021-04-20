@@ -21,6 +21,7 @@ from scipy.cluster.hierarchy import linkage
 def readAll():
     fileName=[]
     f={}
+    openFile=""
     for(dirpath,dirnames,filenames) in walk('./half_data'):
         fileName = filenames
     for i in fileName:
@@ -49,7 +50,7 @@ def read():
     return f
 
 def vectorize(f):
-    fileName = defaultdict(set)
+    fileName = defaultdict(list)
     documents = []
     for key, value in f.items():
         for i in value:
@@ -57,8 +58,7 @@ def vectorize(f):
 
             documents = documents + tokenText
             for z in tokenText:
-                fileName[z].add(key)
-
+                fileName[z].append(key)
     tfidf = TfidfVectorizer(use_idf=False)
     result = tfidf.fit_transform(documents)
     return documents,tfidf,result,fileName
@@ -86,7 +86,7 @@ def main():
         sentence,tfidf,result,fileName = vectorize(f)
         df = pd.DataFrame(result.toarray(),columns=tfidf.get_feature_names(),index = sentence)
         #print(df)
-        
+
         """
         Menghapus vector yang semua fitrunya bernilai 0, karena jika tidak maka 
         #saat melakukan clustering dengan affinity Cosine akan terdapat pesan error :
@@ -130,8 +130,7 @@ def main():
 
         df_result = pd.DataFrame([])
         for ca, sentence, docs in zip(labels_single, new_df.index, fileName.values()):
-            arr = fileName[sentence]
-            row = pd.Series([ca, sentence, arr])
+            row = pd.Series([ca, sentence, docs])
             row_df = pd.DataFrame([row])
             #Insert baris baru ke data frame
             df_result = pd.concat([row_df, df_result], ignore_index=True)
@@ -144,8 +143,14 @@ def main():
         for q in range(nClusters):
             df_unique = df_result[df_result['Cluster'] == q]
             #print("Cluster ",q," : \n",df_unique)
-            df2 = df_unique[['Document','Sentence']]
-            print("Cluster ",q," : \n",df2)
+            df2 = df_unique['Document']
+            arr=[]
+            for index, row in df_unique.iterrows():
+                doc = fileName[row['Sentence']]
+                arr = arr + doc
+            
+            arr = list(set(arr))
+            print("Cluster ",q," : \n",arr)
 
         print("program berjalan selama {:.5f} seconds".format(time.time()-start_time))
         
