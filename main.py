@@ -95,7 +95,7 @@ def main():
         print(new_df)
 
 
-        buat model clustering dengan menggunakan jarak euclidean linkage single
+        #buat model clustering dengan menggunakan jarak euclidean linkage single
         pkl_filename = "pickle_model.pkl"
         clustering_model = ""
         if os.path.isfile(pkl_filename):
