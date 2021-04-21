@@ -149,7 +149,7 @@ def main():
                 arr = arr + doc
             
             arr = list(set(arr))
-            res = {}
+
             print("Cluster ",q," : \n",arr)
 
         print("clustering berjalan selama {:.5f} second \n".format(time.time()-start_time))
