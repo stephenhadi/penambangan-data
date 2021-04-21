@@ -95,64 +95,64 @@ def main():
         print(new_df)
 
 
-        # buat model clustering dengan menggunakan jarak euclidean linkage single
-        # pkl_filename = "pickle_model.pkl"
-        # clustering_model = ""
-        # if os.path.isfile(pkl_filename):
-            # with open(pkl_filename, 'rb') as file:
-                # clustering_model = pickle.load(file)
+        buat model clustering dengan menggunakan jarak euclidean linkage single
+        pkl_filename = "pickle_model.pkl"
+        clustering_model = ""
+        if os.path.isfile(pkl_filename):
+            with open(pkl_filename, 'rb') as file:
+                clustering_model = pickle.load(file)
         
-        # else: 
-            # clustering_model = AgglomerativeClustering(distance_threshold=1, n_clusters=None,linkage = 'single', affinity = 'cosine')
+        else: 
+            clustering_model = AgglomerativeClustering(distance_threshold=1, n_clusters=None,linkage = 'single', affinity = 'cosine')
 
-            # clustering_model.fit(new_df)
+            clustering_model.fit(new_df)
         
-            # with open(pkl_filename, 'wb') as file:
-                # pickle.dump(clustering_model, file)
+            with open(pkl_filename, 'wb') as file:
+                pickle.dump(clustering_model, file)
 
-        # #Jumlah cluster
-        # nClusters = clustering_model.n_clusters_
-        # print("Jumlah cluster :", nClusters)
+        #Jumlah cluster
+        nClusters = clustering_model.n_clusters_
+        print("Jumlah cluster :", nClusters)
 
-        # #Jarak antar cluster
-        # distances = clustering_model.distances_
-        # print("Jarak antar cluster :", distances)
+        #Jarak antar cluster
+        distances = clustering_model.distances_
+        print("Jarak antar cluster :", distances)
 
-        # #Jarak terkecil
-        # print("Jarak terkecil antar cluster :",distances.min())
+        #Jarak terkecil
+        print("Jarak terkecil antar cluster :",distances.min())
 
-        # #Jarak terbesar
-        # print("Jarak terbesar antar cluster :",distances.max())
+        #Jarak terbesar
+        print("Jarak terbesar antar cluster :",distances.max())
 
-        # labels_single = clustering_model.labels_
-        # print(labels_single)
+        labels_single = clustering_model.labels_
+        print(labels_single)
 
-        # df_result = pd.DataFrame([])
-        # for ca, sentence, docs in zip(labels_single, new_df.index, fileName.values()):
-            # row = pd.Series([ca, sentence, docs])
-            # row_df = pd.DataFrame([row])
-            # #Insert baris baru ke data frame
-            # df_result = pd.concat([row_df, df_result], ignore_index=True)
+        df_result = pd.DataFrame([])
+        for ca, sentence, docs in zip(labels_single, new_df.index, fileName.values()):
+            row = pd.Series([ca, sentence, docs])
+            row_df = pd.DataFrame([row])
+            #Insert baris baru ke data frame
+            df_result = pd.concat([row_df, df_result], ignore_index=True)
 
-        # #Rename kolom
-        # df_result.rename(columns = {0:'Cluster',1:'Sentence',2:'Document'}, inplace = True)
-        # print(df_result)
+        #Rename kolom
+        df_result.rename(columns = {0:'Cluster',1:'Sentence',2:'Document'}, inplace = True)
+        print(df_result)
 
-        # #Menampilkan nama dokumen di setiap cluster
-        # for q in range(nClusters):
-            # df_unique = df_result[df_result['Cluster'] == q]
-            # #print("Cluster ",q," : \n",df_unique)
-            # df2 = df_unique['Document']
-            # arr=[]
-            # for index, row in df_unique.iterrows():
-                # doc = fileName[row['Sentence']]
-                # arr = arr + doc
+        #Menampilkan nama dokumen di setiap cluster
+        for q in range(nClusters):
+            df_unique = df_result[df_result['Cluster'] == q]
+            #print("Cluster ",q," : \n",df_unique)
+            df2 = df_unique['Document']
+            arr=[]
+            for index, row in df_unique.iterrows():
+                doc = fileName[row['Sentence']]
+                arr = arr + doc
             
-            # arr = list(set(arr))
-            # res = {}
-            # print("Cluster ",q," : \n",arr)
+            arr = list(set(arr))
+            res = {}
+            print("Cluster ",q," : \n",arr)
 
-        # print("clustering berjalan selama {:.5f} second \n".format(time.time()-start_time))
+        print("clustering berjalan selama {:.5f} second \n".format(time.time()-start_time))
         
         
         #cosine similarities
