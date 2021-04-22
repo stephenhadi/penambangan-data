@@ -25,18 +25,20 @@ def readAll():
     fileName=[]
     f={}
     openFile=""
-    for(dirpath,dirnames,filenames) in walk('./data'):
+    #for(dirpath,dirnames,filenames) in walk('./data'):
+    for(dirpath,dirnames,filenames) in walk('./half_data'):
         fileName = filenames
     for i in fileName:
         try:
-            openFile = open("data/{}".format(i),'r', encoding='utf-8', errors='ignore')
+            #openFile = open("data/{}".format(i),'r', encoding='utf-8', errors='ignore')
+            openFile = open("half_data/{}".format(i),'r', encoding='utf-8', errors='ignore')
             arrText = openFile.read().split("\n")
             myText = ""
             for y in arrText:
                 # cari panjang diatas 9 untuk membuang kalimat kalimat yang tidak penting dan tidak memberikan bobot terlalu besar
                 if len(y)> 9:
                     myText += " "+y
-            f[i] = myText
+            f[i] = myText   
         except:
             print(openFile)
     return f
@@ -45,7 +47,7 @@ def readAll():
 def vectorize(f):
     fileName = defaultdict(list)
     documents = []
-    sentenceCountPerDoc = defaultdict(int)
+    sentenceCountPerDoc = defaultdict(int)   
     stop_words = set(stopwords.words('indonesian'))
     for key, value in f.items():
         words = nltk.sent_tokenize(value.lower())
@@ -94,23 +96,12 @@ def main():
         new_df = df[~np.all(df == 0, axis=1)]
         print(new_df)
 
-
         #buat model clustering dengan menggunakan jarak euclidean linkage single
-        pkl_filename = "pickle_model.pkl"
-        clustering_model = ""
-        if os.path.isfile(pkl_filename):
-            with open(pkl_filename, 'rb') as file:
-                clustering_model = pickle.load(file)
-        
-        else: 
-            clustering_model = AgglomerativeClustering(distance_threshold=1, n_clusters=None,linkage = 'single', affinity = 'cosine')
+        clustering_model = AgglomerativeClustering(distance_threshold=0.4, n_clusters=None,linkage = 'single', affinity = 'cosine')
 
-            clustering_model.fit(new_df)
+        clustering_model.fit(new_df)  
         
-            with open(pkl_filename, 'wb') as file:
-                pickle.dump(clustering_model, file)
-
-        #Jumlah cluster
+        #Jumlah cluster  
         nClusters = clustering_model.n_clusters_
         print("Jumlah cluster :", nClusters)
 
@@ -136,25 +127,29 @@ def main():
 
         #Rename kolom
         df_result.rename(columns = {0:'Cluster',1:'Sentence',2:'Document'}, inplace = True)
-        print(df_result)
+        #print(df_result)
 
         #Menampilkan nama dokumen di setiap cluster
+        df_result2 = pd.DataFrame([])
         for q in range(nClusters):
             df_unique = df_result[df_result['Cluster'] == q]
-            #print("Cluster ",q," : \n",df_unique)
-            df2 = df_unique['Document']
+                
             arr=[]
             for index, row in df_unique.iterrows():
                 doc = fileName[row['Sentence']]
-                arr = arr + doc
-            
+                arr = arr + doc        
+                
             arr = list(set(arr))
-
-            print("Cluster ",q," : \n",arr)
-
+            if len(arr)>1:
+                #Insert cluster yang memiliki lebih dari satu dokumen yang berbeda ke df_result2
+                df_result2 = pd.concat([df_unique, df_result2], ignore_index=True)
+                print(df_unique)
+    
+            #print("Cluster ",q," : \n",arr) 
+                
         print("clustering berjalan selama {:.5f} second \n".format(time.time()-start_time))
         
-        
+        """
         #cosine similarities
         start_time = time.time()
         cos_sim = cosine_similarity(new_df)
@@ -204,7 +199,7 @@ def main():
        
         
         print("cosine similarity berjalan selama {:.5f} second".format(time.time()-start_time))
-        
+        """
         
         
         
