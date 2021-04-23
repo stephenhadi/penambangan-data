@@ -18,6 +18,7 @@ from nltk.corpus import stopwords
 from sklearn.cluster import AgglomerativeClustering
 from scipy.cluster.hierarchy import linkage
 from matplotlib import pyplot as plt
+import collections
 
 
 
@@ -97,15 +98,15 @@ def main():
         print(new_df)
 
         #buat model clustering dengan menggunakan jarak euclidean linkage single
-        clustering_model = AgglomerativeClustering(distance_threshold=0.4, n_clusters=None,linkage = 'single', affinity = 'cosine')
+        clustering_model = AgglomerativeClustering(distance_threshold=0.3, n_clusters=None,linkage = 'single', affinity = 'cosine')
 
         clustering_model.fit(new_df)  
-        
+         
         #Jumlah cluster  
         nClusters = clustering_model.n_clusters_
         print("Jumlah cluster :", nClusters)
 
-        #Jarak antar cluster
+        #Jarak antar cluster   
         distances = clustering_model.distances_
         print("Jarak antar cluster :", distances)
 
@@ -128,6 +129,9 @@ def main():
         #Rename kolom
         df_result.rename(columns = {0:'Cluster',1:'Sentence',2:'Document'}, inplace = True)
         #print(df_result)
+        
+        #Menyimpan nama dokumen untuk cluster yang sama.
+        arrDocument = []
 
         #Menampilkan nama dokumen di setiap cluster
         df_result2 = pd.DataFrame([])
@@ -143,10 +147,14 @@ def main():
             if len(arr)>1:
                 #Insert cluster yang memiliki lebih dari satu dokumen yang berbeda ke df_result2
                 df_result2 = pd.concat([df_unique, df_result2], ignore_index=True)
-                print(df_unique)
+                arrDocument.append(tuple(arr))     
+                print(df_unique)   
     
             #print("Cluster ",q," : \n",arr) 
-                
+        
+        #Menghitung jumlah duplikat untuk elemen pada list
+        val = collections.Counter(arrDocument)
+        print(val)       
         print("clustering berjalan selama {:.5f} second \n".format(time.time()-start_time))
         
         """
